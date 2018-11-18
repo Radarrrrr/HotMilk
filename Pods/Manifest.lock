@@ -1,0 +1,20 @@
+PODS:
+  - RDDevLibrary (1.0.1)
+  - RDTableView (1.0.0)
+
+DEPENDENCIES:
+  - RDDevLibrary
+  - RDTableView
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - RDDevLibrary
+    - RDTableView
+
+SPEC CHECKSUMS:
+  RDDevLibrary: 8b65de14d92ef51f008ffb42fbcadee3728c3424
+  RDTableView: 237b36bc985f2272efc0360f67848b473b6f62ae
+
+PODFILE CHECKSUM: 809571e8da94a0c6b2d26d67aaee83d04e00ff5b
+
+COCOAPODS: 1.5.2

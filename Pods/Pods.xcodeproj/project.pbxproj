@@ -1,0 +1,738 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0E221B94A242DC8062C51F3D93D193C5 /* RDTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = CB088F219877673C1D49CFBDABE2DDA9 /* RDTableView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0E68B44CC32D9FA53672266059179EC9 /* RDMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = B4AD65FBCA1BCDFCCC865225BE119A02 /* RDMacros.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		142CAD9F0AE95C277B22AFC4D0938C20 /* RDTableView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DC41448726299C885B61229F9CEAC97A /* RDTableView-dummy.m */; };
+		1CA5485B7B33EDD2C9A327961BB6A3B6 /* UIImage+ImageEffects.h in Headers */ = {isa = PBXBuildFile; fileRef = 770EB87FC7D2D81D93AF03BA71E92AF7 /* UIImage+ImageEffects.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1EC94B4043C12D577A8E966A2AA3F709 /* RDSuperCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 77E47CA85E3949AC1703238505112924 /* RDSuperCell.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		209D503660429749171729DA0C9A7CC3 /* UIButton+Spin.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC2FCBCD52EB8BD389EBEA7E12422B8 /* UIButton+Spin.m */; };
+		262CDE86284B71B0B12F7311212E4979 /* RDTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF66EBC98B4D0B00D816D6915C891EB /* RDTableView.m */; };
+		293A8C88B8EFF91841A57057649C024E /* UIButton+Color.h in Headers */ = {isa = PBXBuildFile; fileRef = A5173EC2FE9F4717E3B9EFF0DAFA05F6 /* UIButton+Color.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		470D6BABC84289533244FB472C5772A9 /* RDFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = CD267C1332BEB10F0807DEABA78B5951 /* RDFunction.m */; };
+		4F025A37B1296763F80BF838390CB748 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = E05FF1BC90BB374D65C86FDBE0D1947D /* UIImage+ImageEffects.m */; };
+		51F0CF94FB88C47E7F5FD91CDDE10B8B /* RDAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB959B53D11F58D30BF71AE47ADBFFE /* RDAudioPlayer.m */; };
+		546CD6173F417BC2BB8E28AC7C545D42 /* RDImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 964FDB2C0EBB8481AFC22FF746F6EA2C /* RDImageManager.m */; };
+		5CE30688D1A5499BFF6EA202C441831A /* RDFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F38C86040EA06BAC55D3199B3821DDA8 /* RDFileManager.m */; };
+		5CFB1F78C4ADA9FF7E1FF1854F587C56 /* UIButton+Spin.h in Headers */ = {isa = PBXBuildFile; fileRef = 66ED02CBFB710A0EE6B8E963259F83C9 /* UIButton+Spin.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		695C5F151CFC530E3B2618889EEB50EB /* UIButton+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = ACD05E1D34221FEFEAE00C9F884E0A21 /* UIButton+Color.m */; };
+		71721ACADA1A5FBAFF23F6F3093B303A /* Pods-HotMilk-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CB52BE6313054D96AB7BA6398269C567 /* Pods-HotMilk-dummy.m */; };
+		76867EEA5B9C38C5CCF4EF1CF4481DD1 /* RDTRefreshCover.m in Sources */ = {isa = PBXBuildFile; fileRef = 4794906706013751C4D3FC82E6CF68AE /* RDTRefreshCover.m */; };
+		7E129EA63EC5A2946E181BB7A8D3F536 /* RDFileManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 65B6E408F04B9D87752D237265645C75 /* RDFileManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7F207EB22F003C613C90DBBA74BCC702 /* RDTLoadingDots.h in Headers */ = {isa = PBXBuildFile; fileRef = 17E7541F0D30C4E7598E2DEDDC51E690 /* RDTLoadingDots.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8DB49CC1C649DABC82B6FB9067B64C1E /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = F443ED76A2D4423B6757BC564203F24D /* UIImage+Color.m */; };
+		8F2B7B405BB45CEA9ABEE07EEC845377 /* RDDevLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = DC463DADD4BBE7E2C4223D8A1C7B7B46 /* RDDevLibrary.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		904E2D08AD136156C3360937B403815F /* RDSuperCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A470A39EE33430A54198CEBE3B3038 /* RDSuperCell.m */; };
+		A1CF111A436F612E3B7222B872DB4CC9 /* RDTLoadingDots.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F1CF0E0F409973CC03AB1D9183E742D /* RDTLoadingDots.m */; };
+		A2301D2E9F33495447B649707C46B663 /* UIImage+Color.h in Headers */ = {isa = PBXBuildFile; fileRef = 838B8D02D324328F0A092F60156D7DEF /* UIImage+Color.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B010832C14C0D58904EBF6D98ED74C4B /* RDKeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F3DD96696A308A6EC955C98FBEC9CF /* RDKeyChain.m */; };
+		BB3E0555900D8CF8B7221186F7C1DF72 /* RDFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = 27373CF40C21E3C904EECDFFEA5BE9E7 /* RDFunction.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BBE912ADBAA7377302643C03102D0432 /* RDTRefreshCover.h in Headers */ = {isa = PBXBuildFile; fileRef = D5B10054DE83677103BD6C3D617D5B1B /* RDTRefreshCover.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C283F288A626E6A66AD11543157FD6A7 /* RDMacros.m in Sources */ = {isa = PBXBuildFile; fileRef = 335847F35528E9E75A99CDFEB6D3CA49 /* RDMacros.m */; };
+		CACD6EEF98DCE90465EC4C6E8A9696BF /* RDKeyChain.h in Headers */ = {isa = PBXBuildFile; fileRef = E479772FB809A19EB56E67CE9C862F26 /* RDKeyChain.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DF5309D8075951DACE7A641D46FE7696 /* RDAudioPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 61441FC4B52FC091EB474AB1852327C7 /* RDAudioPlayer.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E045B3AED0622FE2845F110A6F30CDD4 /* RDDevLibrary-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C501602B16AB6E07C2457FCC7FA8FB78 /* RDDevLibrary-dummy.m */; };
+		FF92F3ECE126000CEDABD425E31FF5CF /* RDImageManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 54B41747B557551759D3C53716DC69B5 /* RDImageManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		643CAE9A97BA3D272471420D49376FBB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B6C419C7707223504726ABBB40BA14C;
+			remoteInfo = RDTableView;
+		};
+		6B512FE8E74F987BF677C2AC0A0B3190 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 241C7BDBC84ABC73A53CC4BE0613C561;
+			remoteInfo = RDDevLibrary;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		036E777C4596B5BC5B93ACB56B3FD2A2 /* RDDevLibrary.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RDDevLibrary.xcconfig; sourceTree = "<group>"; };
+		082D336CBECB9EB3D2D541ED73B89042 /* Pods-HotMilk-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HotMilk-resources.sh"; sourceTree = "<group>"; };
+		0AB959B53D11F58D30BF71AE47ADBFFE /* RDAudioPlayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RDAudioPlayer.m; path = RDDevLibrary/RDAudioPlayer.m; sourceTree = "<group>"; };
+		17E7541F0D30C4E7598E2DEDDC51E690 /* RDTLoadingDots.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RDTLoadingDots.h; path = RDTableView/RDTLoadingDots.h; sourceTree = "<group>"; };
+		27373CF40C21E3C904EECDFFEA5BE9E7 /* RDFunction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RDFunction.h; path = RDDevLibrary/RDFunction.h; sourceTree = "<group>"; };
+		335847F35528E9E75A99CDFEB6D3CA49 /* RDMacros.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RDMacros.m; path = RDDevLibrary/RDMacros.m; sourceTree = "<group>"; };
+		4521DAEA72B72AC151AA865EF8A6B6B1 /* Pods-HotMilk-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HotMilk-acknowledgements.plist"; sourceTree = "<group>"; };
+		45D983E5DC47B6904C0A0D7B567C469E /* libRDDevLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libRDDevLibrary.a; path = libRDDevLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4794906706013751C4D3FC82E6CF68AE /* RDTRefreshCover.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RDTRefreshCover.m; path = RDTableView/RDTRefreshCover.m; sourceTree = "<group>"; };
+		49A470A39EE33430A54198CEBE3B3038 /* RDSuperCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RDSuperCell.m; path = RDTableView/RDSuperCell.m; sourceTree = "<group>"; };
+		4F1CF0E0F409973CC03AB1D9183E742D /* RDTLoadingDots.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RDTLoadingDots.m; path = RDTableView/RDTLoadingDots.m; sourceTree = "<group>"; };
+		54B41747B557551759D3C53716DC69B5 /* RDImageManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RDImageManager.h; path = RDDevLibrary/RDImageManager.h; sourceTree = "<group>"; };
+		61441FC4B52FC091EB474AB1852327C7 /* RDAudioPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RDAudioPlayer.h; path = RDDevLibrary/RDAudioPlayer.h; sourceTree = "<group>"; };
+		65B6E408F04B9D87752D237265645C75 /* RDFileManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RDFileManager.h; path = RDDevLibrary/RDFileManager.h; sourceTree = "<group>"; };
+		66ED02CBFB710A0EE6B8E963259F83C9 /* UIButton+Spin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+Spin.h"; path = "RDDevLibrary/UIButton+Spin.h"; sourceTree = "<group>"; };
+		6FC2FCBCD52EB8BD389EBEA7E12422B8 /* UIButton+Spin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+Spin.m"; path = "RDDevLibrary/UIButton+Spin.m"; sourceTree = "<group>"; };
+		770EB87FC7D2D81D93AF03BA71E92AF7 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+ImageEffects.h"; path = "RDDevLibrary/UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		77E47CA85E3949AC1703238505112924 /* RDSuperCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RDSuperCell.h; path = RDTableView/RDSuperCell.h; sourceTree = "<group>"; };
+		838B8D02D324328F0A092F60156D7DEF /* UIImage+Color.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Color.h"; path = "RDDevLibrary/UIImage+Color.h"; sourceTree = "<group>"; };
+		8F172315911FD91CEA8A86F5F0F5092A /* libRDTableView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libRDTableView.a; path = libRDTableView.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		964FDB2C0EBB8481AFC22FF746F6EA2C /* RDImageManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RDImageManager.m; path = RDDevLibrary/RDImageManager.m; sourceTree = "<group>"; };
+		9B5AC176CDFD275C8E6B3F00BF62FFD0 /* libPods-HotMilk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-HotMilk.a"; path = "libPods-HotMilk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5173EC2FE9F4717E3B9EFF0DAFA05F6 /* UIButton+Color.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+Color.h"; path = "RDDevLibrary/UIButton+Color.h"; sourceTree = "<group>"; };
+		ABF66EBC98B4D0B00D816D6915C891EB /* RDTableView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RDTableView.m; path = RDTableView/RDTableView.m; sourceTree = "<group>"; };
+		ACD05E1D34221FEFEAE00C9F884E0A21 /* UIButton+Color.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+Color.m"; path = "RDDevLibrary/UIButton+Color.m"; sourceTree = "<group>"; };
+		B4AD65FBCA1BCDFCCC865225BE119A02 /* RDMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RDMacros.h; path = RDDevLibrary/RDMacros.h; sourceTree = "<group>"; };
+		B89323B2767B4CEE447821BBE1D2263E /* Pods-HotMilk-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HotMilk-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BED899003503036E205506E7B6073116 /* RDDevLibrary-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RDDevLibrary-prefix.pch"; sourceTree = "<group>"; };
+		C2B9FCCFF4808DCA1CAE23A76DAAB5F1 /* RDTableView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RDTableView-prefix.pch"; sourceTree = "<group>"; };
+		C501602B16AB6E07C2457FCC7FA8FB78 /* RDDevLibrary-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RDDevLibrary-dummy.m"; sourceTree = "<group>"; };
+		CB088F219877673C1D49CFBDABE2DDA9 /* RDTableView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RDTableView.h; path = RDTableView/RDTableView.h; sourceTree = "<group>"; };
+		CB52BE6313054D96AB7BA6398269C567 /* Pods-HotMilk-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HotMilk-dummy.m"; sourceTree = "<group>"; };
+		CD267C1332BEB10F0807DEABA78B5951 /* RDFunction.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RDFunction.m; path = RDDevLibrary/RDFunction.m; sourceTree = "<group>"; };
+		CDC12CB1F1229FE3802F309BA147B98F /* Pods-HotMilk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HotMilk.release.xcconfig"; sourceTree = "<group>"; };
+		D5B10054DE83677103BD6C3D617D5B1B /* RDTRefreshCover.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RDTRefreshCover.h; path = RDTableView/RDTRefreshCover.h; sourceTree = "<group>"; };
+		D84ECEFC90423FA8D11B5A19DC7026B2 /* Pods-HotMilk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HotMilk.debug.xcconfig"; sourceTree = "<group>"; };
+		DC41448726299C885B61229F9CEAC97A /* RDTableView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RDTableView-dummy.m"; sourceTree = "<group>"; };
+		DC463DADD4BBE7E2C4223D8A1C7B7B46 /* RDDevLibrary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RDDevLibrary.h; path = RDDevLibrary/RDDevLibrary.h; sourceTree = "<group>"; };
+		E05FF1BC90BB374D65C86FDBE0D1947D /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ImageEffects.m"; path = "RDDevLibrary/UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		E479772FB809A19EB56E67CE9C862F26 /* RDKeyChain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RDKeyChain.h; path = RDDevLibrary/RDKeyChain.h; sourceTree = "<group>"; };
+		E8CD9D83CCCA82058582DCFE8304A193 /* Pods-HotMilk-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HotMilk-frameworks.sh"; sourceTree = "<group>"; };
+		F0CC04A85FBE7A4A2C37822453AD7BA1 /* RDTableView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RDTableView.xcconfig; sourceTree = "<group>"; };
+		F38C86040EA06BAC55D3199B3821DDA8 /* RDFileManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RDFileManager.m; path = RDDevLibrary/RDFileManager.m; sourceTree = "<group>"; };
+		F443ED76A2D4423B6757BC564203F24D /* UIImage+Color.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Color.m"; path = "RDDevLibrary/UIImage+Color.m"; sourceTree = "<group>"; };
+		F5F3DD96696A308A6EC955C98FBEC9CF /* RDKeyChain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RDKeyChain.m; path = RDDevLibrary/RDKeyChain.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		34AD425DFF184AB79D47FA60C7C90ABC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49156114BD16D04FD2FCF5215D362E33 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49B09B21CACDEB4499D1983E19CEC62D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0F8D2E47FE03D3B91B51069F7C273AF4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1E3AFBB7D9863308EA3F20E0AB47B572 /* Pods-HotMilk */ = {
+			isa = PBXGroup;
+			children = (
+				B89323B2767B4CEE447821BBE1D2263E /* Pods-HotMilk-acknowledgements.markdown */,
+				4521DAEA72B72AC151AA865EF8A6B6B1 /* Pods-HotMilk-acknowledgements.plist */,
+				CB52BE6313054D96AB7BA6398269C567 /* Pods-HotMilk-dummy.m */,
+				E8CD9D83CCCA82058582DCFE8304A193 /* Pods-HotMilk-frameworks.sh */,
+				082D336CBECB9EB3D2D541ED73B89042 /* Pods-HotMilk-resources.sh */,
+				D84ECEFC90423FA8D11B5A19DC7026B2 /* Pods-HotMilk.debug.xcconfig */,
+				CDC12CB1F1229FE3802F309BA147B98F /* Pods-HotMilk.release.xcconfig */,
+			);
+			name = "Pods-HotMilk";
+			path = "Target Support Files/Pods-HotMilk";
+			sourceTree = "<group>";
+		};
+		2008ADC63BBB2E45B7B3421AF38EFBA6 /* RDDevLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				61441FC4B52FC091EB474AB1852327C7 /* RDAudioPlayer.h */,
+				0AB959B53D11F58D30BF71AE47ADBFFE /* RDAudioPlayer.m */,
+				DC463DADD4BBE7E2C4223D8A1C7B7B46 /* RDDevLibrary.h */,
+				65B6E408F04B9D87752D237265645C75 /* RDFileManager.h */,
+				F38C86040EA06BAC55D3199B3821DDA8 /* RDFileManager.m */,
+				27373CF40C21E3C904EECDFFEA5BE9E7 /* RDFunction.h */,
+				CD267C1332BEB10F0807DEABA78B5951 /* RDFunction.m */,
+				54B41747B557551759D3C53716DC69B5 /* RDImageManager.h */,
+				964FDB2C0EBB8481AFC22FF746F6EA2C /* RDImageManager.m */,
+				E479772FB809A19EB56E67CE9C862F26 /* RDKeyChain.h */,
+				F5F3DD96696A308A6EC955C98FBEC9CF /* RDKeyChain.m */,
+				B4AD65FBCA1BCDFCCC865225BE119A02 /* RDMacros.h */,
+				335847F35528E9E75A99CDFEB6D3CA49 /* RDMacros.m */,
+				A5173EC2FE9F4717E3B9EFF0DAFA05F6 /* UIButton+Color.h */,
+				ACD05E1D34221FEFEAE00C9F884E0A21 /* UIButton+Color.m */,
+				66ED02CBFB710A0EE6B8E963259F83C9 /* UIButton+Spin.h */,
+				6FC2FCBCD52EB8BD389EBEA7E12422B8 /* UIButton+Spin.m */,
+				838B8D02D324328F0A092F60156D7DEF /* UIImage+Color.h */,
+				F443ED76A2D4423B6757BC564203F24D /* UIImage+Color.m */,
+				770EB87FC7D2D81D93AF03BA71E92AF7 /* UIImage+ImageEffects.h */,
+				E05FF1BC90BB374D65C86FDBE0D1947D /* UIImage+ImageEffects.m */,
+				F8D2CA97B68A3660D3CD7F6DAD259C4A /* Support Files */,
+			);
+			name = RDDevLibrary;
+			path = RDDevLibrary;
+			sourceTree = "<group>";
+		};
+		56892434A4C6C0B67551A8CDB171071F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2008ADC63BBB2E45B7B3421AF38EFBA6 /* RDDevLibrary */,
+				D1EC9918484EA90677DA5E3821378B4A /* RDTableView */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				0F8D2E47FE03D3B91B51069F7C273AF4 /* Frameworks */,
+				56892434A4C6C0B67551A8CDB171071F /* Pods */,
+				AED78C52EA89C83CABC78C3D3E65B9FC /* Products */,
+				BBD7D841012750CDA31AB7888F777678 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		AED78C52EA89C83CABC78C3D3E65B9FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9B5AC176CDFD275C8E6B3F00BF62FFD0 /* libPods-HotMilk.a */,
+				45D983E5DC47B6904C0A0D7B567C469E /* libRDDevLibrary.a */,
+				8F172315911FD91CEA8A86F5F0F5092A /* libRDTableView.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BBD7D841012750CDA31AB7888F777678 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1E3AFBB7D9863308EA3F20E0AB47B572 /* Pods-HotMilk */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		D1EC9918484EA90677DA5E3821378B4A /* RDTableView */ = {
+			isa = PBXGroup;
+			children = (
+				77E47CA85E3949AC1703238505112924 /* RDSuperCell.h */,
+				49A470A39EE33430A54198CEBE3B3038 /* RDSuperCell.m */,
+				CB088F219877673C1D49CFBDABE2DDA9 /* RDTableView.h */,
+				ABF66EBC98B4D0B00D816D6915C891EB /* RDTableView.m */,
+				17E7541F0D30C4E7598E2DEDDC51E690 /* RDTLoadingDots.h */,
+				4F1CF0E0F409973CC03AB1D9183E742D /* RDTLoadingDots.m */,
+				D5B10054DE83677103BD6C3D617D5B1B /* RDTRefreshCover.h */,
+				4794906706013751C4D3FC82E6CF68AE /* RDTRefreshCover.m */,
+				E9EC6DF118C3D6B09CC8C5A073538E30 /* Support Files */,
+			);
+			name = RDTableView;
+			path = RDTableView;
+			sourceTree = "<group>";
+		};
+		E9EC6DF118C3D6B09CC8C5A073538E30 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F0CC04A85FBE7A4A2C37822453AD7BA1 /* RDTableView.xcconfig */,
+				DC41448726299C885B61229F9CEAC97A /* RDTableView-dummy.m */,
+				C2B9FCCFF4808DCA1CAE23A76DAAB5F1 /* RDTableView-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/RDTableView";
+			sourceTree = "<group>";
+		};
+		F8D2CA97B68A3660D3CD7F6DAD259C4A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				036E777C4596B5BC5B93ACB56B3FD2A2 /* RDDevLibrary.xcconfig */,
+				C501602B16AB6E07C2457FCC7FA8FB78 /* RDDevLibrary-dummy.m */,
+				BED899003503036E205506E7B6073116 /* RDDevLibrary-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/RDDevLibrary";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		28077CDC8F3731AF22AE853380E8D58E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF5309D8075951DACE7A641D46FE7696 /* RDAudioPlayer.h in Headers */,
+				8F2B7B405BB45CEA9ABEE07EEC845377 /* RDDevLibrary.h in Headers */,
+				7E129EA63EC5A2946E181BB7A8D3F536 /* RDFileManager.h in Headers */,
+				BB3E0555900D8CF8B7221186F7C1DF72 /* RDFunction.h in Headers */,
+				FF92F3ECE126000CEDABD425E31FF5CF /* RDImageManager.h in Headers */,
+				CACD6EEF98DCE90465EC4C6E8A9696BF /* RDKeyChain.h in Headers */,
+				0E68B44CC32D9FA53672266059179EC9 /* RDMacros.h in Headers */,
+				293A8C88B8EFF91841A57057649C024E /* UIButton+Color.h in Headers */,
+				5CFB1F78C4ADA9FF7E1FF1854F587C56 /* UIButton+Spin.h in Headers */,
+				A2301D2E9F33495447B649707C46B663 /* UIImage+Color.h in Headers */,
+				1CA5485B7B33EDD2C9A327961BB6A3B6 /* UIImage+ImageEffects.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68D17E7F37AA1615B6B59EFB52411955 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EC94B4043C12D577A8E966A2AA3F709 /* RDSuperCell.h in Headers */,
+				0E221B94A242DC8062C51F3D93D193C5 /* RDTableView.h in Headers */,
+				7F207EB22F003C613C90DBBA74BCC702 /* RDTLoadingDots.h in Headers */,
+				BBE912ADBAA7377302643C03102D0432 /* RDTRefreshCover.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		241C7BDBC84ABC73A53CC4BE0613C561 /* RDDevLibrary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35B50E57EB227D5DFFD441D6C041F8A2 /* Build configuration list for PBXNativeTarget "RDDevLibrary" */;
+			buildPhases = (
+				C179DE133E5B6BE908596FD366EF62CB /* Sources */,
+				49B09B21CACDEB4499D1983E19CEC62D /* Frameworks */,
+				28077CDC8F3731AF22AE853380E8D58E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RDDevLibrary;
+			productName = RDDevLibrary;
+			productReference = 45D983E5DC47B6904C0A0D7B567C469E /* libRDDevLibrary.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		2B6C419C7707223504726ABBB40BA14C /* RDTableView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA44F15658238EDD62827FD4A627AC7A /* Build configuration list for PBXNativeTarget "RDTableView" */;
+			buildPhases = (
+				2A5C400436511FB4BFE47D5B2E330730 /* Sources */,
+				34AD425DFF184AB79D47FA60C7C90ABC /* Frameworks */,
+				68D17E7F37AA1615B6B59EFB52411955 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RDTableView;
+			productName = RDTableView;
+			productReference = 8F172315911FD91CEA8A86F5F0F5092A /* libRDTableView.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		FAE40E314BC1CEEE159DA78908CDC7E5 /* Pods-HotMilk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04BE6D2DA75F47960B436C620A8F40D2 /* Build configuration list for PBXNativeTarget "Pods-HotMilk" */;
+			buildPhases = (
+				B8B54B455C4D18924A9BFD9F9BCC0FDF /* Sources */,
+				49156114BD16D04FD2FCF5215D362E33 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E007E8DC7E6487FE9D0C2684A0330D16 /* PBXTargetDependency */,
+				3A7468FF38C1C5C1AC8150ED745AE846 /* PBXTargetDependency */,
+			);
+			name = "Pods-HotMilk";
+			productName = "Pods-HotMilk";
+			productReference = 9B5AC176CDFD275C8E6B3F00BF62FFD0 /* libPods-HotMilk.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = AED78C52EA89C83CABC78C3D3E65B9FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FAE40E314BC1CEEE159DA78908CDC7E5 /* Pods-HotMilk */,
+				241C7BDBC84ABC73A53CC4BE0613C561 /* RDDevLibrary */,
+				2B6C419C7707223504726ABBB40BA14C /* RDTableView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2A5C400436511FB4BFE47D5B2E330730 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				904E2D08AD136156C3360937B403815F /* RDSuperCell.m in Sources */,
+				142CAD9F0AE95C277B22AFC4D0938C20 /* RDTableView-dummy.m in Sources */,
+				262CDE86284B71B0B12F7311212E4979 /* RDTableView.m in Sources */,
+				A1CF111A436F612E3B7222B872DB4CC9 /* RDTLoadingDots.m in Sources */,
+				76867EEA5B9C38C5CCF4EF1CF4481DD1 /* RDTRefreshCover.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8B54B455C4D18924A9BFD9F9BCC0FDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71721ACADA1A5FBAFF23F6F3093B303A /* Pods-HotMilk-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C179DE133E5B6BE908596FD366EF62CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51F0CF94FB88C47E7F5FD91CDDE10B8B /* RDAudioPlayer.m in Sources */,
+				E045B3AED0622FE2845F110A6F30CDD4 /* RDDevLibrary-dummy.m in Sources */,
+				5CE30688D1A5499BFF6EA202C441831A /* RDFileManager.m in Sources */,
+				470D6BABC84289533244FB472C5772A9 /* RDFunction.m in Sources */,
+				546CD6173F417BC2BB8E28AC7C545D42 /* RDImageManager.m in Sources */,
+				B010832C14C0D58904EBF6D98ED74C4B /* RDKeyChain.m in Sources */,
+				C283F288A626E6A66AD11543157FD6A7 /* RDMacros.m in Sources */,
+				695C5F151CFC530E3B2618889EEB50EB /* UIButton+Color.m in Sources */,
+				209D503660429749171729DA0C9A7CC3 /* UIButton+Spin.m in Sources */,
+				8DB49CC1C649DABC82B6FB9067B64C1E /* UIImage+Color.m in Sources */,
+				4F025A37B1296763F80BF838390CB748 /* UIImage+ImageEffects.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3A7468FF38C1C5C1AC8150ED745AE846 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RDTableView;
+			target = 2B6C419C7707223504726ABBB40BA14C /* RDTableView */;
+			targetProxy = 643CAE9A97BA3D272471420D49376FBB /* PBXContainerItemProxy */;
+		};
+		E007E8DC7E6487FE9D0C2684A0330D16 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RDDevLibrary;
+			target = 241C7BDBC84ABC73A53CC4BE0613C561 /* RDDevLibrary */;
+			targetProxy = 6B512FE8E74F987BF677C2AC0A0B3190 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		14FC8D4ED027B4CA44059DDA7E920D35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 036E777C4596B5BC5B93ACB56B3FD2A2 /* RDDevLibrary.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/RDDevLibrary/RDDevLibrary-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = RDDevLibrary;
+				PRODUCT_NAME = RDDevLibrary;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		178BD77257E5CFE58ABE1086097A6AAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D84ECEFC90423FA8D11B5A19DC7026B2 /* Pods-HotMilk.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		21C9BC9188438316E16E88758661B423 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDC12CB1F1229FE3802F309BA147B98F /* Pods-HotMilk.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		553022A828EE1991F07D2D73F565AEF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		58CE816B060A41D32CEC095441D0E3E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		BA06C72E13F656204BB90D0FF07B8ACB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0CC04A85FBE7A4A2C37822453AD7BA1 /* RDTableView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/RDTableView/RDTableView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = RDTableView;
+				PRODUCT_NAME = RDTableView;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DB6246A438CECD737B391871499FF5CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0CC04A85FBE7A4A2C37822453AD7BA1 /* RDTableView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/RDTableView/RDTableView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = RDTableView;
+				PRODUCT_NAME = RDTableView;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF4F6855C6AC9717DE98F52CB453E6C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 036E777C4596B5BC5B93ACB56B3FD2A2 /* RDDevLibrary.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/RDDevLibrary/RDDevLibrary-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = RDDevLibrary;
+				PRODUCT_NAME = RDDevLibrary;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04BE6D2DA75F47960B436C620A8F40D2 /* Build configuration list for PBXNativeTarget "Pods-HotMilk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				178BD77257E5CFE58ABE1086097A6AAB /* Debug */,
+				21C9BC9188438316E16E88758661B423 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				553022A828EE1991F07D2D73F565AEF8 /* Debug */,
+				58CE816B060A41D32CEC095441D0E3E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		35B50E57EB227D5DFFD441D6C041F8A2 /* Build configuration list for PBXNativeTarget "RDDevLibrary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF4F6855C6AC9717DE98F52CB453E6C4 /* Debug */,
+				14FC8D4ED027B4CA44059DDA7E920D35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA44F15658238EDD62827FD4A627AC7A /* Build configuration list for PBXNativeTarget "RDTableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA06C72E13F656204BB90D0FF07B8ACB /* Debug */,
+				DB6246A438CECD737B391871499FF5CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
