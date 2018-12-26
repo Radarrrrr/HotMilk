@@ -12,6 +12,8 @@
 		0C451B2321A1C1350081424F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C451B2121A1C1350081424F /* LaunchScreen.storyboard */; };
 		0C451B2621A1C1350081424F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C451B2521A1C1350081424F /* main.m */; };
 		0C451B2E21A1C2830081424F /* HotMilkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C451B2D21A1C2830081424F /* HotMilkViewController.m */; };
+		0C64A6BE21D4159E006B7A93 /* BabyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C64A6BD21D4159E006B7A93 /* BabyView.m */; };
+		0C64A6C121D42017006B7A93 /* BabyMilkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C64A6C021D42017006B7A93 /* BabyMilkCell.m */; };
 		0C6941E321A4953E004D3DB9 /* MoveableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6941E121A4953E004D3DB9 /* MoveableView.m */; };
 		9000A92B9E85A0E3FC2D7258 /* libPods-HotMilk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1431FA8BAC0F18250F0794F6 /* libPods-HotMilk.a */; };
 /* End PBXBuildFile section */
@@ -27,6 +29,10 @@
 		0C451B2521A1C1350081424F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0C451B2C21A1C2830081424F /* HotMilkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HotMilkViewController.h; sourceTree = "<group>"; };
 		0C451B2D21A1C2830081424F /* HotMilkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HotMilkViewController.m; sourceTree = "<group>"; };
+		0C64A6BC21D4159E006B7A93 /* BabyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BabyView.h; sourceTree = "<group>"; };
+		0C64A6BD21D4159E006B7A93 /* BabyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BabyView.m; sourceTree = "<group>"; };
+		0C64A6BF21D42017006B7A93 /* BabyMilkCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BabyMilkCell.h; sourceTree = "<group>"; };
+		0C64A6C021D42017006B7A93 /* BabyMilkCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BabyMilkCell.m; sourceTree = "<group>"; };
 		0C6941E121A4953E004D3DB9 /* MoveableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoveableView.m; sourceTree = "<group>"; };
 		0C6941E221A4953E004D3DB9 /* MoveableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoveableView.h; sourceTree = "<group>"; };
 		1431FA8BAC0F18250F0794F6 /* libPods-HotMilk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HotMilk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +77,10 @@
 				0C451B1721A1C1330081424F /* AppDelegate.m */,
 				0C451B2C21A1C2830081424F /* HotMilkViewController.h */,
 				0C451B2D21A1C2830081424F /* HotMilkViewController.m */,
+				0C64A6BC21D4159E006B7A93 /* BabyView.h */,
+				0C64A6BD21D4159E006B7A93 /* BabyView.m */,
+				0C64A6BF21D42017006B7A93 /* BabyMilkCell.h */,
+				0C64A6C021D42017006B7A93 /* BabyMilkCell.m */,
 				0C6941E221A4953E004D3DB9 /* MoveableView.h */,
 				0C6941E121A4953E004D3DB9 /* MoveableView.m */,
 				0C451B1F21A1C1350081424F /* Assets.xcassets */,
@@ -190,9 +200,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C64A6C121D42017006B7A93 /* BabyMilkCell.m in Sources */,
 				0C451B2E21A1C2830081424F /* HotMilkViewController.m in Sources */,
 				0C451B2621A1C1350081424F /* main.m in Sources */,
 				0C451B1821A1C1330081424F /* AppDelegate.m in Sources */,
+				0C64A6BE21D4159E006B7A93 /* BabyView.m in Sources */,
 				0C6941E321A4953E004D3DB9 /* MoveableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

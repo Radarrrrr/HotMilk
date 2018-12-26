@@ -99,23 +99,23 @@
     float toY = self.center.y + offsetY;
     
     //判断是否越界了
-    if(toX < self.frame.size.width/2) 
-    {
-        toX = self.frame.size.width/2;
-    }
-    else if(toX > self.superview.frame.size.width-self.frame.size.width/2)
-    {
-        toX = self.superview.frame.size.width-self.frame.size.width/2;
-    }
-    
-    if(toY < self.frame.size.height/2) 
-    {
-        toY = self.frame.size.height/2;
-    }
-    else if(toY > self.superview.frame.size.height-self.frame.size.height/2)
-    {
-        toY = self.superview.frame.size.height-self.frame.size.height/2;
-    }
+//    if(toX < self.frame.size.width/2) 
+//    {
+//        toX = self.frame.size.width/2;
+//    }
+//    else if(toX > self.superview.frame.size.width-self.frame.size.width/2)
+//    {
+//        toX = self.superview.frame.size.width-self.frame.size.width/2;
+//    }
+//    
+//    if(toY < self.frame.size.height/2) 
+//    {
+//        toY = self.frame.size.height/2;
+//    }
+//    else if(toY > self.superview.frame.size.height-self.frame.size.height/2)
+//    {
+//        toY = self.superview.frame.size.height-self.frame.size.height/2;
+//    }
 
     
     if(_horizontalOnly)
