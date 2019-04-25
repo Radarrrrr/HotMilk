@@ -23,7 +23,7 @@
 
 @property (nonatomic, strong) DDPageScrollView *contentScroll;
 @property (nonatomic, strong) NSMutableArray *babyRecords;
-
+@property (nonatomic, strong) UILabel *dateLabel;
 
 @end
 
@@ -38,6 +38,18 @@
     self.navigationItem.title = @"HOT MILK";
     
     self.babyRecords = [[NSMutableArray alloc] init];
+    
+    //左上角日期
+    self.dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 150, 44)];
+    _dateLabel.backgroundColor = [UIColor clearColor];
+    _dateLabel.textAlignment = NSTextAlignmentRight;
+    _dateLabel.font = [UIFont boldSystemFontOfSize:13.0];
+    _dateLabel.textColor = COLOR_TEXT_B;
+    
+    UIBarButtonItem *dateItem = [[UIBarButtonItem alloc] initWithCustomView:_dateLabel];
+    self.navigationItem.rightBarButtonItem = dateItem;
+    
+    //右上角设置
     
 
     //添加主容器
@@ -59,7 +71,8 @@
     //初始化数据
     [self loadBabyRecords];
    
-    
+    //延时滚动到今天页面
+    [self performSelector:@selector(scrollToTodayPage) withObject:nil afterDelay:1.0];
 }
 
 + (BOOL)iPhoneXorLater
@@ -79,6 +92,34 @@
     return NO;
 }
 
+- (void)scrollToTodayPage
+{
+    NSInteger toIndex = [_babyRecords count]-1;
+    //滚动到今天页面
+    [_contentScroll scrollToPageIndex:toIndex animated:NO];
+    
+    //改变右上角日期
+    [self changeDateForPageIndex:toIndex];
+}
+
+- (void)changeDateForPageIndex:(NSInteger)pageIndex
+{
+    NSDictionary *record = [self recordForPageIndex:pageIndex];
+    if(!DICTIONARYVALID(record)) return;
+    
+    NSString *dateStr = [record objectForKey:@"date"];
+    
+    NSDate *date = [RDFunction dateFromString:dateStr useFormat:@"yyyy-MM-dd"];
+    NSString *showDate = [RDFunction stringFromDate:date useFormat:@"MM月dd日"];
+    
+    NSString *todayDate = [RDFunction stringFromDate:[NSDate date] useFormat:@"yyyy-MM-dd"];
+    if([todayDate isEqualToString:dateStr])
+    {
+        showDate = [showDate stringByAppendingString:@"(今天)"];
+    }
+    
+    _dateLabel.text = showDate;
+}
 
 - (void)loadBabyRecords
 {
@@ -86,7 +127,7 @@
     //测试数据
     NSArray *records =  @[
                         @{
-                            @"date":@"2019-04-25",
+                            @"date":@"2019-04-26",
                             @"data":@{
                                     @"dot":@{
                                             @"AD":@"1",
@@ -109,6 +150,39 @@
                                             @"bian":@"1",
                                             @"milk":@[
                                                     @{@"time":@"7:00", @"count":@"110ml"},
+                                                    @{@"time":@"9:00", @"count":@"110ml"},
+                                                    @{@"time":@"9:00", @"count":@"110ml"},
+                                                    @{@"time":@"9:00", @"count":@"110ml"},
+                                                    @{@"time":@"9:00", @"count":@"110ml"},
+                                                    @{@"time":@"9:00", @"count":@"110ml"}
+                                                    ]
+                                            }
+                                    }
+                            },
+                        @{
+                            @"date":@"2019-04-25",
+                            @"data":@{
+                                    @"dot":@{
+                                            @"AD":@"1",
+                                            @"gai":@"1",
+                                            @"tie":@"1",
+                                            @"bian":@"1",
+                                            @"milk":@[
+                                                    @{@"time":@"8:00", @"count":@"110ml"},
+                                                    @{@"time":@"9:00", @"count":@"110ml"},
+                                                    @{@"time":@"9:00", @"count":@"110ml"},
+                                                    @{@"time":@"9:00", @"count":@"110ml"},
+                                                    @{@"time":@"9:00", @"count":@"110ml"},
+                                                    @{@"time":@"9:00", @"count":@"110ml"}
+                                                    ]
+                                            },
+                                    @"six":@{
+                                            @"AD":@"1",
+                                            @"gai":@"1",
+                                            @"tie":@"1",
+                                            @"bian":@"1",
+                                            @"milk":@[
+                                                    @{@"time":@"8:00", @"count":@"110ml"},
                                                     @{@"time":@"9:00", @"count":@"110ml"},
                                                     @{@"time":@"9:00", @"count":@"110ml"},
                                                     @{@"time":@"9:00", @"count":@"110ml"},
@@ -120,39 +194,6 @@
                             },
                         @{
                             @"date":@"2019-04-24",
-                            @"data":@{
-                                    @"dot":@{
-                                            @"AD":@"1",
-                                            @"gai":@"1",
-                                            @"tie":@"1",
-                                            @"bian":@"1",
-                                            @"milk":@[
-                                                    @{@"time":@"8:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"}
-                                                    ]
-                                            },
-                                    @"six":@{
-                                            @"AD":@"1",
-                                            @"gai":@"1",
-                                            @"tie":@"1",
-                                            @"bian":@"1",
-                                            @"milk":@[
-                                                    @{@"time":@"8:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"}
-                                                    ]
-                                            }
-                                    }
-                            },
-                        @{
-                            @"date":@"2019-04-23",
                             @"data":@{
                                     @"dot":@{
                                             @"AD":@"1",
@@ -188,6 +229,16 @@
     
     [_babyRecords addObjectsFromArray:records];    
     
+}
+
+- (NSDictionary *)recordForPageIndex:(NSInteger)pageIndex
+{
+    if(!ARRAYVALID(_babyRecords)) return nil;
+    
+    NSInteger recordIndex = _babyRecords.count -1 - pageIndex;
+    NSDictionary *record = [_babyRecords objectAtIndex:recordIndex];
+    
+    return record;
 }
 
 
@@ -235,8 +286,7 @@
 }
 - (UIView*)pageScrollView:(DDPageScrollView*)pageScrollView viewForPageAtIndex:(NSInteger)pageIndex
 {
-    NSInteger recordIndex = _babyRecords.count -1 - pageIndex;
-    NSDictionary *record = [_babyRecords objectAtIndex:recordIndex];
+    NSDictionary *record = [self recordForPageIndex:pageIndex];
     
     UIView *twinsView = [self createTwinsViewForRecord:record atPageIndex:pageIndex];
     
@@ -246,9 +296,12 @@
 //DDPageScrollViewDelegate
 - (void)ddPageScrollViewDidChangeToPageIndex:(DDPageScrollView*)pageScrollView pageIndex:(NSInteger)index;
 {
-    NSLog(@"page changed to index: %ld", index);
-    NSInteger  curPageIndex = [pageScrollView currentPageIndex];
-    NSLog(@"当前获取到的页面index: %ld", curPageIndex);
+//    NSLog(@"page changed to index: %ld", index);
+//    NSInteger  curPageIndex = [pageScrollView currentPageIndex];
+//    NSLog(@"当前获取到的页面index: %ld", curPageIndex);
+    
+    //改变右上角日期
+    [self changeDateForPageIndex:index];
 }
 - (void)ddPageScrollViewOverFirstPage:(DDPageScrollView*)pageScrollView
 {
