@@ -13,7 +13,7 @@
 
 @property (nonatomic, strong) UIImageView *faceView;
 @property (nonatomic, strong) RDTableView *listTable;
-@property (nonatomic, strong) UITextView *statusView;
+@property (nonatomic, strong) UIView *statusView;
 
 @end
 
@@ -27,27 +27,32 @@
     {
         self.backgroundColor = [UIColor clearColor];
         
-        //添加头像
-        self.faceView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 150, 150)];
-        _faceView.backgroundColor = [UIColor redColor];
-        [self addSubview:_faceView];
-        
-        [RDFunction addRadiusToView:_faceView radius:CGRectGetWidth(_faceView.frame)/2];
-        
         //添加列表
         self.listTable = [[RDTableView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
         _listTable.delegate = self;
+        _listTable.backgroundColor = [UIColor clearColor];
+        _listTable.tableView.backgroundColor = [UIColor clearColor];
+        _listTable.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [self addSubview:_listTable];
         
-        //添加状态头
-        self.statusView = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, CGRectGetWidth(_faceView.frame))];
-        _statusView.backgroundColor = [UIColor grayColor];
+        //添加状态头区域
+        self.statusView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, 150)];
+        _statusView.backgroundColor = [UIColor clearColor];
         [_listTable setSection:0 headerView:_statusView footerView:nil];
         
-        //把头像提到上层
-        [self bringSubviewToFront:_faceView];
+        //添加头像
+        self.faceView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 80, 80)];
+        _faceView.backgroundColor = [UIColor blueColor];
+        [_statusView addSubview:_faceView];
         
+        [RDFunction addRadiusToView:_faceView radius:CGRectGetWidth(_faceView.frame)/2];
         
+        //分割线
+        //[HMFunction addDotLineToView:_statusView fromPoint:CGPointMake(15, CGRectGetHeight(_statusView.frame)) toPoint:CGPointMake(CGRectGetWidth(_statusView.frame)-30, CGRectGetHeight(_statusView.frame))];
+        UIView *line = [[UIView alloc] initWithFrame:CGRectMake(15, CGRectGetHeight(_statusView.frame), CGRectGetWidth(_statusView.frame)-30, 1)];
+        line.backgroundColor = COLOR_LINE_B;
+        [_statusView addSubview:line];
+
     }
     return self;
 }

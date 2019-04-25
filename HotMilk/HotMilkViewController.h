@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DDPageScrollView.h"
 
-@interface HotMilkViewController : UIViewController
+@interface HotMilkViewController : UIViewController <DDPageScrollViewDelegate, DDPageScrollViewDataSource>
 
 @end

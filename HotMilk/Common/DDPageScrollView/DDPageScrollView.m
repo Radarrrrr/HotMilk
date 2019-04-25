@@ -87,7 +87,7 @@
         
         
         //add _pcBackView
-        self.pcBackView = [[[UIView alloc] initWithFrame:CGRectMake(0, frame.size.height-16, frame.size.width, 12)] autorelease];
+        self.pcBackView = [[[UIView alloc] initWithFrame:CGRectMake(0, frame.size.height-16-10, frame.size.width, 12)] autorelease];
         _pcBackView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleTopMargin;
         _pcBackView.backgroundColor = [UIColor blackColor];
         _pcBackView.alpha = 0.3;
@@ -97,7 +97,7 @@
         [self addSubview:_pcBackView];
         
         //add pagectrl
-        _pageCtrl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, frame.size.height-20, frame.size.width, 20)];
+        _pageCtrl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, frame.size.height-20-10, frame.size.width, 20)];
         _pageCtrl.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleTopMargin;
         _pageCtrl.hidesForSinglePage = YES;
         _pageCtrl.userInteractionEnabled = NO;
@@ -478,7 +478,7 @@
 
     //重置self.pages
 	self.pages = pagesArr;
-	_scrollView.contentSize = CGSizeMake(content_w, self.frame.size.height);
+	_scrollView.contentSize = CGSizeMake(content_w, 0); //CGSizeMake(content_w, self.frame.size.height);
     
     
 	//判断是否把所有页面一次性全部读取完毕

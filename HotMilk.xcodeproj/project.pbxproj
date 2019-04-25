@@ -16,6 +16,8 @@
 		0C64A6C121D42017006B7A93 /* BabyMilkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C64A6C021D42017006B7A93 /* BabyMilkCell.m */; };
 		0C7E19122271B13E006A4546 /* DDPageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7E19102271B13E006A4546 /* DDPageScrollView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		0C7E19162271B23F006A4546 /* MoveableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7E19152271B23F006A4546 /* MoveableView.m */; };
+		0C7E19182271B2D5006A4546 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7E19172271B2D5006A4546 /* QuartzCore.framework */; };
+		0C7E191B22720B17006A4546 /* HMFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7E191A22720B17006A4546 /* HMFunction.m */; };
 		9000A92B9E85A0E3FC2D7258 /* libPods-HotMilk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1431FA8BAC0F18250F0794F6 /* libPods-HotMilk.a */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +40,9 @@
 		0C7E19112271B13E006A4546 /* DDPageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDPageScrollView.h; sourceTree = "<group>"; };
 		0C7E19142271B23F006A4546 /* MoveableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoveableView.h; sourceTree = "<group>"; };
 		0C7E19152271B23F006A4546 /* MoveableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoveableView.m; sourceTree = "<group>"; };
+		0C7E19172271B2D5006A4546 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		0C7E191922720B17006A4546 /* HMFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMFunction.h; sourceTree = "<group>"; };
+		0C7E191A22720B17006A4546 /* HMFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMFunction.m; sourceTree = "<group>"; };
 		1431FA8BAC0F18250F0794F6 /* libPods-HotMilk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HotMilk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86A562146A2BB8E29B4B31A3 /* Pods-HotMilk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotMilk.release.xcconfig"; path = "Pods/Target Support Files/Pods-HotMilk/Pods-HotMilk.release.xcconfig"; sourceTree = "<group>"; };
 		AF58E5993DA4EECF2414F7BB /* Pods-HotMilk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotMilk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HotMilk/Pods-HotMilk.debug.xcconfig"; sourceTree = "<group>"; };
@@ -48,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C7E19182271B2D5006A4546 /* QuartzCore.framework in Frameworks */,
 				9000A92B9E85A0E3FC2D7258 /* libPods-HotMilk.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -76,6 +82,8 @@
 		0C451B1521A1C1330081424F /* HotMilk */ = {
 			isa = PBXGroup;
 			children = (
+				0C7E191922720B17006A4546 /* HMFunction.h */,
+				0C7E191A22720B17006A4546 /* HMFunction.m */,
 				0C7E190E2271B13E006A4546 /* Common */,
 				0C451B1621A1C1330081424F /* AppDelegate.h */,
 				0C451B1721A1C1330081424F /* AppDelegate.m */,
@@ -106,8 +114,8 @@
 		0C7E190F2271B13E006A4546 /* DDPageScrollView */ = {
 			isa = PBXGroup;
 			children = (
-				0C7E19102271B13E006A4546 /* DDPageScrollView.m */,
 				0C7E19112271B13E006A4546 /* DDPageScrollView.h */,
+				0C7E19102271B13E006A4546 /* DDPageScrollView.m */,
 			);
 			path = DDPageScrollView;
 			sourceTree = "<group>";
@@ -124,6 +132,7 @@
 		CDB943B49AA08B2D92A30A11 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0C7E19172271B2D5006A4546 /* QuartzCore.framework */,
 				1431FA8BAC0F18250F0794F6 /* libPods-HotMilk.a */,
 			);
 			name = Frameworks;
@@ -231,6 +240,7 @@
 			files = (
 				0C64A6C121D42017006B7A93 /* BabyMilkCell.m in Sources */,
 				0C451B2E21A1C2830081424F /* HotMilkViewController.m in Sources */,
+				0C7E191B22720B17006A4546 /* HMFunction.m in Sources */,
 				0C451B2621A1C1350081424F /* main.m in Sources */,
 				0C451B1821A1C1330081424F /* AppDelegate.m in Sources */,
 				0C64A6BE21D4159E006B7A93 /* BabyView.m in Sources */,

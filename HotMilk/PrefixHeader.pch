@@ -15,5 +15,6 @@
 
 #import "RDDevLibrary.h"
 #import "RDTableView.h"
+#import "HMFunction.h"
 
 #endif /* PrefixHeader_pch */

@@ -21,19 +21,8 @@
 
 @interface HotMilkViewController () <RDTableViewDelegate, MoveableViewDelegate>
 
-@property (nonatomic, strong) UIScrollView *contentScroll;
+@property (nonatomic, strong) DDPageScrollView *contentScroll;
 
-//@property (nonatomic, strong) BabyView *dotView;
-//@property (nonatomic, strong) BabyView *sixView;
-
-
-//@property (nonatomic, strong) UIImageView *faceViewDot;        //头像区域
-//@property (nonatomic, strong) UIImageView *faceViewSix;        //头像区域
-//
-//@property (nonatomic, strong) MoveableView *milkView;   //奶操作区
-//@property (nonatomic, strong) MoveableView *diaperView; //尿布操作区
-//@property (nonatomic, strong) MoveableView *nutritionView; //营养操作区
-//@property (nonatomic, strong) UIView *tipsView;   //状态提示区
 
 @end
 
@@ -44,70 +33,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = RGBS(220);
     self.navigationItem.title = @"HOT MILK";
     
-//    //添加头像区域
-//    self.faceViewDot = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCR_WIDTH/2, SCR_WIDTH/2)];
-//    _faceViewDot.backgroundColor = [UIColor greenColor];
-//    [self.view addSubview:_faceViewDot];
-//    
-//    self.faceViewSix = [[UIImageView alloc] initWithFrame:CGRectMake(SCR_WIDTH/2, 0, SCR_WIDTH/2, SCR_WIDTH/2)];
-//    _faceViewSix.backgroundColor = [UIColor yellowColor];
-//    [self.view addSubview:_faceViewSix];
-//    
-//    
-//    //添加营养操作区
-//    self.nutritionView = [[MoveableView alloc] initWithFrame:CGRectMake(0, HM_VIEW_HEIGHT-HM_NUTRITION_HEIGHT, SCR_WIDTH, HM_NUTRITION_HEIGHT)];
-//    _nutritionView.backgroundColor = [UIColor grayColor];
-//    [self.view addSubview:_nutritionView];
-//    
-//    
-//    //添加尿布操作区
-//    self.diaperView = [[MoveableView alloc] initWithFrame:CGRectMake(0, CGRectGetMinY(_nutritionView.frame)-HM_DIAPER_HEIGHT, SCR_WIDTH, HM_DIAPER_HEIGHT)];
-//    _diaperView.backgroundColor = [UIColor redColor];
-//    [self.view addSubview:_diaperView];
-//    
-//    //添加奶操作区
-//    self.milkView = [[MoveableView alloc] initWithFrame:CGRectMake(0, CGRectGetMinY(_diaperView.frame)-HM_MILK_HEIGHT, SCR_WIDTH, HM_MILK_HEIGHT)];
-//    _milkView.backgroundColor = [UIColor lightGrayColor];
-//    [self.view addSubview:_milkView];
-//    
-//    
-//    //添加状态提示区
-//    self.tipsView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(_faceViewDot.frame), SCR_WIDTH, CGRectGetMinY(_milkView.frame)-CGRectGetMaxY(_faceViewDot.frame))];
-//    _tipsView.backgroundColor = [UIColor blueColor];
-//    [self.view addSubview:_tipsView];
-    
-//    //修改头像区高度
-//    _faceViewDot.frame = CGRectMake(0, 0, SCR_WIDTH/2, CGRectGetMinY(_milkView.frame));
-//    _faceViewSix.frame = CGRectMake(SCR_WIDTH/2, 0, SCR_WIDTH/2, CGRectGetMinY(_milkView.frame));
-    
-    
-    
-    
+
     //添加主容器
-    self.contentScroll = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, SCR_WIDTH, SCR_HEIGHT-(HM_STATUS_BAR_HEIGHT)-44)];
-    _contentScroll.pagingEnabled = YES;
-    _contentScroll.scrollEnabled = YES;
-    _contentScroll.contentSize = CGSizeMake(SCR_WIDTH*2, CGRectGetWidth(_contentScroll.frame));
-    [self.view addSubview:_contentScroll];
+    self.contentScroll = [[DDPageScrollView alloc] initWithFrame:CGRectMake(0, 0, SCR_WIDTH, SCR_HEIGHT-(HM_STATUS_BAR_HEIGHT)-44)];
+    _contentScroll.backgroundColor = [UIColor clearColor]; //PS:如果设定bPageRoundRect=YES, 则backgroundColor必须为clearColor
+    _contentScroll.delegate = self;
+    _contentScroll.dataSource = self;
     
-    //显示今天的双胞胎页面
-    [self showTodayTwinsView];
+    _contentScroll.zoomEnabled = NO;
+    _contentScroll.pageCtrlEnabled = YES;
+    _contentScroll.pcBackEnabled = YES;
+    _contentScroll.circleEnabled = NO;
+    _contentScroll.ingoreMemory = NO;
+    _contentScroll.loadingStyle = DDPageScrollLoadingStylePreLoading;
+        
+    [self.view addSubview:_contentScroll];
     
     
 
+   
     
-    //添加主列表
-//    RDTableView *table = [[RDTableView alloc] initWithFrame:CGRectMake(0, 0, 320, 230)];
-//    table.delegate = self;
-//    table.tag = 1000;
-//    table.loadMoreStyle = LoadMoreStyleLoading;
-//    table.refreshStyle = RefreshStyleDropdown;
-//    table.multiSelectEnabled = YES;
-//    table.editRowEnabled = NO;
-//    table.moveRowEnabled = NO;
 }
 
 + (BOOL)iPhoneXorLater
@@ -127,20 +75,137 @@
     return NO;
 }
 
-- (void)showTodayTwinsView
+- (UIView*)createTwinsViewForData:(NSDictionary*)data atIndex:(NSInteger)index
 {
-//    //创建临时的双胞胎页面
-//    UIView *twinsView = [[UIView alloc] initWithFrame:<#(CGRect)#>];
-//    
-//    self.dotView = [[BabyView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(_contentScroll.frame), CGRectGetHeight(_contentScroll.frame))];
-//    _dotView.backgroundColor = [UIColor greenColor];
-//    [_contentScroll addSubview:_dotView];
-//    
-//    
-//    self.sixView = [[BabyView alloc] initWithFrame:CGRectMake(SCR_WIDTH, 0, CGRectGetWidth(_contentScroll.frame), CGRectGetHeight(_contentScroll.frame))];
-//    _sixView.backgroundColor = [UIColor yellowColor];
-//    [_contentScroll addSubview:_sixView];
+    //创建临时的双胞胎页面
+    UIView *twinsView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(_contentScroll.frame), CGRectGetHeight(_contentScroll.frame))];
+    
+    if(index%2 == 0)
+    {
+        twinsView.backgroundColor = RGBS(250);
+    }
+    else
+    {
+        twinsView.backgroundColor = RGBS(240);
+    }
+    
+    BabyView *dotView = [[BabyView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(twinsView.frame)/2, CGRectGetHeight(twinsView.frame))];
+    [twinsView addSubview:dotView];
+    
+    BabyView *sixView = [[BabyView alloc] initWithFrame:CGRectMake(CGRectGetWidth(twinsView.frame)/2, 0, CGRectGetWidth(twinsView.frame)/2, CGRectGetHeight(twinsView.frame))];
+    [twinsView addSubview:sixView];
+        
+    
+    //中线
+    [HMFunction addDotLineToView:twinsView fromPoint:CGPointMake(twinsView.center.x, 0) toPoint:CGPointMake(twinsView.center.x, CGRectGetHeight(twinsView.frame))];
+    
+    
+    return twinsView;
 }
+
+
+
+#pragma mark - 主容器相关方法
+//DDPageScrollViewDataSource
+- (NSInteger)numberOfPagesInPageScrollView:(DDPageScrollView*)pageScrollView
+{
+    return 2;
+}
+- (UIView*)pageScrollView:(DDPageScrollView*)pageScrollView viewForPageAtIndex:(NSInteger)pageIndex
+{
+    //测试数据
+    NSArray *datas =  @[
+                         @{
+                             @"date":@"2019-04-24",
+                             @"record":@{
+                                        @"dot":@{
+                                                   @"AD":@"1",
+                                                   @"gai":@"1",
+                                                   @"tie":@"1",
+                                                   @"bian":@"1",
+                                                   @"milk":@[
+                                                             @{@"time":@"9:00", @"count":@"110ml"},
+                                                             @{@"time":@"9:00", @"count":@"110ml"},
+                                                             @{@"time":@"9:00", @"count":@"110ml"},
+                                                             @{@"time":@"9:00", @"count":@"110ml"},
+                                                             @{@"time":@"9:00", @"count":@"110ml"},
+                                                             @{@"time":@"9:00", @"count":@"110ml"}
+                                                           ]
+                                                  },
+                                        @"six":@{
+                                                    @"AD":@"1",
+                                                    @"gai":@"1",
+                                                    @"tie":@"1",
+                                                    @"bian":@"1",
+                                                    @"milk":@[
+                                                            @{@"time":@"9:00", @"count":@"110ml"},
+                                                            @{@"time":@"9:00", @"count":@"110ml"},
+                                                            @{@"time":@"9:00", @"count":@"110ml"},
+                                                            @{@"time":@"9:00", @"count":@"110ml"},
+                                                            @{@"time":@"9:00", @"count":@"110ml"},
+                                                            @{@"time":@"9:00", @"count":@"110ml"}
+                                                        ]
+                                                }
+                                        }
+                             },
+                             @{
+                                 @"date":@"2019-04-25",
+                                 @"record":@{
+                                         @"dot":@{
+                                                 @"AD":@"1",
+                                                 @"gai":@"1",
+                                                 @"tie":@"1",
+                                                 @"bian":@"1",
+                                                 @"milk":@[
+                                                         @{@"time":@"9:00", @"count":@"110ml"},
+                                                         @{@"time":@"9:00", @"count":@"110ml"},
+                                                         @{@"time":@"9:00", @"count":@"110ml"},
+                                                         @{@"time":@"9:00", @"count":@"110ml"},
+                                                         @{@"time":@"9:00", @"count":@"110ml"},
+                                                         @{@"time":@"9:00", @"count":@"110ml"}
+                                                         ]
+                                                 },
+                                         @"six":@{
+                                                 @"AD":@"1",
+                                                 @"gai":@"1",
+                                                 @"tie":@"1",
+                                                 @"bian":@"1",
+                                                 @"milk":@[
+                                                         @{@"time":@"9:00", @"count":@"110ml"},
+                                                         @{@"time":@"9:00", @"count":@"110ml"},
+                                                         @{@"time":@"9:00", @"count":@"110ml"},
+                                                         @{@"time":@"9:00", @"count":@"110ml"},
+                                                         @{@"time":@"9:00", @"count":@"110ml"},
+                                                         @{@"time":@"9:00", @"count":@"110ml"}
+                                                         ]
+                                                 }
+                                         }
+                                 }
+                         ];
+    
+    
+    NSDictionary *data = [datas objectAtIndex:pageIndex];
+    
+    UIView *twinsView = [self createTwinsViewForData:data atIndex:pageIndex];
+    //if(pageIndex == 0) twinsView.backgroundColor = [UIColor grayColor];
+    return twinsView;
+}
+
+//DDPageScrollViewDelegate
+- (void)ddPageScrollViewDidChangeToPageIndex:(DDPageScrollView*)pageScrollView pageIndex:(NSInteger)index;
+{
+    NSLog(@"page changed to index: %ld", index);
+    NSInteger  curPageIndex = [pageScrollView currentPageIndex];
+    NSLog(@"当前获取到的页面index: %ld", curPageIndex);
+}
+- (void)ddPageScrollViewOverFirstPage:(DDPageScrollView*)pageScrollView
+{
+}
+- (void)ddPageScrollViewOverLastPage:(DDPageScrollView*)pageScrollView
+{
+}
+
+
 
 
 @end
