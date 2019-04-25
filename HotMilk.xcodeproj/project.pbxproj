@@ -14,7 +14,8 @@
 		0C451B2E21A1C2830081424F /* HotMilkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C451B2D21A1C2830081424F /* HotMilkViewController.m */; };
 		0C64A6BE21D4159E006B7A93 /* BabyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C64A6BD21D4159E006B7A93 /* BabyView.m */; };
 		0C64A6C121D42017006B7A93 /* BabyMilkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C64A6C021D42017006B7A93 /* BabyMilkCell.m */; };
-		0C6941E321A4953E004D3DB9 /* MoveableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6941E121A4953E004D3DB9 /* MoveableView.m */; };
+		0C7E19122271B13E006A4546 /* DDPageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7E19102271B13E006A4546 /* DDPageScrollView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0C7E19162271B23F006A4546 /* MoveableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7E19152271B23F006A4546 /* MoveableView.m */; };
 		9000A92B9E85A0E3FC2D7258 /* libPods-HotMilk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1431FA8BAC0F18250F0794F6 /* libPods-HotMilk.a */; };
 /* End PBXBuildFile section */
 
@@ -33,8 +34,10 @@
 		0C64A6BD21D4159E006B7A93 /* BabyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BabyView.m; sourceTree = "<group>"; };
 		0C64A6BF21D42017006B7A93 /* BabyMilkCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BabyMilkCell.h; sourceTree = "<group>"; };
 		0C64A6C021D42017006B7A93 /* BabyMilkCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BabyMilkCell.m; sourceTree = "<group>"; };
-		0C6941E121A4953E004D3DB9 /* MoveableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoveableView.m; sourceTree = "<group>"; };
-		0C6941E221A4953E004D3DB9 /* MoveableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoveableView.h; sourceTree = "<group>"; };
+		0C7E19102271B13E006A4546 /* DDPageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDPageScrollView.m; sourceTree = "<group>"; };
+		0C7E19112271B13E006A4546 /* DDPageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDPageScrollView.h; sourceTree = "<group>"; };
+		0C7E19142271B23F006A4546 /* MoveableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoveableView.h; sourceTree = "<group>"; };
+		0C7E19152271B23F006A4546 /* MoveableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoveableView.m; sourceTree = "<group>"; };
 		1431FA8BAC0F18250F0794F6 /* libPods-HotMilk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HotMilk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86A562146A2BB8E29B4B31A3 /* Pods-HotMilk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotMilk.release.xcconfig"; path = "Pods/Target Support Files/Pods-HotMilk/Pods-HotMilk.release.xcconfig"; sourceTree = "<group>"; };
 		AF58E5993DA4EECF2414F7BB /* Pods-HotMilk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotMilk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HotMilk/Pods-HotMilk.debug.xcconfig"; sourceTree = "<group>"; };
@@ -73,6 +76,7 @@
 		0C451B1521A1C1330081424F /* HotMilk */ = {
 			isa = PBXGroup;
 			children = (
+				0C7E190E2271B13E006A4546 /* Common */,
 				0C451B1621A1C1330081424F /* AppDelegate.h */,
 				0C451B1721A1C1330081424F /* AppDelegate.m */,
 				0C451B2C21A1C2830081424F /* HotMilkViewController.h */,
@@ -81,8 +85,6 @@
 				0C64A6BD21D4159E006B7A93 /* BabyView.m */,
 				0C64A6BF21D42017006B7A93 /* BabyMilkCell.h */,
 				0C64A6C021D42017006B7A93 /* BabyMilkCell.m */,
-				0C6941E221A4953E004D3DB9 /* MoveableView.h */,
-				0C6941E121A4953E004D3DB9 /* MoveableView.m */,
 				0C451B1F21A1C1350081424F /* Assets.xcassets */,
 				0C451B2121A1C1350081424F /* LaunchScreen.storyboard */,
 				0C451B2421A1C1350081424F /* Info.plist */,
@@ -90,6 +92,33 @@
 				0C1909F521A1C8F70041CDD2 /* PrefixHeader.pch */,
 			);
 			path = HotMilk;
+			sourceTree = "<group>";
+		};
+		0C7E190E2271B13E006A4546 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0C7E19132271B23F006A4546 /* MoveableView */,
+				0C7E190F2271B13E006A4546 /* DDPageScrollView */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		0C7E190F2271B13E006A4546 /* DDPageScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				0C7E19102271B13E006A4546 /* DDPageScrollView.m */,
+				0C7E19112271B13E006A4546 /* DDPageScrollView.h */,
+			);
+			path = DDPageScrollView;
+			sourceTree = "<group>";
+		};
+		0C7E19132271B23F006A4546 /* MoveableView */ = {
+			isa = PBXGroup;
+			children = (
+				0C7E19142271B23F006A4546 /* MoveableView.h */,
+				0C7E19152271B23F006A4546 /* MoveableView.m */,
+			);
+			path = MoveableView;
 			sourceTree = "<group>";
 		};
 		CDB943B49AA08B2D92A30A11 /* Frameworks */ = {
@@ -205,7 +234,8 @@
 				0C451B2621A1C1350081424F /* main.m in Sources */,
 				0C451B1821A1C1330081424F /* AppDelegate.m in Sources */,
 				0C64A6BE21D4159E006B7A93 /* BabyView.m in Sources */,
-				0C6941E321A4953E004D3DB9 /* MoveableView.m in Sources */,
+				0C7E19122271B13E006A4546 /* DDPageScrollView.m in Sources */,
+				0C7E19162271B23F006A4546 /* MoveableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,7 +369,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZTW9XPA927;
+				DEVELOPMENT_TEAM = ZC5ZC9QH42;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/HotMilk/PrefixHeader.pch";
 				INFOPLIST_FILE = HotMilk/Info.plist;
@@ -359,7 +389,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZTW9XPA927;
+				DEVELOPMENT_TEAM = ZC5ZC9QH42;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/HotMilk/PrefixHeader.pch";
 				INFOPLIST_FILE = HotMilk/Info.plist;

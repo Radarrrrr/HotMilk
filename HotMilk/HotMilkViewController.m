@@ -23,8 +23,8 @@
 
 @property (nonatomic, strong) UIScrollView *contentScroll;
 
-@property (nonatomic, strong) BabyView *dotView;
-@property (nonatomic, strong) BabyView *sixView;
+//@property (nonatomic, strong) BabyView *dotView;
+//@property (nonatomic, strong) BabyView *sixView;
 
 
 //@property (nonatomic, strong) UIImageView *faceViewDot;        //头像区域
@@ -93,17 +93,11 @@
     _contentScroll.contentSize = CGSizeMake(SCR_WIDTH*2, CGRectGetWidth(_contentScroll.frame));
     [self.view addSubview:_contentScroll];
     
-    self.dotView = [[BabyView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(_contentScroll.frame), CGRectGetHeight(_contentScroll.frame))];
-    _dotView.backgroundColor = [UIColor greenColor];
-    [_contentScroll addSubview:_dotView];
+    //显示今天的双胞胎页面
+    [self showTodayTwinsView];
     
     
-    self.sixView = [[BabyView alloc] initWithFrame:CGRectMake(SCR_WIDTH, 0, CGRectGetWidth(_contentScroll.frame), CGRectGetHeight(_contentScroll.frame))];
-    _sixView.backgroundColor = [UIColor yellowColor];
-    [_contentScroll addSubview:_sixView];
-    
-        
-    
+
     
     //添加主列表
 //    RDTableView *table = [[RDTableView alloc] initWithFrame:CGRectMake(0, 0, 320, 230)];
@@ -131,6 +125,21 @@
     }
     
     return NO;
+}
+
+- (void)showTodayTwinsView
+{
+//    //创建临时的双胞胎页面
+//    UIView *twinsView = [[UIView alloc] initWithFrame:<#(CGRect)#>];
+//    
+//    self.dotView = [[BabyView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(_contentScroll.frame), CGRectGetHeight(_contentScroll.frame))];
+//    _dotView.backgroundColor = [UIColor greenColor];
+//    [_contentScroll addSubview:_dotView];
+//    
+//    
+//    self.sixView = [[BabyView alloc] initWithFrame:CGRectMake(SCR_WIDTH, 0, CGRectGetWidth(_contentScroll.frame), CGRectGetHeight(_contentScroll.frame))];
+//    _sixView.backgroundColor = [UIColor yellowColor];
+//    [_contentScroll addSubview:_sixView];
 }
 
 
