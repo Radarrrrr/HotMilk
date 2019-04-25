@@ -12,6 +12,7 @@
 @interface BabyMilkCell ()
 
 @property (nonatomic, strong) UILabel *tLabel;
+@property (nonatomic, strong) UILabel *cLabel;
 
 @end
 
@@ -29,12 +30,20 @@
     
     
     //add _tLabel
-    self.tLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 30)];
+    self.tLabel = [[UILabel alloc] initWithFrame:CGRectMake(25, 0, 80, 40)];
     _tLabel.backgroundColor = [UIColor clearColor];
-    _tLabel.textAlignment = NSTextAlignmentCenter;
-    _tLabel.font = [UIFont boldSystemFontOfSize:16.0];
-    _tLabel.textColor = [UIColor blueColor];
+    _tLabel.textAlignment = NSTextAlignmentLeft;
+    _tLabel.font = [UIFont boldSystemFontOfSize:15.0];
+    _tLabel.textColor = COLOR_TEXT_A;
     [self.contentView addSubview:_tLabel];
+    
+    //add _cLabel
+    self.cLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, SCR_WIDTH/2-25, 40)];
+    _cLabel.backgroundColor = [UIColor clearColor];
+    _cLabel.textAlignment = NSTextAlignmentRight;
+    _cLabel.font = [UIFont boldSystemFontOfSize:14.0];
+    _cLabel.textColor = COLOR_TEXT_B;
+    [self.contentView addSubview:_cLabel];
     
     //add line
 //    UIView *line = [[UIView alloc] initWithFrame:CGRectMake(10, 0, SCR_WIDTH/2-20, 2)];
@@ -44,11 +53,16 @@
 
 -(NSNumber*)setCellData:(id)data atIndexPath:(NSIndexPath*)indexPath
 {
+    //@{@"time":@"9:00", @"count":@"110ml"}
     //根据data设定cell上组件的属性，并返回计算以后的cell高度, 用number类型装进去，[重要]cell高度必须要做计算并返回，如果返回nil就使用默认的44高度了
     
-    //...复写此方法
+    if(!DICTIONARYVALID(data)) return nil;
     
-    return nil;
+    NSDictionary *milkDic = (NSDictionary*)data;
+    _tLabel.text = [milkDic objectForKey:@"time"];
+    _cLabel.text = [milkDic objectForKey:@"count"];
+    
+    return [NSNumber numberWithFloat:44.0];
 }
 
 

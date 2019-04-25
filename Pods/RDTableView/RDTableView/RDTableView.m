@@ -23,6 +23,7 @@ typedef enum {
     
     BOOL _multiSelectEnabled;     //是否可多选
     LoadMoreStyle _loadMoreStyle; //加载更多样式
+    RefreshStyle _refreshStyle;   //下拉刷新样式
     
 }
 
@@ -138,8 +139,8 @@ typedef enum {
         _refreshCover.delegate = self;
         
         //add _refreshControll
-        self.refreshControll = [[UIRefreshControl alloc] init];
-        [_refreshControll addTarget:self action:@selector(dragRefreshAction:) forControlEvents:UIControlEventValueChanged];
+//        self.refreshControll = [[UIRefreshControl alloc] init];
+//        [_refreshControll addTarget:self action:@selector(dragRefreshAction:) forControlEvents:UIControlEventValueChanged];
         
         //这俩可以通过外面调用refreshControll来修改，这里只是用来作备忘的
         //_refreshControll.attributedTitle = [[NSAttributedString alloc] initWithString:@"123"];
@@ -328,6 +329,36 @@ typedef enum {
     return _loadMoreStyle;
 }
 
+- (void)setRefreshStyle:(RefreshStyle)refreshStyle
+{
+    _refreshStyle = refreshStyle;
+    
+    switch (refreshStyle) {
+        case RefreshStyleDropdown:
+        {
+            if(!_refreshControll)
+            {
+                self.refreshControll = [[UIRefreshControl alloc] init];
+                [_refreshControll addTarget:self action:@selector(dragRefreshAction:) forControlEvents:UIControlEventValueChanged];
+            }
+        }
+            break;
+        case RefreshStyleNone:
+        {
+            if(_refreshControll)
+            {
+                self.refreshControll = nil;
+            }
+        }
+            break;
+        default:
+            break;
+    }
+}
+- (RefreshStyle)refreshStyle
+{
+    return _refreshStyle;
+}
 
 
 
@@ -924,7 +955,7 @@ typedef enum {
 {
     if(!_refreshControll) return;
     
-    [_refreshControll removeObserver:self forKeyPath:@"frame"];
+    [_refreshControll removeObserver:self forKeyPath:@"frame" context:NULL];
 }
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
