@@ -7,6 +7,7 @@
 //
 
 #import "BabyView.h"
+#import "RecordInputView.h"
 
 
 @interface BabyView () <RDTableViewDelegate>
@@ -38,7 +39,6 @@
         //添加状态头区域
         self.statusView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, 120)];
         _statusView.backgroundColor = [UIColor whiteColor];
-        //[_listTable setSection:0 headerView:_statusView footerView:nil];
         _listTable.tableView.tableHeaderView = _statusView;
         
         //添加头像
@@ -48,9 +48,16 @@
         
         [RDFunction addRadiusToView:_faceView radius:CGRectGetWidth(_faceView.frame)/2];
         
+        //添加记录按钮
+        UIButton *addBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        addBtn.frame = CGRectMake((frame.size.width-60)/2, frame.size.height-20-40, 60, 60);
+        [addBtn setImage:[UIImage imageNamed:@"btn_addrecord"] forState:UIControlStateNormal];
+        [addBtn addTarget:self action:@selector(addRecordAction) forControlEvents:UIControlEventTouchUpInside];
+        [self addSubview:addBtn];
+        
+        
+        
         //分割线
-        //[HMFunction addDotLineToView:_statusView fromPoint:CGPointMake(15, CGRectGetHeight(_statusView.frame)) toPoint:CGPointMake(CGRectGetWidth(_statusView.frame)-30, CGRectGetHeight(_statusView.frame))];
-
 //        UIView *line = [[UIView alloc] initWithFrame:CGRectMake(15, CGRectGetHeight(_statusView.frame), CGRectGetWidth(_statusView.frame)-30, 1)];
 //        line.backgroundColor = COLOR_LINE_B;
 //        [_statusView addSubview:line];
@@ -63,12 +70,12 @@
     // Drawing code
     
     //绘制头像
-    if([_babyname isEqualToString:@"diandian"])
+    if([_babyname isEqualToString:@"dot"])
     {
         _faceView.image = [UIImage imageNamed:@"face_dotbao"];
         _statusView.backgroundColor = RGB(226, 254, 234);
     }
-    else if([_babyname isEqualToString:@"liuliu"])
+    else if([_babyname isEqualToString:@"six"])
     {
         _faceView.image = [UIImage imageNamed:@"face_sixbao"];
         _statusView.backgroundColor = RGB(250, 255, 221);
@@ -84,6 +91,14 @@
         
     }];
     
+}
+
+- (void)addRecordAction
+{
+    //呼叫添加记录浮层
+    [[RecordInputView sharedInstance] callRecordInputForBaby:_babyname completion:^{
+        
+    }];
 }
 
 

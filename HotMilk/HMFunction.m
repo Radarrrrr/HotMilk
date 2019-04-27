@@ -82,11 +82,15 @@
     
 }
 
-+ (void)addDotLineToView:(UIView *)view fromPoint:(CGPoint)startP toPoint:(CGPoint)endP
++ (void)addDotLineOnView:(UIView *)view fromPoint:(CGPoint)startP toPoint:(CGPoint)endP useColor:(UIColor*)color
 {
+    if(!view) return;
+    if(!color) return;
+    
     CAShapeLayer *border = [CAShapeLayer layer];
+    
     //  线条颜色
-    border.strokeColor = [UIColor lightGrayColor].CGColor;
+    border.strokeColor = color.CGColor; //[UIColor lightGrayColor].CGColor;
     border.fillColor = nil;
     
     UIBezierPath *pat = [UIBezierPath bezierPath];
@@ -102,8 +106,45 @@
     border.lineCap = @"butt";
     
     //  第一个是 线条长度   第二个是间距    nil时为实线
-    border.lineDashPattern = @[@6, @10];
+    border.lineDashPattern = @[@6, @6];
     [view.layer addSublayer:border];
+}
+
++ (void)addLineOnView:(UIView *)view fromPoint:(CGPoint)startP toPoint:(CGPoint)endP useColor:(UIColor*)color isDot:(BOOL)isdot
+{
+    if(!view) return;
+    if(!color) return;
+    
+    if(isdot)
+    {
+        [self addDotLineOnView:view fromPoint:startP toPoint:endP useColor:color];
+    }
+    else
+    {
+        float w = 0.5;
+        float h = 0.5;
+        
+        if(startP.y == endP.y)
+        {
+            //划横线
+            w = endP.x - startP.x;
+        }
+        else if(startP.x == endP.x)
+        {
+            //划竖线
+            h = endP.y - startP.y;
+        }
+        else
+        {
+            //斜线暂不处理
+            return;
+        }
+        
+        UIView *line = [[UIView alloc] initWithFrame:CGRectMake(startP.x, startP.y, w, h)];
+        line.userInteractionEnabled = NO;
+        line.backgroundColor = color;
+        [view addSubview:line];
+    }
 }
 
 

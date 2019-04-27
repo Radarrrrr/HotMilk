@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C150ACE22742D5700D83AD2 /* RecordInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C150ACD22742D5700D83AD2 /* RecordInputView.m */; };
 		0C451B1821A1C1330081424F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C451B1721A1C1330081424F /* AppDelegate.m */; };
 		0C451B2021A1C1350081424F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C451B1F21A1C1350081424F /* Assets.xcassets */; };
 		0C451B2321A1C1350081424F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C451B2121A1C1350081424F /* LaunchScreen.storyboard */; };
@@ -22,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C150ACB227412F300D83AD2 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		0C150ACC22742D5700D83AD2 /* RecordInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordInputView.h; sourceTree = "<group>"; };
+		0C150ACD22742D5700D83AD2 /* RecordInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordInputView.m; sourceTree = "<group>"; };
 		0C1909F521A1C8F70041CDD2 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		0C451B1321A1C1330081424F /* HotMilk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotMilk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C451B1621A1C1330081424F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -82,9 +86,11 @@
 		0C451B1521A1C1330081424F /* HotMilk */ = {
 			isa = PBXGroup;
 			children = (
+				0C150ACC22742D5700D83AD2 /* RecordInputView.h */,
+				0C150ACD22742D5700D83AD2 /* RecordInputView.m */,
+				0C150ACB227412F300D83AD2 /* Constants.h */,
 				0C7E191922720B17006A4546 /* HMFunction.h */,
 				0C7E191A22720B17006A4546 /* HMFunction.m */,
-				0C7E190E2271B13E006A4546 /* Common */,
 				0C451B1621A1C1330081424F /* AppDelegate.h */,
 				0C451B1721A1C1330081424F /* AppDelegate.m */,
 				0C451B2C21A1C2830081424F /* HotMilkViewController.h */,
@@ -93,6 +99,7 @@
 				0C64A6BD21D4159E006B7A93 /* BabyView.m */,
 				0C64A6BF21D42017006B7A93 /* BabyMilkCell.h */,
 				0C64A6C021D42017006B7A93 /* BabyMilkCell.m */,
+				0C7E190E2271B13E006A4546 /* Common */,
 				0C451B1F21A1C1350081424F /* Assets.xcassets */,
 				0C451B2121A1C1350081424F /* LaunchScreen.storyboard */,
 				0C451B2421A1C1350081424F /* Info.plist */,
@@ -239,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C64A6C121D42017006B7A93 /* BabyMilkCell.m in Sources */,
+				0C150ACE22742D5700D83AD2 /* RecordInputView.m in Sources */,
 				0C451B2E21A1C2830081424F /* HotMilkViewController.m in Sources */,
 				0C7E191B22720B17006A4546 /* HMFunction.m in Sources */,
 				0C451B2621A1C1350081424F /* main.m in Sources */,

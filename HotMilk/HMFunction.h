@@ -20,7 +20,7 @@
 
 + (void)addShadowToView:(UIView*)hostView;      //在一个view的下面添加阴影背景，PS：hostview必须先有superview
 
-+ (void)addDotLineToView:(UIView *)view fromPoint:(CGPoint)startP toPoint:(CGPoint)endP; //给一个view上画虚线
++ (void)addLineOnView:(UIView *)view fromPoint:(CGPoint)startP toPoint:(CGPoint)endP useColor:(UIColor*)color isDot:(BOOL)isdot; //在一个view上画线，可选择是否虚线 PS:point是view上的相对坐标，目前只能支持横竖线，斜线暂不支持
 
 @end
 

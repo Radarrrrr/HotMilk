@@ -26,6 +26,13 @@
     mainNav.navigationBar.translucent = NO; //不要导航条模糊，为了让页面从导航条下部是0开始，如果为YES，则从屏幕顶部开始是0
     self.window.rootViewController = mainNav;
     
+    //修改导航条颜色
+    mainNav.navigationBar.barTintColor = COLOR_PINK; 
+    NSDictionary *dict = [NSDictionary dictionaryWithObject:[UIColor whiteColor] forKey:NSForegroundColorAttributeName];
+    mainNav.navigationBar.titleTextAttributes = dict;
+    
+    
+    
     return YES;
 }
 

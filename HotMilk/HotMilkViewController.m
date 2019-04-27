@@ -36,7 +36,7 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = RGBS(220);
     self.navigationItem.title = @"HOT MILK";
-    
+
     self.babyRecords = [[NSMutableArray alloc] init];
     
     //左上角日期
@@ -44,7 +44,7 @@
     _dateLabel.backgroundColor = [UIColor clearColor];
     _dateLabel.textAlignment = NSTextAlignmentRight;
     _dateLabel.font = [UIFont boldSystemFontOfSize:13.0];
-    _dateLabel.textColor = COLOR_TEXT_B;
+    _dateLabel.textColor = [UIColor whiteColor];
     
     UIBarButtonItem *dateItem = [[UIBarButtonItem alloc] initWithCustomView:_dateLabel];
     self.navigationItem.rightBarButtonItem = dateItem;
@@ -259,19 +259,18 @@
     }
     
     BabyView *dotView = [[BabyView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(twinsView.frame)/2, CGRectGetHeight(twinsView.frame))];
-    dotView.babyname = @"diandian";
+    dotView.babyname = @"dot";
     dotView.babyRecord = [RDFunction valueOfData:record byPath:@"data.dot"];
     [twinsView addSubview:dotView];
     
     BabyView *sixView = [[BabyView alloc] initWithFrame:CGRectMake(CGRectGetWidth(twinsView.frame)/2, 0, CGRectGetWidth(twinsView.frame)/2, CGRectGetHeight(twinsView.frame))];
-    sixView.babyname = @"liuliu";
+    sixView.babyname = @"six";
     sixView.babyRecord = [RDFunction valueOfData:record byPath:@"data.six"];
     [twinsView addSubview:sixView];
         
     
     //中线
-    [HMFunction addDotLineToView:twinsView fromPoint:CGPointMake(twinsView.center.x, 130) toPoint:CGPointMake(twinsView.center.x, CGRectGetHeight(twinsView.frame)-30)];
-    
+    [HMFunction addLineOnView:twinsView fromPoint:CGPointMake(twinsView.center.x, 130) toPoint:CGPointMake(twinsView.center.x, CGRectGetHeight(twinsView.frame)-30) useColor:COLOR_LINE_A isDot:YES];
     
     return twinsView;
 }
