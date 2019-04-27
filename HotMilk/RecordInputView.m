@@ -88,14 +88,25 @@ static float inputLastPosition;
         [HMFunction addLineOnView:_containerView fromPoint:CGPointMake(30, RecordInputView_container_height-200) toPoint:CGPointMake(SCR_WIDTH-30, RecordInputView_container_height-200) useColor:COLOR_LINE_A isDot:NO];
         
         
+        //添加键盘落下按钮
+        UIButton *kbColoseBtn = [UIButton buttonWithType:UIButtonTypeSystem];
+        kbColoseBtn.frame = CGRectMake(frame.size.width-8-38, 12, 38, 38);
+        [kbColoseBtn setBackgroundImage:[UIImage imageNamed:@"icon_close_keyboard"] forState:UIControlStateNormal];
+        [kbColoseBtn addTarget:self action:@selector(closeKeyBoardAction) forControlEvents:UIControlEventTouchUpInside];
+        [RDFunction addRadiusToView:kbColoseBtn radius:19];
+        [_containerView addSubview:kbColoseBtn];
+        
         //添加输入框和其他组件
         self.inputField = [[UITextField alloc] initWithFrame:CGRectMake(8, 12, frame.size.width-16, 38)]; 
         _inputField.backgroundColor = COLOR_PINK;
+        _inputField.textColor = [UIColor whiteColor];
+        _inputField.font = FONT_B(20);
         _inputField.borderStyle = UITextBorderStyleRoundedRect;
         _inputField.returnKeyType = UIReturnKeyDone;
         _inputField.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
         _inputField.delegate = self;
         _inputField.placeholder = @"自行输入奶量 @^_^@  =>";
+        _inputField.textAlignment = NSTextAlignmentLeft;
         [_containerView addSubview:_inputField];
         
         //添加拉动条
@@ -184,9 +195,7 @@ static float inputLastPosition;
         
         [self moveContainerViewToY:RecordInputView_container_position_down];
         inputLastPosition = RecordInputView_container_position_down;
-        
-        //[self->_inputField becomeFirstResponder];
-        
+            
     } completion:^(BOOL finished) {
         
     }];
@@ -262,6 +271,35 @@ static float inputLastPosition;
     
 }
 
+- (void)closeKeyBoardAction
+{
+    //增加输入框长度
+    [self showColoseKeyboardBtn:NO];
+    
+    //收起键盘
+    if([_inputField isFirstResponder])
+    {
+        [_inputField resignFirstResponder];
+    }
+}
+
+- (void)showColoseKeyboardBtn:(BOOL)show
+{
+    CGRect inputLongRect  = CGRectMake(8, 12, self.frame.size.width-16, 38);
+    CGRect inputshortRect = CGRectMake(8, 12, self.frame.size.width-16-38-4, 38);
+    
+    [UIView animateWithDuration:0.25 animations:^{
+        if(show)
+        {
+            self->_inputField.frame = inputshortRect;
+        }
+        else
+        {
+            self->_inputField.frame = inputLongRect;
+        }
+    }];
+}
+
 
 #pragma mark - 数据保存相关
 //判断是否为纯int类型
@@ -273,6 +311,13 @@ static float inputLastPosition;
 }
 
 //UITextFieldDelegate
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+    //缩短输入框长度
+    [self showColoseKeyboardBtn:YES];
+    
+    return YES;
+}
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     if(textField.text && ![textField.text isEqualToString:@""])
@@ -290,7 +335,12 @@ static float inputLastPosition;
 - (void)countBtnAction:(UIButton*)btn
 {
     NSInteger count = btn.tag;
-    [self saveCountToDB:[NSString stringWithFormat:@"%ld", (long)count]];
+    _inputField.text = [NSString stringWithFormat:@"%ld", (long)count];
+    
+    if(![_inputField isFirstResponder])
+    {
+        [_inputField becomeFirstResponder];
+    }
 }
 
 - (void)saveCountToDB:(NSString*)count
