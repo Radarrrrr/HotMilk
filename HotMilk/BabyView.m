@@ -50,7 +50,7 @@
         
         //添加记录按钮
         UIButton *addBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        addBtn.frame = CGRectMake((frame.size.width-60)/2, frame.size.height-20-40, 60, 60);
+        addBtn.frame = CGRectMake((frame.size.width-80)/2, frame.size.height-20-60, 80, 80);
         [addBtn setImage:[UIImage imageNamed:@"btn_addrecord"] forState:UIControlStateNormal];
         [addBtn addTarget:self action:@selector(addRecordAction) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:addBtn];

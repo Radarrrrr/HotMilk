@@ -107,7 +107,7 @@
         if([[UIDevice currentDevice].systemVersion floatValue] >= 6.0)
         {
             _pageCtrl.pageIndicatorTintColor = [UIColor colorWithRed:(float)220/255 green:(float)220/255 blue:(float)220/255 alpha:.7];
-            _pageCtrl.currentPageIndicatorTintColor = RGB(255, 70, 60);
+            _pageCtrl.currentPageIndicatorTintColor = COLOR_PINK;
         }
         
     }

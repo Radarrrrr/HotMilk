@@ -88,12 +88,12 @@ static float inputLastPosition;
         [HMFunction addLineOnView:_containerView fromPoint:CGPointMake(30, RecordInputView_container_height-200) toPoint:CGPointMake(SCR_WIDTH-30, RecordInputView_container_height-200) useColor:COLOR_LINE_A isDot:NO];
         
         
-        
         //添加输入框和其他组件
         self.inputField = [[UITextField alloc] initWithFrame:CGRectMake(8, 12, frame.size.width-16, 38)]; 
         _inputField.backgroundColor = COLOR_PINK;
         _inputField.borderStyle = UITextBorderStyleRoundedRect;
-        _inputField.returnKeyType = UIReturnKeySend;
+        _inputField.returnKeyType = UIReturnKeyDone;
+        _inputField.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
         _inputField.delegate = self;
         _inputField.placeholder = @"自行输入奶量 @^_^@  =>";
         [_containerView addSubview:_inputField];
@@ -104,7 +104,8 @@ static float inputLastPosition;
         [RDFunction addRadiusToView:dragLine radius:2];
         [_containerView addSubview:dragLine];
         
-        
+        //添加奶量选择按钮
+        [self addCountButtons];
         
     }
     return self;
@@ -114,6 +115,51 @@ static float inputLastPosition;
 {
 }
 
+- (void)addCountButtons;
+{
+    //添加奶量选择按钮
+    NSArray *counts = @[@"20", @"30", @"35", @"40", 
+                        @"50", @"60", @"70", @"80", 
+                        @"90", @"100", @"110", @"120"
+                       ];
+    
+    for(int i=0; i<counts.count; i++)
+    {
+        NSString *cout = [counts objectAtIndex:i];
+        
+        UIButton *cbtn = [UIButton buttonWithType:UIButtonTypeSystem];
+        cbtn.backgroundColor = RGBS(200);//RGB(255, 252, 247);
+        [cbtn setTitle:cout forState:UIControlStateNormal];
+        [cbtn setTitleColor:COLOR_TEXT_B forState:UIControlStateNormal];
+        
+        cbtn.titleLabel.font = FONT_B(16);
+        cbtn.tag = cout.integerValue;
+        [cbtn addTarget:self action:@selector(countBtnAction:) forControlEvents:UIControlEventTouchUpInside];
+        [RDFunction addRadiusToView:cbtn radius:15];
+        
+        int han = i/4; //行
+        int lie = i%4; //列
+        
+        float offw = (SCR_WIDTH-10)/4;
+        float offh = 80;
+        
+        float x = 10 + lie*offw; 
+        float y = 65 + han*offh;
+        
+        NSLog(@"(%f, %f)", x, y);
+        
+        cbtn.frame = CGRectMake(x, y, offw-10, offh-10);
+        [_containerView addSubview:cbtn];
+        
+        
+        [cbtn setBackgroundImage:[UIImage imageWithColor:RGB(255, 252, 247) andSize:CGSizeMake(offw-10, offh-10)] forState:UIControlStateNormal];
+        
+    }
+}
+
+
+
+#pragma mark - 页面移动相关
 - (void)moveContainerViewToY:(float)toY
 {
     CGRect cframe = _containerView.frame;
@@ -155,6 +201,7 @@ static float inputLastPosition;
         [self moveContainerViewToY:SCR_HEIGHT];
         
         [self->_inputField resignFirstResponder];
+        self->_inputField.text = nil;
         
     } completion:^(BOOL finished) {
         
@@ -216,20 +263,45 @@ static float inputLastPosition;
 }
 
 
+#pragma mark - 数据保存相关
+//判断是否为纯int类型
+- (BOOL)isPureInt:(NSString*)string
+{
+    NSScanner* scan = [NSScanner scannerWithString:string]; 
+    int val; 
+    return [scan scanInt:&val] && [scan isAtEnd];
+}
+
 //UITextFieldDelegate
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     if(textField.text && ![textField.text isEqualToString:@""])
     {
-        //NSString *count = textField.text;
+        NSString *countStr = textField.text;
+        if(![self isPureInt:countStr]) return NO;
         
+        [self saveCountToDB:countStr];
         return YES;
     }
     
     return NO;
 }
 
+- (void)countBtnAction:(UIButton*)btn
+{
+    NSInteger count = btn.tag;
+    [self saveCountToDB:[NSString stringWithFormat:@"%ld", (long)count]];
+}
 
+- (void)saveCountToDB:(NSString*)count
+{
+    //TO DO: 保存数据到数据库
+    //_forBaby
+    //[NSDate date]
+    
+    
+    [self closeAction:nil];
+}
 
 //- (NSDictionary *)assemblePayload:(NSString *)message attach:(NSString *)attach msgtype:(NSString*)msgtype//attach就是一个url，无论上传了什么都是一个url
 //{    
