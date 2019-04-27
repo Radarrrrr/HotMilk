@@ -488,8 +488,8 @@
     }
 
     
-    //跳转到第一页，如果不忽略内存，则顺便读取该页内容
-    [self scrollToPageIndex:0 animated:NO];
+    //跳转到最后一页，如果不忽略内存，则顺便读取该页内容
+    [self scrollToPageIndex:_pageCount-1 animated:NO];
 }
 
 

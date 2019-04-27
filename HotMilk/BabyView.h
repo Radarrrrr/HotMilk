@@ -30,5 +30,6 @@
 
 @property (nonatomic, strong) NSString *babyname; 
 @property (nonatomic, copy)   NSDictionary *babyRecord;
+@property (nonatomic)         BOOL isToday;
 
 @end

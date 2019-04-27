@@ -70,9 +70,9 @@
     
     //初始化数据
     [self loadBabyRecords];
-   
-    //延时滚动到今天页面
-    [self performSelector:@selector(scrollToTodayPage) withObject:nil afterDelay:1.0];
+    
+    //改变右上角日期
+    [self changeDateForPageIndex:_babyRecords.count-1];
 }
 
 + (BOOL)iPhoneXorLater
@@ -92,16 +92,6 @@
     return NO;
 }
 
-- (void)scrollToTodayPage
-{
-    NSInteger toIndex = [_babyRecords count]-1;
-    //滚动到今天页面
-    [_contentScroll scrollToPageIndex:toIndex animated:NO];
-    
-    //改变右上角日期
-    [self changeDateForPageIndex:toIndex];
-}
-
 - (void)changeDateForPageIndex:(NSInteger)pageIndex
 {
     NSDictionary *record = [self recordForPageIndex:pageIndex];
@@ -111,14 +101,28 @@
     
     NSDate *date = [RDFunction dateFromString:dateStr useFormat:@"yyyy-MM-dd"];
     NSString *showDate = [RDFunction stringFromDate:date useFormat:@"MM月dd日"];
-    
-    NSString *todayDate = [RDFunction stringFromDate:[NSDate date] useFormat:@"yyyy-MM-dd"];
-    if([todayDate isEqualToString:dateStr])
+        
+    if([self checkRecordIsToday:record])
     {
         showDate = [showDate stringByAppendingString:@"(今天)"];
     }
     
     _dateLabel.text = showDate;
+}
+
+- (BOOL)checkRecordIsToday:(NSDictionary*)record
+{
+    if(!record) return NO;
+    
+    NSString *dateStr       = [record objectForKey:@"date"];
+    NSString *todayDateStr  = [RDFunction stringFromDate:[NSDate date] useFormat:@"yyyy-MM-dd"];
+    
+    if([todayDateStr isEqualToString:dateStr])
+    {
+        return YES;
+    }
+    
+    return NO;
 }
 
 - (void)loadBabyRecords
@@ -127,7 +131,7 @@
     //测试数据
     NSArray *records =  @[
                         @{
-                            @"date":@"2019-04-26",
+                            @"date":@"2019-04-27",
                             @"data":@{
                                     @"dot":@{
                                             @"AD":@"1",
@@ -150,6 +154,39 @@
                                             @"bian":@"1",
                                             @"milk":@[
                                                     @{@"time":@"7:00", @"count":@"110ml"},
+                                                    @{@"time":@"9:00", @"count":@"110ml"},
+                                                    @{@"time":@"9:00", @"count":@"110ml"},
+                                                    @{@"time":@"9:00", @"count":@"110ml"},
+                                                    @{@"time":@"9:00", @"count":@"110ml"},
+                                                    @{@"time":@"9:00", @"count":@"110ml"}
+                                                    ]
+                                            }
+                                    }
+                            },
+                        @{
+                            @"date":@"2019-04-26",
+                            @"data":@{
+                                    @"dot":@{
+                                            @"AD":@"1",
+                                            @"gai":@"1",
+                                            @"tie":@"1",
+                                            @"bian":@"1",
+                                            @"milk":@[
+                                                    @{@"time":@"8:00", @"count":@"110ml"},
+                                                    @{@"time":@"9:00", @"count":@"110ml"},
+                                                    @{@"time":@"9:00", @"count":@"110ml"},
+                                                    @{@"time":@"9:00", @"count":@"110ml"},
+                                                    @{@"time":@"9:00", @"count":@"110ml"},
+                                                    @{@"time":@"9:00", @"count":@"110ml"}
+                                                    ]
+                                            },
+                                    @"six":@{
+                                            @"AD":@"1",
+                                            @"gai":@"1",
+                                            @"tie":@"1",
+                                            @"bian":@"1",
+                                            @"milk":@[
+                                                    @{@"time":@"8:00", @"count":@"110ml"},
                                                     @{@"time":@"9:00", @"count":@"110ml"},
                                                     @{@"time":@"9:00", @"count":@"110ml"},
                                                     @{@"time":@"9:00", @"count":@"110ml"},
@@ -168,7 +205,7 @@
                                             @"tie":@"1",
                                             @"bian":@"1",
                                             @"milk":@[
-                                                    @{@"time":@"8:00", @"count":@"110ml"},
+                                                    @{@"time":@"9:00", @"count":@"110ml"},
                                                     @{@"time":@"9:00", @"count":@"110ml"},
                                                     @{@"time":@"9:00", @"count":@"110ml"},
                                                     @{@"time":@"9:00", @"count":@"110ml"},
@@ -182,7 +219,7 @@
                                             @"tie":@"1",
                                             @"bian":@"1",
                                             @"milk":@[
-                                                    @{@"time":@"8:00", @"count":@"110ml"},
+                                                    @{@"time":@"9:00", @"count":@"110ml"},
                                                     @{@"time":@"9:00", @"count":@"110ml"},
                                                     @{@"time":@"9:00", @"count":@"110ml"},
                                                     @{@"time":@"9:00", @"count":@"110ml"},
@@ -194,6 +231,39 @@
                             },
                         @{
                             @"date":@"2019-04-24",
+                            @"data":@{
+                                    @"dot":@{
+                                            @"AD":@"1",
+                                            @"gai":@"1",
+                                            @"tie":@"1",
+                                            @"bian":@"1",
+                                            @"milk":@[
+                                                    @{@"time":@"9:00", @"count":@"110ml"},
+                                                    @{@"time":@"9:00", @"count":@"110ml"},
+                                                    @{@"time":@"9:00", @"count":@"110ml"},
+                                                    @{@"time":@"9:00", @"count":@"110ml"},
+                                                    @{@"time":@"9:00", @"count":@"110ml"},
+                                                    @{@"time":@"9:00", @"count":@"110ml"}
+                                                    ]
+                                            },
+                                    @"six":@{
+                                            @"AD":@"1",
+                                            @"gai":@"1",
+                                            @"tie":@"1",
+                                            @"bian":@"1",
+                                            @"milk":@[
+                                                    @{@"time":@"9:00", @"count":@"110ml"},
+                                                    @{@"time":@"9:00", @"count":@"110ml"},
+                                                    @{@"time":@"9:00", @"count":@"110ml"},
+                                                    @{@"time":@"9:00", @"count":@"110ml"},
+                                                    @{@"time":@"9:00", @"count":@"110ml"},
+                                                    @{@"time":@"9:00", @"count":@"110ml"}
+                                                    ]
+                                            }
+                                    }
+                            },
+                        @{
+                            @"date":@"2019-04-23",
                             @"data":@{
                                     @"dot":@{
                                             @"AD":@"1",
@@ -249,23 +319,27 @@
     //创建临时的双胞胎页面
     UIView *twinsView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(_contentScroll.frame), CGRectGetHeight(_contentScroll.frame))];
     
-    if(pageIndex%2 == 0)
-    {
-        twinsView.backgroundColor = RGBS(250);
-    }
-    else
-    {
-        twinsView.backgroundColor = RGBS(240);
-    }
+    
+    //改变背景色
+    NSInteger todayPageIndex = _babyRecords.count-1;
+    float color = 230.0 + (todayPageIndex-pageIndex)*5.0;
+    if(color > 255.0) color = 255.0;
+    
+    twinsView.backgroundColor = RGBS(color);
+    
+    BOOL isToday = [self checkRecordIsToday:record];
+    
     
     BabyView *dotView = [[BabyView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(twinsView.frame)/2, CGRectGetHeight(twinsView.frame))];
     dotView.babyname = @"dot";
     dotView.babyRecord = [RDFunction valueOfData:record byPath:@"data.dot"];
+    dotView.isToday = isToday;
     [twinsView addSubview:dotView];
     
     BabyView *sixView = [[BabyView alloc] initWithFrame:CGRectMake(CGRectGetWidth(twinsView.frame)/2, 0, CGRectGetWidth(twinsView.frame)/2, CGRectGetHeight(twinsView.frame))];
     sixView.babyname = @"six";
     sixView.babyRecord = [RDFunction valueOfData:record byPath:@"data.six"];
+    sixView.isToday = isToday;
     [twinsView addSubview:sixView];
         
     

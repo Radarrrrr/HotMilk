@@ -15,6 +15,14 @@
 @property (nonatomic, strong) UIImageView *faceView;
 @property (nonatomic, strong) RDTableView *listTable;
 @property (nonatomic, strong) UIView *statusView;
+@property (nonatomic, strong) UIButton *addBtn;
+
+@property (nonatomic, strong) UIButton *adButton;
+@property (nonatomic, strong) UIButton *gaiButton;
+@property (nonatomic, strong) UIButton *tieButton;
+@property (nonatomic, strong) UIButton *bianButton;
+
+@property (nonatomic, strong) UILabel *totalCountsLabel;
 
 @end
 
@@ -48,12 +56,28 @@
         
         [RDFunction addRadiusToView:_faceView radius:CGRectGetWidth(_faceView.frame)/2];
         
+        //添加AD按钮
+        self.adButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _adButton.backgroundColor = [UIColor redColor];
+        _adButton.frame = CGRectMake(CGRectGetMaxX(_faceView.frame)+4, 2, 37, 37);
+        [_statusView addSubview:_adButton];
+        
+        //添加钙按钮
+        
+        //添加铁按钮
+        
+        //添加大便按钮
+        
+        //添加总量label
+        
+        
         //添加记录按钮
-        UIButton *addBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        addBtn.frame = CGRectMake((frame.size.width-80)/2, frame.size.height-20-60, 80, 80);
-        [addBtn setImage:[UIImage imageNamed:@"btn_addrecord"] forState:UIControlStateNormal];
-        [addBtn addTarget:self action:@selector(addRecordAction) forControlEvents:UIControlEventTouchUpInside];
-        [self addSubview:addBtn];
+        self.addBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _addBtn.frame = CGRectMake((frame.size.width-80)/2, frame.size.height-20-60, 80, 80);
+        [_addBtn setImage:[UIImage imageNamed:@"btn_addrecord"] forState:UIControlStateNormal];
+        [_addBtn addTarget:self action:@selector(addRecordAction) forControlEvents:UIControlEventTouchUpInside];
+        _addBtn.alpha = 0.0;
+        [self addSubview:_addBtn];
         
         
         
@@ -90,6 +114,13 @@
     [_listTable refreshTable:^{
         
     }];
+    
+    
+    //控制添加按钮的显示
+    if(_isToday)
+    {
+        _addBtn.alpha = 1.0;
+    }
     
 }
 
