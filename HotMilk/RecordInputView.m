@@ -31,6 +31,7 @@ static float inputLastPosition;
 @property (nonatomic, strong) MoveableView *containerView;
 
 @property (nonatomic, copy)   NSString *forBaby; //为哪个宝宝打开的本页面
+@property (nonatomic, strong) UIImageView *faceView; //宝宝头像
 
 @property (nonatomic, strong) void (^closeHandler)(void);
 
@@ -118,6 +119,17 @@ static float inputLastPosition;
         //添加奶量选择按钮
         [self addCountButtons];
         
+        //添加头像
+        float w = 280;
+        float x = (SCR_WIDTH-w)/2;
+        float y = (SCR_HEIGHT - (RecordInputView_container_height-200) -w)/2;
+        self.faceView = [[UIImageView alloc] initWithFrame:CGRectMake(x, y, w, w)];
+        _faceView.userInteractionEnabled = NO;
+        _faceView.backgroundColor = [UIColor clearColor];
+        _faceView.alpha = 0.0;
+        [RDFunction addRadiusToView:_faceView radius:w/2];
+        [self addSubview:_faceView];
+        
     }
     return self;
 }
@@ -183,6 +195,16 @@ static float inputLastPosition;
     self.closeHandler = completion;
     self.forBaby = babyname;
     
+    //设定头像
+    if([_forBaby isEqualToString:@"dot"])
+    {
+        _faceView.image = [UIImage imageNamed:@"ma+diandian"];
+    }
+    else if([_forBaby isEqualToString:@"six"])
+    {
+        _faceView.image = [UIImage imageNamed:@"ma+liuliu"];
+    }
+    
     UIWindow *topWindow = [UIApplication sharedApplication].keyWindow;
     if(![self superview])
     {
@@ -198,6 +220,9 @@ static float inputLastPosition;
             
     } completion:^(BOOL finished) {
         
+        [UIView animateWithDuration:0.25 animations:^{
+            self->_faceView.alpha = 1.0;
+        }];
     }];
 }
 
@@ -206,6 +231,7 @@ static float inputLastPosition;
     [UIView animateWithDuration:0.25 animations:^{
         
         self->_backView.alpha = 0.0;
+        self->_faceView.alpha = 0.0;
         
         [self moveContainerViewToY:SCR_HEIGHT];
         

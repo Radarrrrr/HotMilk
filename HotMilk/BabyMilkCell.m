@@ -60,7 +60,7 @@
     
     NSDictionary *milkDic = (NSDictionary*)data;
     _tLabel.text = [milkDic objectForKey:@"time"];
-    _cLabel.text = [milkDic objectForKey:@"count"];
+    _cLabel.text = [NSString stringWithFormat:@"%@ml", [milkDic objectForKey:@"count"]];
     
     return [NSNumber numberWithFloat:44.0];
 }

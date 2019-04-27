@@ -130,35 +130,68 @@
     //从数据库读取baby记录数据
     //测试数据
     NSArray *records =  @[
+                          @{
+                              @"date":@"2019-04-28",
+                              @"data":@{
+                                      @"dot":@{
+                                              @"AD":@"1",
+                                              @"gai":@"1",
+                                              @"tie":@"0",
+                                              @"bian":@"1",
+                                              @"milk":@[
+                                                      @{@"time":@"7:00", @"count":@"60"},
+                                                      @{@"time":@"9:00", @"count":@"110"},
+                                                      @{@"time":@"9:00", @"count":@"80"},
+                                                      @{@"time":@"9:00", @"count":@"90"},
+                                                      @{@"time":@"9:00", @"count":@"110"},
+                                                      @{@"time":@"9:00", @"count":@"70"}
+                                                      ]
+                                              },
+                                      @"six":@{
+                                              @"AD":@"1",
+                                              @"gai":@"1",
+                                              @"tie":@"0",
+                                              @"bian":@"0",
+                                              @"milk":@[
+                                                      @{@"time":@"7:00", @"count":@"70"},
+                                                      @{@"time":@"9:00", @"count":@"90"},
+                                                      @{@"time":@"9:00", @"count":@"110"},
+                                                      @{@"time":@"9:00", @"count":@"105"},
+                                                      @{@"time":@"9:00", @"count":@"60"},
+                                                      @{@"time":@"9:00", @"count":@"80"}
+                                                      ]
+                                              }
+                                      }
+                            },
                         @{
                             @"date":@"2019-04-27",
                             @"data":@{
                                     @"dot":@{
                                             @"AD":@"1",
-                                            @"gai":@"1",
+                                            @"gai":@"0",
                                             @"tie":@"1",
-                                            @"bian":@"1",
+                                            @"bian":@"0",
                                             @"milk":@[
-                                                    @{@"time":@"7:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"}
+                                                    @{@"time":@"7:00", @"count":@"70"},
+                                                    @{@"time":@"9:00", @"count":@"90"},
+                                                    @{@"time":@"9:00", @"count":@"110"},
+                                                    @{@"time":@"9:00", @"count":@"105"},
+                                                    @{@"time":@"9:00", @"count":@"60"},
+                                                    @{@"time":@"9:00", @"count":@"80"}
                                                     ]
                                             },
                                     @"six":@{
                                             @"AD":@"1",
                                             @"gai":@"1",
-                                            @"tie":@"1",
+                                            @"tie":@"0",
                                             @"bian":@"1",
                                             @"milk":@[
-                                                    @{@"time":@"7:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"}
+                                                    @{@"time":@"7:00", @"count":@"70"},
+                                                    @{@"time":@"9:00", @"count":@"90"},
+                                                    @{@"time":@"9:00", @"count":@"110"},
+                                                    @{@"time":@"9:00", @"count":@"105"},
+                                                    @{@"time":@"9:00", @"count":@"60"},
+                                                    @{@"time":@"9:00", @"count":@"80"}
                                                     ]
                                             }
                                     }
@@ -172,12 +205,12 @@
                                             @"tie":@"1",
                                             @"bian":@"1",
                                             @"milk":@[
-                                                    @{@"time":@"8:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"}
+                                                    @{@"time":@"7:00", @"count":@"70"},
+                                                    @{@"time":@"9:00", @"count":@"90"},
+                                                    @{@"time":@"9:00", @"count":@"110"},
+                                                    @{@"time":@"9:00", @"count":@"105"},
+                                                    @{@"time":@"9:00", @"count":@"60"},
+                                                    @{@"time":@"9:00", @"count":@"80"}
                                                     ]
                                             },
                                     @"six":@{
@@ -186,12 +219,12 @@
                                             @"tie":@"1",
                                             @"bian":@"1",
                                             @"milk":@[
-                                                    @{@"time":@"8:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"}
+                                                    @{@"time":@"7:00", @"count":@"70"},
+                                                    @{@"time":@"9:00", @"count":@"90"},
+                                                    @{@"time":@"9:00", @"count":@"110"},
+                                                    @{@"time":@"9:00", @"count":@"105"},
+                                                    @{@"time":@"9:00", @"count":@"60"},
+                                                    @{@"time":@"9:00", @"count":@"80"}
                                                     ]
                                             }
                                     }
@@ -205,12 +238,12 @@
                                             @"tie":@"1",
                                             @"bian":@"1",
                                             @"milk":@[
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"}
+                                                    @{@"time":@"7:00", @"count":@"70"},
+                                                    @{@"time":@"9:00", @"count":@"90"},
+                                                    @{@"time":@"9:00", @"count":@"110"},
+                                                    @{@"time":@"9:00", @"count":@"105"},
+                                                    @{@"time":@"9:00", @"count":@"60"},
+                                                    @{@"time":@"9:00", @"count":@"80"}
                                                     ]
                                             },
                                     @"six":@{
@@ -219,12 +252,12 @@
                                             @"tie":@"1",
                                             @"bian":@"1",
                                             @"milk":@[
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"}
+                                                    @{@"time":@"7:00", @"count":@"70"},
+                                                    @{@"time":@"9:00", @"count":@"90"},
+                                                    @{@"time":@"9:00", @"count":@"110"},
+                                                    @{@"time":@"9:00", @"count":@"105"},
+                                                    @{@"time":@"9:00", @"count":@"60"},
+                                                    @{@"time":@"9:00", @"count":@"80"}
                                                     ]
                                             }
                                     }
@@ -238,12 +271,12 @@
                                             @"tie":@"1",
                                             @"bian":@"1",
                                             @"milk":@[
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"}
+                                                    @{@"time":@"7:00", @"count":@"70"},
+                                                    @{@"time":@"9:00", @"count":@"90"},
+                                                    @{@"time":@"9:00", @"count":@"110"},
+                                                    @{@"time":@"9:00", @"count":@"105"},
+                                                    @{@"time":@"9:00", @"count":@"60"},
+                                                    @{@"time":@"9:00", @"count":@"80"}
                                                     ]
                                             },
                                     @"six":@{
@@ -252,12 +285,12 @@
                                             @"tie":@"1",
                                             @"bian":@"1",
                                             @"milk":@[
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"}
+                                                    @{@"time":@"7:00", @"count":@"70"},
+                                                    @{@"time":@"9:00", @"count":@"90"},
+                                                    @{@"time":@"9:00", @"count":@"110"},
+                                                    @{@"time":@"9:00", @"count":@"105"},
+                                                    @{@"time":@"9:00", @"count":@"60"},
+                                                    @{@"time":@"9:00", @"count":@"80"}
                                                     ]
                                             }
                                     }
@@ -271,12 +304,12 @@
                                             @"tie":@"1",
                                             @"bian":@"1",
                                             @"milk":@[
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"}
+                                                    @{@"time":@"7:00", @"count":@"70"},
+                                                    @{@"time":@"9:00", @"count":@"90"},
+                                                    @{@"time":@"9:00", @"count":@"110"},
+                                                    @{@"time":@"9:00", @"count":@"105"},
+                                                    @{@"time":@"9:00", @"count":@"60"},
+                                                    @{@"time":@"9:00", @"count":@"80"}
                                                     ]
                                             },
                                     @"six":@{
@@ -285,12 +318,12 @@
                                             @"tie":@"1",
                                             @"bian":@"1",
                                             @"milk":@[
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"},
-                                                    @{@"time":@"9:00", @"count":@"110ml"}
+                                                    @{@"time":@"7:00", @"count":@"70"},
+                                                    @{@"time":@"9:00", @"count":@"90"},
+                                                    @{@"time":@"9:00", @"count":@"110"},
+                                                    @{@"time":@"9:00", @"count":@"105"},
+                                                    @{@"time":@"9:00", @"count":@"60"},
+                                                    @{@"time":@"9:00", @"count":@"80"}
                                                     ]
                                             }
                                     }
@@ -344,7 +377,7 @@
         
     
     //中线
-    [HMFunction addLineOnView:twinsView fromPoint:CGPointMake(twinsView.center.x, 130) toPoint:CGPointMake(twinsView.center.x, CGRectGetHeight(twinsView.frame)-30) useColor:COLOR_LINE_A isDot:YES];
+    [HMFunction addLineOnView:twinsView fromPoint:CGPointMake(twinsView.center.x, 150) toPoint:CGPointMake(twinsView.center.x, CGRectGetHeight(twinsView.frame)-30) useColor:RGBS(200) isDot:YES];
     
     return twinsView;
 }
