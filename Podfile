@@ -9,5 +9,6 @@ target 'HotMilk' do
 
 pod "RDDevLibrary"
 pod "RDTableView"
+pod "FMDB"
 
 end

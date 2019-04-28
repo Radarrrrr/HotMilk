@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2B6C419C7707223504726ABBB40BA14C"
+               BlueprintIdentifier = "7C60CB93BAA42CE4E1B40A43ED599E83"
                BlueprintName = "RDTableView"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "libRDTableView.a">

@@ -1,20 +1,26 @@
 PODS:
+  - FMDB (2.7.2):
+    - FMDB/standard (= 2.7.2)
+  - FMDB/standard (2.7.2)
   - RDDevLibrary (1.0.1)
   - RDTableView (1.0.0)
 
 DEPENDENCIES:
+  - FMDB
   - RDDevLibrary
   - RDTableView
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - FMDB
     - RDDevLibrary
     - RDTableView
 
 SPEC CHECKSUMS:
+  FMDB: 6198a90e7b6900cfc046e6bc0ef6ebb7be9236aa
   RDDevLibrary: 8b65de14d92ef51f008ffb42fbcadee3728c3424
   RDTableView: 237b36bc985f2272efc0360f67848b473b6f62ae
 
-PODFILE CHECKSUM: 809571e8da94a0c6b2d26d67aaee83d04e00ff5b
+PODFILE CHECKSUM: d4b243cfc9611cab62f65c6b5728f5fb41452701
 
 COCOAPODS: 1.5.2

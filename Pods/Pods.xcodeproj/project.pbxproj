@@ -7,122 +7,163 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E221B94A242DC8062C51F3D93D193C5 /* RDTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = CB088F219877673C1D49CFBDABE2DDA9 /* RDTableView.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		0E68B44CC32D9FA53672266059179EC9 /* RDMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = B4AD65FBCA1BCDFCCC865225BE119A02 /* RDMacros.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		142CAD9F0AE95C277B22AFC4D0938C20 /* RDTableView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DC41448726299C885B61229F9CEAC97A /* RDTableView-dummy.m */; };
-		1CA5485B7B33EDD2C9A327961BB6A3B6 /* UIImage+ImageEffects.h in Headers */ = {isa = PBXBuildFile; fileRef = 770EB87FC7D2D81D93AF03BA71E92AF7 /* UIImage+ImageEffects.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		1EC94B4043C12D577A8E966A2AA3F709 /* RDSuperCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 77E47CA85E3949AC1703238505112924 /* RDSuperCell.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		209D503660429749171729DA0C9A7CC3 /* UIButton+Spin.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC2FCBCD52EB8BD389EBEA7E12422B8 /* UIButton+Spin.m */; };
-		262CDE86284B71B0B12F7311212E4979 /* RDTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF66EBC98B4D0B00D816D6915C891EB /* RDTableView.m */; };
-		293A8C88B8EFF91841A57057649C024E /* UIButton+Color.h in Headers */ = {isa = PBXBuildFile; fileRef = A5173EC2FE9F4717E3B9EFF0DAFA05F6 /* UIButton+Color.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		470D6BABC84289533244FB472C5772A9 /* RDFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = CD267C1332BEB10F0807DEABA78B5951 /* RDFunction.m */; };
-		4F025A37B1296763F80BF838390CB748 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = E05FF1BC90BB374D65C86FDBE0D1947D /* UIImage+ImageEffects.m */; };
-		51F0CF94FB88C47E7F5FD91CDDE10B8B /* RDAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB959B53D11F58D30BF71AE47ADBFFE /* RDAudioPlayer.m */; };
-		546CD6173F417BC2BB8E28AC7C545D42 /* RDImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 964FDB2C0EBB8481AFC22FF746F6EA2C /* RDImageManager.m */; };
-		5CE30688D1A5499BFF6EA202C441831A /* RDFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F38C86040EA06BAC55D3199B3821DDA8 /* RDFileManager.m */; };
-		5CFB1F78C4ADA9FF7E1FF1854F587C56 /* UIButton+Spin.h in Headers */ = {isa = PBXBuildFile; fileRef = 66ED02CBFB710A0EE6B8E963259F83C9 /* UIButton+Spin.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		695C5F151CFC530E3B2618889EEB50EB /* UIButton+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = ACD05E1D34221FEFEAE00C9F884E0A21 /* UIButton+Color.m */; };
-		71721ACADA1A5FBAFF23F6F3093B303A /* Pods-HotMilk-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CB52BE6313054D96AB7BA6398269C567 /* Pods-HotMilk-dummy.m */; };
-		76867EEA5B9C38C5CCF4EF1CF4481DD1 /* RDTRefreshCover.m in Sources */ = {isa = PBXBuildFile; fileRef = 4794906706013751C4D3FC82E6CF68AE /* RDTRefreshCover.m */; };
-		7E129EA63EC5A2946E181BB7A8D3F536 /* RDFileManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 65B6E408F04B9D87752D237265645C75 /* RDFileManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		7F207EB22F003C613C90DBBA74BCC702 /* RDTLoadingDots.h in Headers */ = {isa = PBXBuildFile; fileRef = 17E7541F0D30C4E7598E2DEDDC51E690 /* RDTLoadingDots.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		8DB49CC1C649DABC82B6FB9067B64C1E /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = F443ED76A2D4423B6757BC564203F24D /* UIImage+Color.m */; };
-		8F2B7B405BB45CEA9ABEE07EEC845377 /* RDDevLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = DC463DADD4BBE7E2C4223D8A1C7B7B46 /* RDDevLibrary.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		904E2D08AD136156C3360937B403815F /* RDSuperCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A470A39EE33430A54198CEBE3B3038 /* RDSuperCell.m */; };
-		A1CF111A436F612E3B7222B872DB4CC9 /* RDTLoadingDots.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F1CF0E0F409973CC03AB1D9183E742D /* RDTLoadingDots.m */; };
-		A2301D2E9F33495447B649707C46B663 /* UIImage+Color.h in Headers */ = {isa = PBXBuildFile; fileRef = 838B8D02D324328F0A092F60156D7DEF /* UIImage+Color.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		B010832C14C0D58904EBF6D98ED74C4B /* RDKeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F3DD96696A308A6EC955C98FBEC9CF /* RDKeyChain.m */; };
-		BB3E0555900D8CF8B7221186F7C1DF72 /* RDFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = 27373CF40C21E3C904EECDFFEA5BE9E7 /* RDFunction.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		BBE912ADBAA7377302643C03102D0432 /* RDTRefreshCover.h in Headers */ = {isa = PBXBuildFile; fileRef = D5B10054DE83677103BD6C3D617D5B1B /* RDTRefreshCover.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		C283F288A626E6A66AD11543157FD6A7 /* RDMacros.m in Sources */ = {isa = PBXBuildFile; fileRef = 335847F35528E9E75A99CDFEB6D3CA49 /* RDMacros.m */; };
-		CACD6EEF98DCE90465EC4C6E8A9696BF /* RDKeyChain.h in Headers */ = {isa = PBXBuildFile; fileRef = E479772FB809A19EB56E67CE9C862F26 /* RDKeyChain.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		DF5309D8075951DACE7A641D46FE7696 /* RDAudioPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 61441FC4B52FC091EB474AB1852327C7 /* RDAudioPlayer.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		E045B3AED0622FE2845F110A6F30CDD4 /* RDDevLibrary-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C501602B16AB6E07C2457FCC7FA8FB78 /* RDDevLibrary-dummy.m */; };
-		FF92F3ECE126000CEDABD425E31FF5CF /* RDImageManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 54B41747B557551759D3C53716DC69B5 /* RDImageManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		004F314F460241C865020CCD06A55AF8 /* UIButton+Spin.m in Sources */ = {isa = PBXBuildFile; fileRef = D226236908EF3069C11B3ACB0DF0289B /* UIButton+Spin.m */; };
+		007D1E37A9E103506C9B460CD3AE8AB4 /* UIButton+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 963A3E5F79C1FB3C42CB63DD05E6B383 /* UIButton+Color.m */; };
+		1759F78B5CE058C49A526CA0C820F150 /* FMDB.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AAAE7D57CE132BB77AA362A2B20DBD0 /* FMDB.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1EB268D419C3DA8A8C853CF4A8558B04 /* RDImageManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F6A36F40C72B0107DE031164EA1AFC17 /* RDImageManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		207139A12E5D9327E721977E23FCBF49 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BD618AFABA1EB146B1D4F8FD30E317 /* UIImage+ImageEffects.m */; };
+		25CC1DEE97CF04979DBEF384D53D0209 /* RDTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = D7B11EBFF9FC7D56F37163F2F94A71E5 /* RDTableView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3253F81EBDA889C2FDE1FAD24F3697E8 /* FMDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FBCE02A0F2D999FB2445DA174438700 /* FMDatabase.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3367F093F18D31B29A1335FA8EDC1267 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B999AA0A18A69C794223ECE5AF077DF /* FMDatabasePool.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		3930487D5A8E019F114B20E7D8FA9674 /* RDDevLibrary-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A00EB74669D631C8262FAF89A66363B3 /* RDDevLibrary-dummy.m */; };
+		3CABEF1B444C2571449547D54646BCCD /* UIButton+Color.h in Headers */ = {isa = PBXBuildFile; fileRef = AF6C845501DC8FF01F2F85F6A798BEB3 /* UIButton+Color.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3CB03A0C5910FFCDDBB3487607ABA095 /* Pods-HotMilk-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CB52BE6313054D96AB7BA6398269C567 /* Pods-HotMilk-dummy.m */; };
+		3F43757140C55EF0FE730AE5820A89E9 /* RDKeyChain.h in Headers */ = {isa = PBXBuildFile; fileRef = E8A6C8AE6DA8FE3F8ACAD44C34416F09 /* RDKeyChain.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		484F666874A9B5E79EB48EDC8FDA9CF0 /* RDTableView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4982669FF74184F6BFE964FF85D6EF /* RDTableView-dummy.m */; };
+		5287A9A3E6EC4E7E906F769F579C83BC /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA0423421131F5C9954423846C6D1C1 /* FMDatabase.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		5535D22077B4C1B610983C2A0078127B /* RDFileManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CB73541020BF2DDDE7794A1C3D39C76 /* RDFileManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5BA684D6E41D89708F831BB77ED61CD3 /* RDAudioPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EDEC379EA2701539AF0FEB576A0038C /* RDAudioPlayer.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		64A49BC5DA7BA9108D3C8FC50CD93C31 /* RDTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 582DAECD7B20AABBA7F32E1686C09725 /* RDTableView.m */; };
+		6BFEF584F139785FB63E7F57ADA5F880 /* RDFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = ADBF8DFA58E35B21411AE36085F31DC8 /* RDFunction.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6FFE08F5F9D65DCF4ED497C486E52BB0 /* RDKeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC119BB21FDECBE69910F60458A6B1C /* RDKeyChain.m */; };
+		79691F395D3133A391B813CB88A1675A /* UIButton+Spin.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D8689359BD3A8A61C059D734FF57A8B /* UIButton+Spin.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7CD12D8435C036EABC584AA5C4EC0F0A /* RDFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 998D53BC3BD9BB058772225B7A374F77 /* RDFunction.m */; };
+		859D7ED69D00170EDE2B3E01FBFB675A /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 416FA1E4DB815B1277D7051363543631 /* FMDatabaseAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		8B41E7B460D7CDB18D214ADF33B0797E /* RDDevLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B3E295C28026C50E2FCCEDA31B62EE6 /* RDDevLibrary.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8EFD21116F189E6C8076CE39CB273584 /* FMResultSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 296230D2E65CD622142A33F4A2F6425F /* FMResultSet.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		971B6826C6C8096F6A82C40FF134EA90 /* RDTLoadingDots.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF91CF959210C9C406D416F886B55F2 /* RDTLoadingDots.m */; };
+		9918385E99AA20D66120837F7CB8C197 /* FMDatabaseQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 82C7C891E22D766DAADC45297098BECC /* FMDatabaseQueue.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9D5E5C3CF66153FDA0FF13DCD969C946 /* RDTRefreshCover.h in Headers */ = {isa = PBXBuildFile; fileRef = C41C276CBA91AADC66F7B80A8F3D5848 /* RDTRefreshCover.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9D7353E4AE60E9F40B89D0F70DA47EE0 /* RDSuperCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FAAAC9910CA147D3DD13650913234E /* RDSuperCell.m */; };
+		ADB4E2AF8791453041A8217273707FF2 /* RDFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CC58DAC4E449C7041915C40A7606828 /* RDFileManager.m */; };
+		B585ECE5945353A680A2B18EB92FE45D /* FMDatabaseAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 29424583FA1037508150150D6122097F /* FMDatabaseAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BEEBA361A402AAC4D37661CD9E1B472F /* RDTLoadingDots.h in Headers */ = {isa = PBXBuildFile; fileRef = EBC529142B2FD1CC2C9B4D2605447F30 /* RDTLoadingDots.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C02CA53F474AE7476ADE5CB11849EF14 /* FMDB-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1893BCE35341CACAFC7D44E88C09E877 /* FMDB-dummy.m */; };
+		C7B945CB42E376D342FD73F64D92036D /* UIImage+Color.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AC6EB4A3E7F0972B49E7CB761C98ED8 /* UIImage+Color.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D2882C4B699E1AE931D88B5C9C2D8D85 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2576F4086E7724B8D40B4A6AC5E892 /* FMDatabaseQueue.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D5660D1E73B1034185A34E377263CE88 /* RDImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C64D2985AE18B6A4B0E37B9FACF5C56E /* RDImageManager.m */; };
+		D926F4E141CBC53907A14BC926583BDD /* RDMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = BA2A10974A29C34FB45067B6D0A76C5A /* RDMacros.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D9A02C77779E09D3C31AB94BBFAE735B /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0273C6C0B3571353C32727265FFDEF81 /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E5FD51BD57AFAA84BE9D606A7B141DED /* RDSuperCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 29E5CAB17BCA76858837E2CA12FD181F /* RDSuperCell.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E8E555C3A47BCA97A7A0356B69E0D8C0 /* UIImage+ImageEffects.h in Headers */ = {isa = PBXBuildFile; fileRef = 257632E10375511039B824ED379AB483 /* UIImage+ImageEffects.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E977597E4B72871AF0FF702E1AAD7FF6 /* RDMacros.m in Sources */ = {isa = PBXBuildFile; fileRef = E8A065C9BFD21B63A712F995DA6378C7 /* RDMacros.m */; };
+		ED8918386B5AD1743DEF1D2529390BCA /* FMDatabasePool.h in Headers */ = {isa = PBXBuildFile; fileRef = E94234550BB41E595ADC47CF364946CC /* FMDatabasePool.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		EF4DC0C83CCE742EEBE04F0BD318D1CB /* RDTRefreshCover.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F87FBF967A6F7E156C9DFCF7D29FE5B /* RDTRefreshCover.m */; };
+		F96F514DED888C2E0B17575EA22D2C87 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CABC2CECF11AA745B8DC26FDD6CD808 /* UIImage+Color.m */; };
+		FD22186A187BCC5C6CEA09530DEC3F50 /* RDAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C547492222C141B3B4AECF8DE1BBB1 /* RDAudioPlayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		643CAE9A97BA3D272471420D49376FBB /* PBXContainerItemProxy */ = {
+		7D4C99FB80C83E53DF5F7E12772A1CE5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2B6C419C7707223504726ABBB40BA14C;
+			remoteGlobalIDString = 7C60CB93BAA42CE4E1B40A43ED599E83;
 			remoteInfo = RDTableView;
 		};
-		6B512FE8E74F987BF677C2AC0A0B3190 /* PBXContainerItemProxy */ = {
+		8F7FF846556BBAC3DD02C4FB7C5A8920 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 241C7BDBC84ABC73A53CC4BE0613C561;
+			remoteGlobalIDString = F3B1490ADFF2E0A5A13B4C445576BB03;
+			remoteInfo = FMDB;
+		};
+		B94FAC4762845998F69D962ED5955EF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA7F09450D5F9C25F5B5634A6A9D2629;
 			remoteInfo = RDDevLibrary;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		036E777C4596B5BC5B93ACB56B3FD2A2 /* RDDevLibrary.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RDDevLibrary.xcconfig; sourceTree = "<group>"; };
+		0273C6C0B3571353C32727265FFDEF81 /* FMResultSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = src/fmdb/FMResultSet.m; sourceTree = "<group>"; };
+		079714E97689D1B4954BBA6DD2F560EE /* libRDTableView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libRDTableView.a; path = libRDTableView.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		082D336CBECB9EB3D2D541ED73B89042 /* Pods-HotMilk-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HotMilk-resources.sh"; sourceTree = "<group>"; };
-		0AB959B53D11F58D30BF71AE47ADBFFE /* RDAudioPlayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RDAudioPlayer.m; path = RDDevLibrary/RDAudioPlayer.m; sourceTree = "<group>"; };
-		17E7541F0D30C4E7598E2DEDDC51E690 /* RDTLoadingDots.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RDTLoadingDots.h; path = RDTableView/RDTLoadingDots.h; sourceTree = "<group>"; };
-		27373CF40C21E3C904EECDFFEA5BE9E7 /* RDFunction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RDFunction.h; path = RDDevLibrary/RDFunction.h; sourceTree = "<group>"; };
-		335847F35528E9E75A99CDFEB6D3CA49 /* RDMacros.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RDMacros.m; path = RDDevLibrary/RDMacros.m; sourceTree = "<group>"; };
+		0A4982669FF74184F6BFE964FF85D6EF /* RDTableView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RDTableView-dummy.m"; sourceTree = "<group>"; };
+		0AC6EB4A3E7F0972B49E7CB761C98ED8 /* UIImage+Color.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Color.h"; path = "RDDevLibrary/UIImage+Color.h"; sourceTree = "<group>"; };
+		0CA0423421131F5C9954423846C6D1C1 /* FMDatabase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = src/fmdb/FMDatabase.m; sourceTree = "<group>"; };
+		12F3CEC13C42126EC91365C00E055C6A /* FMDB.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FMDB.xcconfig; sourceTree = "<group>"; };
+		1893BCE35341CACAFC7D44E88C09E877 /* FMDB-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FMDB-dummy.m"; sourceTree = "<group>"; };
+		1A837355439AB1D8C885C01C16A326A5 /* RDTableView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RDTableView.xcconfig; sourceTree = "<group>"; };
+		1CC58DAC4E449C7041915C40A7606828 /* RDFileManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RDFileManager.m; path = RDDevLibrary/RDFileManager.m; sourceTree = "<group>"; };
+		1D8689359BD3A8A61C059D734FF57A8B /* UIButton+Spin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+Spin.h"; path = "RDDevLibrary/UIButton+Spin.h"; sourceTree = "<group>"; };
+		257632E10375511039B824ED379AB483 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+ImageEffects.h"; path = "RDDevLibrary/UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		29424583FA1037508150150D6122097F /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = src/fmdb/FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		296230D2E65CD622142A33F4A2F6425F /* FMResultSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = src/fmdb/FMResultSet.h; sourceTree = "<group>"; };
+		29E5CAB17BCA76858837E2CA12FD181F /* RDSuperCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RDSuperCell.h; path = RDTableView/RDSuperCell.h; sourceTree = "<group>"; };
+		2CBA3182C078466C43E4E595D7FB88EF /* libRDDevLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libRDDevLibrary.a; path = libRDDevLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		32FAAAC9910CA147D3DD13650913234E /* RDSuperCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RDSuperCell.m; path = RDTableView/RDSuperCell.m; sourceTree = "<group>"; };
+		3AB76C791FC4B0BF8F8C24425DD58FF9 /* RDTableView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RDTableView-prefix.pch"; sourceTree = "<group>"; };
+		3CABC2CECF11AA745B8DC26FDD6CD808 /* UIImage+Color.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Color.m"; path = "RDDevLibrary/UIImage+Color.m"; sourceTree = "<group>"; };
+		3FBCE02A0F2D999FB2445DA174438700 /* FMDatabase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = src/fmdb/FMDatabase.h; sourceTree = "<group>"; };
+		416FA1E4DB815B1277D7051363543631 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = src/fmdb/FMDatabaseAdditions.m; sourceTree = "<group>"; };
 		4521DAEA72B72AC151AA865EF8A6B6B1 /* Pods-HotMilk-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HotMilk-acknowledgements.plist"; sourceTree = "<group>"; };
-		45D983E5DC47B6904C0A0D7B567C469E /* libRDDevLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libRDDevLibrary.a; path = libRDDevLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		4794906706013751C4D3FC82E6CF68AE /* RDTRefreshCover.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RDTRefreshCover.m; path = RDTableView/RDTRefreshCover.m; sourceTree = "<group>"; };
-		49A470A39EE33430A54198CEBE3B3038 /* RDSuperCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RDSuperCell.m; path = RDTableView/RDSuperCell.m; sourceTree = "<group>"; };
-		4F1CF0E0F409973CC03AB1D9183E742D /* RDTLoadingDots.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RDTLoadingDots.m; path = RDTableView/RDTLoadingDots.m; sourceTree = "<group>"; };
-		54B41747B557551759D3C53716DC69B5 /* RDImageManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RDImageManager.h; path = RDDevLibrary/RDImageManager.h; sourceTree = "<group>"; };
-		61441FC4B52FC091EB474AB1852327C7 /* RDAudioPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RDAudioPlayer.h; path = RDDevLibrary/RDAudioPlayer.h; sourceTree = "<group>"; };
-		65B6E408F04B9D87752D237265645C75 /* RDFileManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RDFileManager.h; path = RDDevLibrary/RDFileManager.h; sourceTree = "<group>"; };
-		66ED02CBFB710A0EE6B8E963259F83C9 /* UIButton+Spin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+Spin.h"; path = "RDDevLibrary/UIButton+Spin.h"; sourceTree = "<group>"; };
-		6FC2FCBCD52EB8BD389EBEA7E12422B8 /* UIButton+Spin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+Spin.m"; path = "RDDevLibrary/UIButton+Spin.m"; sourceTree = "<group>"; };
-		770EB87FC7D2D81D93AF03BA71E92AF7 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+ImageEffects.h"; path = "RDDevLibrary/UIImage+ImageEffects.h"; sourceTree = "<group>"; };
-		77E47CA85E3949AC1703238505112924 /* RDSuperCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RDSuperCell.h; path = RDTableView/RDSuperCell.h; sourceTree = "<group>"; };
-		838B8D02D324328F0A092F60156D7DEF /* UIImage+Color.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Color.h"; path = "RDDevLibrary/UIImage+Color.h"; sourceTree = "<group>"; };
-		8F172315911FD91CEA8A86F5F0F5092A /* libRDTableView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libRDTableView.a; path = libRDTableView.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B999AA0A18A69C794223ECE5AF077DF /* FMDatabasePool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabasePool.m; path = src/fmdb/FMDatabasePool.m; sourceTree = "<group>"; };
+		4F2576F4086E7724B8D40B4A6AC5E892 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseQueue.m; path = src/fmdb/FMDatabaseQueue.m; sourceTree = "<group>"; };
+		4F87FBF967A6F7E156C9DFCF7D29FE5B /* RDTRefreshCover.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RDTRefreshCover.m; path = RDTableView/RDTRefreshCover.m; sourceTree = "<group>"; };
+		582DAECD7B20AABBA7F32E1686C09725 /* RDTableView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RDTableView.m; path = RDTableView/RDTableView.m; sourceTree = "<group>"; };
+		64A0F38703B04F4F357474E802795844 /* FMDB-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FMDB-prefix.pch"; sourceTree = "<group>"; };
+		6B3E295C28026C50E2FCCEDA31B62EE6 /* RDDevLibrary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RDDevLibrary.h; path = RDDevLibrary/RDDevLibrary.h; sourceTree = "<group>"; };
+		6BF91CF959210C9C406D416F886B55F2 /* RDTLoadingDots.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RDTLoadingDots.m; path = RDTableView/RDTLoadingDots.m; sourceTree = "<group>"; };
+		6CB73541020BF2DDDE7794A1C3D39C76 /* RDFileManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RDFileManager.h; path = RDDevLibrary/RDFileManager.h; sourceTree = "<group>"; };
+		6EDEC379EA2701539AF0FEB576A0038C /* RDAudioPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RDAudioPlayer.h; path = RDDevLibrary/RDAudioPlayer.h; sourceTree = "<group>"; };
+		71A122D7F8FAE6AB856DB3136787E2F2 /* libFMDB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libFMDB.a; path = libFMDB.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		82C7C891E22D766DAADC45297098BECC /* FMDatabaseQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseQueue.h; path = src/fmdb/FMDatabaseQueue.h; sourceTree = "<group>"; };
+		839019C0E0F4EE4CC59514CD971D1F23 /* libPods-HotMilk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-HotMilk.a"; path = "libPods-HotMilk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AAAE7D57CE132BB77AA362A2B20DBD0 /* FMDB.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDB.h; path = src/fmdb/FMDB.h; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		964FDB2C0EBB8481AFC22FF746F6EA2C /* RDImageManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RDImageManager.m; path = RDDevLibrary/RDImageManager.m; sourceTree = "<group>"; };
-		9B5AC176CDFD275C8E6B3F00BF62FFD0 /* libPods-HotMilk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-HotMilk.a"; path = "libPods-HotMilk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A5173EC2FE9F4717E3B9EFF0DAFA05F6 /* UIButton+Color.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+Color.h"; path = "RDDevLibrary/UIButton+Color.h"; sourceTree = "<group>"; };
-		ABF66EBC98B4D0B00D816D6915C891EB /* RDTableView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RDTableView.m; path = RDTableView/RDTableView.m; sourceTree = "<group>"; };
-		ACD05E1D34221FEFEAE00C9F884E0A21 /* UIButton+Color.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+Color.m"; path = "RDDevLibrary/UIButton+Color.m"; sourceTree = "<group>"; };
-		B4AD65FBCA1BCDFCCC865225BE119A02 /* RDMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RDMacros.h; path = RDDevLibrary/RDMacros.h; sourceTree = "<group>"; };
+		963A3E5F79C1FB3C42CB63DD05E6B383 /* UIButton+Color.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+Color.m"; path = "RDDevLibrary/UIButton+Color.m"; sourceTree = "<group>"; };
+		96420EF5FB346EC4A77AF60036B68D8B /* RDDevLibrary.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RDDevLibrary.xcconfig; sourceTree = "<group>"; };
+		998D53BC3BD9BB058772225B7A374F77 /* RDFunction.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RDFunction.m; path = RDDevLibrary/RDFunction.m; sourceTree = "<group>"; };
+		A00EB74669D631C8262FAF89A66363B3 /* RDDevLibrary-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RDDevLibrary-dummy.m"; sourceTree = "<group>"; };
+		ADBF8DFA58E35B21411AE36085F31DC8 /* RDFunction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RDFunction.h; path = RDDevLibrary/RDFunction.h; sourceTree = "<group>"; };
+		AF6C845501DC8FF01F2F85F6A798BEB3 /* UIButton+Color.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+Color.h"; path = "RDDevLibrary/UIButton+Color.h"; sourceTree = "<group>"; };
+		B5C547492222C141B3B4AECF8DE1BBB1 /* RDAudioPlayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RDAudioPlayer.m; path = RDDevLibrary/RDAudioPlayer.m; sourceTree = "<group>"; };
 		B89323B2767B4CEE447821BBE1D2263E /* Pods-HotMilk-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HotMilk-acknowledgements.markdown"; sourceTree = "<group>"; };
-		BED899003503036E205506E7B6073116 /* RDDevLibrary-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RDDevLibrary-prefix.pch"; sourceTree = "<group>"; };
-		C2B9FCCFF4808DCA1CAE23A76DAAB5F1 /* RDTableView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RDTableView-prefix.pch"; sourceTree = "<group>"; };
-		C501602B16AB6E07C2457FCC7FA8FB78 /* RDDevLibrary-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RDDevLibrary-dummy.m"; sourceTree = "<group>"; };
-		CB088F219877673C1D49CFBDABE2DDA9 /* RDTableView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RDTableView.h; path = RDTableView/RDTableView.h; sourceTree = "<group>"; };
+		BA2A10974A29C34FB45067B6D0A76C5A /* RDMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RDMacros.h; path = RDDevLibrary/RDMacros.h; sourceTree = "<group>"; };
+		C41C276CBA91AADC66F7B80A8F3D5848 /* RDTRefreshCover.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RDTRefreshCover.h; path = RDTableView/RDTRefreshCover.h; sourceTree = "<group>"; };
+		C64D2985AE18B6A4B0E37B9FACF5C56E /* RDImageManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RDImageManager.m; path = RDDevLibrary/RDImageManager.m; sourceTree = "<group>"; };
+		C6BD618AFABA1EB146B1D4F8FD30E317 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ImageEffects.m"; path = "RDDevLibrary/UIImage+ImageEffects.m"; sourceTree = "<group>"; };
 		CB52BE6313054D96AB7BA6398269C567 /* Pods-HotMilk-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HotMilk-dummy.m"; sourceTree = "<group>"; };
-		CD267C1332BEB10F0807DEABA78B5951 /* RDFunction.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RDFunction.m; path = RDDevLibrary/RDFunction.m; sourceTree = "<group>"; };
 		CDC12CB1F1229FE3802F309BA147B98F /* Pods-HotMilk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HotMilk.release.xcconfig"; sourceTree = "<group>"; };
-		D5B10054DE83677103BD6C3D617D5B1B /* RDTRefreshCover.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RDTRefreshCover.h; path = RDTableView/RDTRefreshCover.h; sourceTree = "<group>"; };
+		D1928E1B3776BE0C4D6BE570AEC4F910 /* RDDevLibrary-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RDDevLibrary-prefix.pch"; sourceTree = "<group>"; };
+		D226236908EF3069C11B3ACB0DF0289B /* UIButton+Spin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+Spin.m"; path = "RDDevLibrary/UIButton+Spin.m"; sourceTree = "<group>"; };
+		D7B11EBFF9FC7D56F37163F2F94A71E5 /* RDTableView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RDTableView.h; path = RDTableView/RDTableView.h; sourceTree = "<group>"; };
 		D84ECEFC90423FA8D11B5A19DC7026B2 /* Pods-HotMilk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HotMilk.debug.xcconfig"; sourceTree = "<group>"; };
-		DC41448726299C885B61229F9CEAC97A /* RDTableView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RDTableView-dummy.m"; sourceTree = "<group>"; };
-		DC463DADD4BBE7E2C4223D8A1C7B7B46 /* RDDevLibrary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RDDevLibrary.h; path = RDDevLibrary/RDDevLibrary.h; sourceTree = "<group>"; };
-		E05FF1BC90BB374D65C86FDBE0D1947D /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ImageEffects.m"; path = "RDDevLibrary/UIImage+ImageEffects.m"; sourceTree = "<group>"; };
-		E479772FB809A19EB56E67CE9C862F26 /* RDKeyChain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RDKeyChain.h; path = RDDevLibrary/RDKeyChain.h; sourceTree = "<group>"; };
+		E8A065C9BFD21B63A712F995DA6378C7 /* RDMacros.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RDMacros.m; path = RDDevLibrary/RDMacros.m; sourceTree = "<group>"; };
+		E8A6C8AE6DA8FE3F8ACAD44C34416F09 /* RDKeyChain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RDKeyChain.h; path = RDDevLibrary/RDKeyChain.h; sourceTree = "<group>"; };
 		E8CD9D83CCCA82058582DCFE8304A193 /* Pods-HotMilk-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HotMilk-frameworks.sh"; sourceTree = "<group>"; };
-		F0CC04A85FBE7A4A2C37822453AD7BA1 /* RDTableView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RDTableView.xcconfig; sourceTree = "<group>"; };
-		F38C86040EA06BAC55D3199B3821DDA8 /* RDFileManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RDFileManager.m; path = RDDevLibrary/RDFileManager.m; sourceTree = "<group>"; };
-		F443ED76A2D4423B6757BC564203F24D /* UIImage+Color.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Color.m"; path = "RDDevLibrary/UIImage+Color.m"; sourceTree = "<group>"; };
-		F5F3DD96696A308A6EC955C98FBEC9CF /* RDKeyChain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RDKeyChain.m; path = RDDevLibrary/RDKeyChain.m; sourceTree = "<group>"; };
+		E94234550BB41E595ADC47CF364946CC /* FMDatabasePool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabasePool.h; path = src/fmdb/FMDatabasePool.h; sourceTree = "<group>"; };
+		EBC529142B2FD1CC2C9B4D2605447F30 /* RDTLoadingDots.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RDTLoadingDots.h; path = RDTableView/RDTLoadingDots.h; sourceTree = "<group>"; };
+		F6A36F40C72B0107DE031164EA1AFC17 /* RDImageManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RDImageManager.h; path = RDDevLibrary/RDImageManager.h; sourceTree = "<group>"; };
+		FEC119BB21FDECBE69910F60458A6B1C /* RDKeyChain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RDKeyChain.m; path = RDDevLibrary/RDKeyChain.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		34AD425DFF184AB79D47FA60C7C90ABC /* Frameworks */ = {
+		2B289E7D4F60B624D075CDE8C659B76A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		49156114BD16D04FD2FCF5215D362E33 /* Frameworks */ = {
+		4B3803A7DED13FF74482731E814AA591 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		49B09B21CACDEB4499D1983E19CEC62D /* Frameworks */ = {
+		8D764B845B07E700013073CDF97FF060 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B091794B017AAAE89646A17942C6DCAB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -137,6 +178,17 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1A38A6CD10B754BA09B9DF5AE14DEB9B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				96420EF5FB346EC4A77AF60036B68D8B /* RDDevLibrary.xcconfig */,
+				A00EB74669D631C8262FAF89A66363B3 /* RDDevLibrary-dummy.m */,
+				D1928E1B3776BE0C4D6BE570AEC4F910 /* RDDevLibrary-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/RDDevLibrary";
 			sourceTree = "<group>";
 		};
 		1E3AFBB7D9863308EA3F20E0AB47B572 /* Pods-HotMilk */ = {
@@ -154,43 +206,46 @@
 			path = "Target Support Files/Pods-HotMilk";
 			sourceTree = "<group>";
 		};
-		2008ADC63BBB2E45B7B3421AF38EFBA6 /* RDDevLibrary */ = {
+		52E78E6EDAF50C0486D974407569995F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				61441FC4B52FC091EB474AB1852327C7 /* RDAudioPlayer.h */,
-				0AB959B53D11F58D30BF71AE47ADBFFE /* RDAudioPlayer.m */,
-				DC463DADD4BBE7E2C4223D8A1C7B7B46 /* RDDevLibrary.h */,
-				65B6E408F04B9D87752D237265645C75 /* RDFileManager.h */,
-				F38C86040EA06BAC55D3199B3821DDA8 /* RDFileManager.m */,
-				27373CF40C21E3C904EECDFFEA5BE9E7 /* RDFunction.h */,
-				CD267C1332BEB10F0807DEABA78B5951 /* RDFunction.m */,
-				54B41747B557551759D3C53716DC69B5 /* RDImageManager.h */,
-				964FDB2C0EBB8481AFC22FF746F6EA2C /* RDImageManager.m */,
-				E479772FB809A19EB56E67CE9C862F26 /* RDKeyChain.h */,
-				F5F3DD96696A308A6EC955C98FBEC9CF /* RDKeyChain.m */,
-				B4AD65FBCA1BCDFCCC865225BE119A02 /* RDMacros.h */,
-				335847F35528E9E75A99CDFEB6D3CA49 /* RDMacros.m */,
-				A5173EC2FE9F4717E3B9EFF0DAFA05F6 /* UIButton+Color.h */,
-				ACD05E1D34221FEFEAE00C9F884E0A21 /* UIButton+Color.m */,
-				66ED02CBFB710A0EE6B8E963259F83C9 /* UIButton+Spin.h */,
-				6FC2FCBCD52EB8BD389EBEA7E12422B8 /* UIButton+Spin.m */,
-				838B8D02D324328F0A092F60156D7DEF /* UIImage+Color.h */,
-				F443ED76A2D4423B6757BC564203F24D /* UIImage+Color.m */,
-				770EB87FC7D2D81D93AF03BA71E92AF7 /* UIImage+ImageEffects.h */,
-				E05FF1BC90BB374D65C86FDBE0D1947D /* UIImage+ImageEffects.m */,
-				F8D2CA97B68A3660D3CD7F6DAD259C4A /* Support Files */,
-			);
-			name = RDDevLibrary;
-			path = RDDevLibrary;
-			sourceTree = "<group>";
-		};
-		56892434A4C6C0B67551A8CDB171071F /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				2008ADC63BBB2E45B7B3421AF38EFBA6 /* RDDevLibrary */,
-				D1EC9918484EA90677DA5E3821378B4A /* RDTableView */,
+				5E59A359D094757D4EA90BF865721406 /* FMDB */,
+				EC7B1815A2678426EF7D57FDA28D7307 /* RDDevLibrary */,
+				C3D0A4A3AF913E25E5D6C522874E59C5 /* RDTableView */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		5E59A359D094757D4EA90BF865721406 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				9E141381D8E529BD908782EF7D340A15 /* standard */,
+				71FC4F55FFC707A7D2E7354B3B03C09A /* Support Files */,
+			);
+			name = FMDB;
+			path = FMDB;
+			sourceTree = "<group>";
+		};
+		65E98FC2EE06BBCF3E40993D46012997 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				71A122D7F8FAE6AB856DB3136787E2F2 /* libFMDB.a */,
+				839019C0E0F4EE4CC59514CD971D1F23 /* libPods-HotMilk.a */,
+				2CBA3182C078466C43E4E595D7FB88EF /* libRDDevLibrary.a */,
+				079714E97689D1B4954BBA6DD2F560EE /* libRDTableView.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		71FC4F55FFC707A7D2E7354B3B03C09A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				12F3CEC13C42126EC91365C00E055C6A /* FMDB.xcconfig */,
+				1893BCE35341CACAFC7D44E88C09E877 /* FMDB-dummy.m */,
+				64A0F38703B04F4F357474E802795844 /* FMDB-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FMDB";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -198,20 +253,39 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				0F8D2E47FE03D3B91B51069F7C273AF4 /* Frameworks */,
-				56892434A4C6C0B67551A8CDB171071F /* Pods */,
-				AED78C52EA89C83CABC78C3D3E65B9FC /* Products */,
+				52E78E6EDAF50C0486D974407569995F /* Pods */,
+				65E98FC2EE06BBCF3E40993D46012997 /* Products */,
 				BBD7D841012750CDA31AB7888F777678 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		AED78C52EA89C83CABC78C3D3E65B9FC /* Products */ = {
+		8700C41C6CC2CC7869FBEB49F9AA2572 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				9B5AC176CDFD275C8E6B3F00BF62FFD0 /* libPods-HotMilk.a */,
-				45D983E5DC47B6904C0A0D7B567C469E /* libRDDevLibrary.a */,
-				8F172315911FD91CEA8A86F5F0F5092A /* libRDTableView.a */,
+				1A837355439AB1D8C885C01C16A326A5 /* RDTableView.xcconfig */,
+				0A4982669FF74184F6BFE964FF85D6EF /* RDTableView-dummy.m */,
+				3AB76C791FC4B0BF8F8C24425DD58FF9 /* RDTableView-prefix.pch */,
 			);
-			name = Products;
+			name = "Support Files";
+			path = "../Target Support Files/RDTableView";
+			sourceTree = "<group>";
+		};
+		9E141381D8E529BD908782EF7D340A15 /* standard */ = {
+			isa = PBXGroup;
+			children = (
+				3FBCE02A0F2D999FB2445DA174438700 /* FMDatabase.h */,
+				0CA0423421131F5C9954423846C6D1C1 /* FMDatabase.m */,
+				29424583FA1037508150150D6122097F /* FMDatabaseAdditions.h */,
+				416FA1E4DB815B1277D7051363543631 /* FMDatabaseAdditions.m */,
+				E94234550BB41E595ADC47CF364946CC /* FMDatabasePool.h */,
+				4B999AA0A18A69C794223ECE5AF077DF /* FMDatabasePool.m */,
+				82C7C891E22D766DAADC45297098BECC /* FMDatabaseQueue.h */,
+				4F2576F4086E7724B8D40B4A6AC5E892 /* FMDatabaseQueue.m */,
+				8AAAE7D57CE132BB77AA362A2B20DBD0 /* FMDB.h */,
+				296230D2E65CD622142A33F4A2F6425F /* FMResultSet.h */,
+				0273C6C0B3571353C32727265FFDEF81 /* FMResultSet.m */,
+			);
+			name = standard;
 			sourceTree = "<group>";
 		};
 		BBD7D841012750CDA31AB7888F777678 /* Targets Support Files */ = {
@@ -222,104 +296,108 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		D1EC9918484EA90677DA5E3821378B4A /* RDTableView */ = {
+		C3D0A4A3AF913E25E5D6C522874E59C5 /* RDTableView */ = {
 			isa = PBXGroup;
 			children = (
-				77E47CA85E3949AC1703238505112924 /* RDSuperCell.h */,
-				49A470A39EE33430A54198CEBE3B3038 /* RDSuperCell.m */,
-				CB088F219877673C1D49CFBDABE2DDA9 /* RDTableView.h */,
-				ABF66EBC98B4D0B00D816D6915C891EB /* RDTableView.m */,
-				17E7541F0D30C4E7598E2DEDDC51E690 /* RDTLoadingDots.h */,
-				4F1CF0E0F409973CC03AB1D9183E742D /* RDTLoadingDots.m */,
-				D5B10054DE83677103BD6C3D617D5B1B /* RDTRefreshCover.h */,
-				4794906706013751C4D3FC82E6CF68AE /* RDTRefreshCover.m */,
-				E9EC6DF118C3D6B09CC8C5A073538E30 /* Support Files */,
+				29E5CAB17BCA76858837E2CA12FD181F /* RDSuperCell.h */,
+				32FAAAC9910CA147D3DD13650913234E /* RDSuperCell.m */,
+				D7B11EBFF9FC7D56F37163F2F94A71E5 /* RDTableView.h */,
+				582DAECD7B20AABBA7F32E1686C09725 /* RDTableView.m */,
+				EBC529142B2FD1CC2C9B4D2605447F30 /* RDTLoadingDots.h */,
+				6BF91CF959210C9C406D416F886B55F2 /* RDTLoadingDots.m */,
+				C41C276CBA91AADC66F7B80A8F3D5848 /* RDTRefreshCover.h */,
+				4F87FBF967A6F7E156C9DFCF7D29FE5B /* RDTRefreshCover.m */,
+				8700C41C6CC2CC7869FBEB49F9AA2572 /* Support Files */,
 			);
 			name = RDTableView;
 			path = RDTableView;
 			sourceTree = "<group>";
 		};
-		E9EC6DF118C3D6B09CC8C5A073538E30 /* Support Files */ = {
+		EC7B1815A2678426EF7D57FDA28D7307 /* RDDevLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				F0CC04A85FBE7A4A2C37822453AD7BA1 /* RDTableView.xcconfig */,
-				DC41448726299C885B61229F9CEAC97A /* RDTableView-dummy.m */,
-				C2B9FCCFF4808DCA1CAE23A76DAAB5F1 /* RDTableView-prefix.pch */,
+				6EDEC379EA2701539AF0FEB576A0038C /* RDAudioPlayer.h */,
+				B5C547492222C141B3B4AECF8DE1BBB1 /* RDAudioPlayer.m */,
+				6B3E295C28026C50E2FCCEDA31B62EE6 /* RDDevLibrary.h */,
+				6CB73541020BF2DDDE7794A1C3D39C76 /* RDFileManager.h */,
+				1CC58DAC4E449C7041915C40A7606828 /* RDFileManager.m */,
+				ADBF8DFA58E35B21411AE36085F31DC8 /* RDFunction.h */,
+				998D53BC3BD9BB058772225B7A374F77 /* RDFunction.m */,
+				F6A36F40C72B0107DE031164EA1AFC17 /* RDImageManager.h */,
+				C64D2985AE18B6A4B0E37B9FACF5C56E /* RDImageManager.m */,
+				E8A6C8AE6DA8FE3F8ACAD44C34416F09 /* RDKeyChain.h */,
+				FEC119BB21FDECBE69910F60458A6B1C /* RDKeyChain.m */,
+				BA2A10974A29C34FB45067B6D0A76C5A /* RDMacros.h */,
+				E8A065C9BFD21B63A712F995DA6378C7 /* RDMacros.m */,
+				AF6C845501DC8FF01F2F85F6A798BEB3 /* UIButton+Color.h */,
+				963A3E5F79C1FB3C42CB63DD05E6B383 /* UIButton+Color.m */,
+				1D8689359BD3A8A61C059D734FF57A8B /* UIButton+Spin.h */,
+				D226236908EF3069C11B3ACB0DF0289B /* UIButton+Spin.m */,
+				0AC6EB4A3E7F0972B49E7CB761C98ED8 /* UIImage+Color.h */,
+				3CABC2CECF11AA745B8DC26FDD6CD808 /* UIImage+Color.m */,
+				257632E10375511039B824ED379AB483 /* UIImage+ImageEffects.h */,
+				C6BD618AFABA1EB146B1D4F8FD30E317 /* UIImage+ImageEffects.m */,
+				1A38A6CD10B754BA09B9DF5AE14DEB9B /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/RDTableView";
-			sourceTree = "<group>";
-		};
-		F8D2CA97B68A3660D3CD7F6DAD259C4A /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				036E777C4596B5BC5B93ACB56B3FD2A2 /* RDDevLibrary.xcconfig */,
-				C501602B16AB6E07C2457FCC7FA8FB78 /* RDDevLibrary-dummy.m */,
-				BED899003503036E205506E7B6073116 /* RDDevLibrary-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/RDDevLibrary";
+			name = RDDevLibrary;
+			path = RDDevLibrary;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		28077CDC8F3731AF22AE853380E8D58E /* Headers */ = {
+		447708D13660D5C333D4530376E4D7A5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF5309D8075951DACE7A641D46FE7696 /* RDAudioPlayer.h in Headers */,
-				8F2B7B405BB45CEA9ABEE07EEC845377 /* RDDevLibrary.h in Headers */,
-				7E129EA63EC5A2946E181BB7A8D3F536 /* RDFileManager.h in Headers */,
-				BB3E0555900D8CF8B7221186F7C1DF72 /* RDFunction.h in Headers */,
-				FF92F3ECE126000CEDABD425E31FF5CF /* RDImageManager.h in Headers */,
-				CACD6EEF98DCE90465EC4C6E8A9696BF /* RDKeyChain.h in Headers */,
-				0E68B44CC32D9FA53672266059179EC9 /* RDMacros.h in Headers */,
-				293A8C88B8EFF91841A57057649C024E /* UIButton+Color.h in Headers */,
-				5CFB1F78C4ADA9FF7E1FF1854F587C56 /* UIButton+Spin.h in Headers */,
-				A2301D2E9F33495447B649707C46B663 /* UIImage+Color.h in Headers */,
-				1CA5485B7B33EDD2C9A327961BB6A3B6 /* UIImage+ImageEffects.h in Headers */,
+				5BA684D6E41D89708F831BB77ED61CD3 /* RDAudioPlayer.h in Headers */,
+				8B41E7B460D7CDB18D214ADF33B0797E /* RDDevLibrary.h in Headers */,
+				5535D22077B4C1B610983C2A0078127B /* RDFileManager.h in Headers */,
+				6BFEF584F139785FB63E7F57ADA5F880 /* RDFunction.h in Headers */,
+				1EB268D419C3DA8A8C853CF4A8558B04 /* RDImageManager.h in Headers */,
+				3F43757140C55EF0FE730AE5820A89E9 /* RDKeyChain.h in Headers */,
+				D926F4E141CBC53907A14BC926583BDD /* RDMacros.h in Headers */,
+				3CABEF1B444C2571449547D54646BCCD /* UIButton+Color.h in Headers */,
+				79691F395D3133A391B813CB88A1675A /* UIButton+Spin.h in Headers */,
+				C7B945CB42E376D342FD73F64D92036D /* UIImage+Color.h in Headers */,
+				E8E555C3A47BCA97A7A0356B69E0D8C0 /* UIImage+ImageEffects.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		68D17E7F37AA1615B6B59EFB52411955 /* Headers */ = {
+		57C5E325F6AA73B8FD31F22841A56DE7 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EC94B4043C12D577A8E966A2AA3F709 /* RDSuperCell.h in Headers */,
-				0E221B94A242DC8062C51F3D93D193C5 /* RDTableView.h in Headers */,
-				7F207EB22F003C613C90DBBA74BCC702 /* RDTLoadingDots.h in Headers */,
-				BBE912ADBAA7377302643C03102D0432 /* RDTRefreshCover.h in Headers */,
+				E5FD51BD57AFAA84BE9D606A7B141DED /* RDSuperCell.h in Headers */,
+				25CC1DEE97CF04979DBEF384D53D0209 /* RDTableView.h in Headers */,
+				BEEBA361A402AAC4D37661CD9E1B472F /* RDTLoadingDots.h in Headers */,
+				9D5E5C3CF66153FDA0FF13DCD969C946 /* RDTRefreshCover.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E0B0995C58FCBE723E45CCFDA3593A0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3253F81EBDA889C2FDE1FAD24F3697E8 /* FMDatabase.h in Headers */,
+				B585ECE5945353A680A2B18EB92FE45D /* FMDatabaseAdditions.h in Headers */,
+				ED8918386B5AD1743DEF1D2529390BCA /* FMDatabasePool.h in Headers */,
+				9918385E99AA20D66120837F7CB8C197 /* FMDatabaseQueue.h in Headers */,
+				1759F78B5CE058C49A526CA0C820F150 /* FMDB.h in Headers */,
+				8EFD21116F189E6C8076CE39CB273584 /* FMResultSet.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		241C7BDBC84ABC73A53CC4BE0613C561 /* RDDevLibrary */ = {
+		7C60CB93BAA42CE4E1B40A43ED599E83 /* RDTableView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 35B50E57EB227D5DFFD441D6C041F8A2 /* Build configuration list for PBXNativeTarget "RDDevLibrary" */;
+			buildConfigurationList = E29F0ECE2C292693B3F384B9C6932B5E /* Build configuration list for PBXNativeTarget "RDTableView" */;
 			buildPhases = (
-				C179DE133E5B6BE908596FD366EF62CB /* Sources */,
-				49B09B21CACDEB4499D1983E19CEC62D /* Frameworks */,
-				28077CDC8F3731AF22AE853380E8D58E /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = RDDevLibrary;
-			productName = RDDevLibrary;
-			productReference = 45D983E5DC47B6904C0A0D7B567C469E /* libRDDevLibrary.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		2B6C419C7707223504726ABBB40BA14C /* RDTableView */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DA44F15658238EDD62827FD4A627AC7A /* Build configuration list for PBXNativeTarget "RDTableView" */;
-			buildPhases = (
-				2A5C400436511FB4BFE47D5B2E330730 /* Sources */,
-				34AD425DFF184AB79D47FA60C7C90ABC /* Frameworks */,
-				68D17E7F37AA1615B6B59EFB52411955 /* Headers */,
+				F96F31DEA44FEBD8A8E6617DFB51C135 /* Sources */,
+				4B3803A7DED13FF74482731E814AA591 /* Frameworks */,
+				57C5E325F6AA73B8FD31F22841A56DE7 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -327,25 +405,60 @@
 			);
 			name = RDTableView;
 			productName = RDTableView;
-			productReference = 8F172315911FD91CEA8A86F5F0F5092A /* libRDTableView.a */;
+			productReference = 079714E97689D1B4954BBA6DD2F560EE /* libRDTableView.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		FAE40E314BC1CEEE159DA78908CDC7E5 /* Pods-HotMilk */ = {
+		B0F6F2F6C99E564D527A1A81A315DFA4 /* Pods-HotMilk */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 04BE6D2DA75F47960B436C620A8F40D2 /* Build configuration list for PBXNativeTarget "Pods-HotMilk" */;
+			buildConfigurationList = 5B4EF683387C9081CC9B668979F8376C /* Build configuration list for PBXNativeTarget "Pods-HotMilk" */;
 			buildPhases = (
-				B8B54B455C4D18924A9BFD9F9BCC0FDF /* Sources */,
-				49156114BD16D04FD2FCF5215D362E33 /* Frameworks */,
+				96801E8D5FF2F87868B097E5F9530E25 /* Sources */,
+				B091794B017AAAE89646A17942C6DCAB /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E007E8DC7E6487FE9D0C2684A0330D16 /* PBXTargetDependency */,
-				3A7468FF38C1C5C1AC8150ED745AE846 /* PBXTargetDependency */,
+				06DAC130E87154504A56EB56120DDE3F /* PBXTargetDependency */,
+				CA595AFEF53F385E2876021C2F022EBC /* PBXTargetDependency */,
+				41423B587AC35EA642D438D401539272 /* PBXTargetDependency */,
 			);
 			name = "Pods-HotMilk";
 			productName = "Pods-HotMilk";
-			productReference = 9B5AC176CDFD275C8E6B3F00BF62FFD0 /* libPods-HotMilk.a */;
+			productReference = 839019C0E0F4EE4CC59514CD971D1F23 /* libPods-HotMilk.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		CA7F09450D5F9C25F5B5634A6A9D2629 /* RDDevLibrary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28B1BE51DC65F1E48D9BDFD571FEE1E6 /* Build configuration list for PBXNativeTarget "RDDevLibrary" */;
+			buildPhases = (
+				F9E52DCA9DC018581E9F19EDC7A416FA /* Sources */,
+				2B289E7D4F60B624D075CDE8C659B76A /* Frameworks */,
+				447708D13660D5C333D4530376E4D7A5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RDDevLibrary;
+			productName = RDDevLibrary;
+			productReference = 2CBA3182C078466C43E4E595D7FB88EF /* libRDDevLibrary.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F3B1490ADFF2E0A5A13B4C445576BB03 /* FMDB */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD5637FC9FFD0059BEB97F08F08E2B5F /* Build configuration list for PBXNativeTarget "FMDB" */;
+			buildPhases = (
+				2A83EB307F72A01A401794108C7D5A39 /* Sources */,
+				8D764B845B07E700013073CDF97FF060 /* Frameworks */,
+				8E0B0995C58FCBE723E45CCFDA3593A0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FMDB;
+			productName = FMDB;
+			productReference = 71A122D7F8FAE6AB856DB3136787E2F2 /* libFMDB.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -365,121 +478,95 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = AED78C52EA89C83CABC78C3D3E65B9FC /* Products */;
+			productRefGroup = 65E98FC2EE06BBCF3E40993D46012997 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FAE40E314BC1CEEE159DA78908CDC7E5 /* Pods-HotMilk */,
-				241C7BDBC84ABC73A53CC4BE0613C561 /* RDDevLibrary */,
-				2B6C419C7707223504726ABBB40BA14C /* RDTableView */,
+				F3B1490ADFF2E0A5A13B4C445576BB03 /* FMDB */,
+				B0F6F2F6C99E564D527A1A81A315DFA4 /* Pods-HotMilk */,
+				CA7F09450D5F9C25F5B5634A6A9D2629 /* RDDevLibrary */,
+				7C60CB93BAA42CE4E1B40A43ED599E83 /* RDTableView */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2A5C400436511FB4BFE47D5B2E330730 /* Sources */ = {
+		2A83EB307F72A01A401794108C7D5A39 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				904E2D08AD136156C3360937B403815F /* RDSuperCell.m in Sources */,
-				142CAD9F0AE95C277B22AFC4D0938C20 /* RDTableView-dummy.m in Sources */,
-				262CDE86284B71B0B12F7311212E4979 /* RDTableView.m in Sources */,
-				A1CF111A436F612E3B7222B872DB4CC9 /* RDTLoadingDots.m in Sources */,
-				76867EEA5B9C38C5CCF4EF1CF4481DD1 /* RDTRefreshCover.m in Sources */,
+				5287A9A3E6EC4E7E906F769F579C83BC /* FMDatabase.m in Sources */,
+				859D7ED69D00170EDE2B3E01FBFB675A /* FMDatabaseAdditions.m in Sources */,
+				3367F093F18D31B29A1335FA8EDC1267 /* FMDatabasePool.m in Sources */,
+				D2882C4B699E1AE931D88B5C9C2D8D85 /* FMDatabaseQueue.m in Sources */,
+				C02CA53F474AE7476ADE5CB11849EF14 /* FMDB-dummy.m in Sources */,
+				D9A02C77779E09D3C31AB94BBFAE735B /* FMResultSet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B8B54B455C4D18924A9BFD9F9BCC0FDF /* Sources */ = {
+		96801E8D5FF2F87868B097E5F9530E25 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71721ACADA1A5FBAFF23F6F3093B303A /* Pods-HotMilk-dummy.m in Sources */,
+				3CB03A0C5910FFCDDBB3487607ABA095 /* Pods-HotMilk-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C179DE133E5B6BE908596FD366EF62CB /* Sources */ = {
+		F96F31DEA44FEBD8A8E6617DFB51C135 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51F0CF94FB88C47E7F5FD91CDDE10B8B /* RDAudioPlayer.m in Sources */,
-				E045B3AED0622FE2845F110A6F30CDD4 /* RDDevLibrary-dummy.m in Sources */,
-				5CE30688D1A5499BFF6EA202C441831A /* RDFileManager.m in Sources */,
-				470D6BABC84289533244FB472C5772A9 /* RDFunction.m in Sources */,
-				546CD6173F417BC2BB8E28AC7C545D42 /* RDImageManager.m in Sources */,
-				B010832C14C0D58904EBF6D98ED74C4B /* RDKeyChain.m in Sources */,
-				C283F288A626E6A66AD11543157FD6A7 /* RDMacros.m in Sources */,
-				695C5F151CFC530E3B2618889EEB50EB /* UIButton+Color.m in Sources */,
-				209D503660429749171729DA0C9A7CC3 /* UIButton+Spin.m in Sources */,
-				8DB49CC1C649DABC82B6FB9067B64C1E /* UIImage+Color.m in Sources */,
-				4F025A37B1296763F80BF838390CB748 /* UIImage+ImageEffects.m in Sources */,
+				9D7353E4AE60E9F40B89D0F70DA47EE0 /* RDSuperCell.m in Sources */,
+				484F666874A9B5E79EB48EDC8FDA9CF0 /* RDTableView-dummy.m in Sources */,
+				64A49BC5DA7BA9108D3C8FC50CD93C31 /* RDTableView.m in Sources */,
+				971B6826C6C8096F6A82C40FF134EA90 /* RDTLoadingDots.m in Sources */,
+				EF4DC0C83CCE742EEBE04F0BD318D1CB /* RDTRefreshCover.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9E52DCA9DC018581E9F19EDC7A416FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD22186A187BCC5C6CEA09530DEC3F50 /* RDAudioPlayer.m in Sources */,
+				3930487D5A8E019F114B20E7D8FA9674 /* RDDevLibrary-dummy.m in Sources */,
+				ADB4E2AF8791453041A8217273707FF2 /* RDFileManager.m in Sources */,
+				7CD12D8435C036EABC584AA5C4EC0F0A /* RDFunction.m in Sources */,
+				D5660D1E73B1034185A34E377263CE88 /* RDImageManager.m in Sources */,
+				6FFE08F5F9D65DCF4ED497C486E52BB0 /* RDKeyChain.m in Sources */,
+				E977597E4B72871AF0FF702E1AAD7FF6 /* RDMacros.m in Sources */,
+				007D1E37A9E103506C9B460CD3AE8AB4 /* UIButton+Color.m in Sources */,
+				004F314F460241C865020CCD06A55AF8 /* UIButton+Spin.m in Sources */,
+				F96F514DED888C2E0B17575EA22D2C87 /* UIImage+Color.m in Sources */,
+				207139A12E5D9327E721977E23FCBF49 /* UIImage+ImageEffects.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3A7468FF38C1C5C1AC8150ED745AE846 /* PBXTargetDependency */ = {
+		06DAC130E87154504A56EB56120DDE3F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FMDB;
+			target = F3B1490ADFF2E0A5A13B4C445576BB03 /* FMDB */;
+			targetProxy = 8F7FF846556BBAC3DD02C4FB7C5A8920 /* PBXContainerItemProxy */;
+		};
+		41423B587AC35EA642D438D401539272 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = RDTableView;
-			target = 2B6C419C7707223504726ABBB40BA14C /* RDTableView */;
-			targetProxy = 643CAE9A97BA3D272471420D49376FBB /* PBXContainerItemProxy */;
+			target = 7C60CB93BAA42CE4E1B40A43ED599E83 /* RDTableView */;
+			targetProxy = 7D4C99FB80C83E53DF5F7E12772A1CE5 /* PBXContainerItemProxy */;
 		};
-		E007E8DC7E6487FE9D0C2684A0330D16 /* PBXTargetDependency */ = {
+		CA595AFEF53F385E2876021C2F022EBC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = RDDevLibrary;
-			target = 241C7BDBC84ABC73A53CC4BE0613C561 /* RDDevLibrary */;
-			targetProxy = 6B512FE8E74F987BF677C2AC0A0B3190 /* PBXContainerItemProxy */;
+			target = CA7F09450D5F9C25F5B5634A6A9D2629 /* RDDevLibrary */;
+			targetProxy = B94FAC4762845998F69D962ED5955EF7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		14FC8D4ED027B4CA44059DDA7E920D35 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 036E777C4596B5BC5B93ACB56B3FD2A2 /* RDDevLibrary.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/RDDevLibrary/RDDevLibrary-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = RDDevLibrary;
-				PRODUCT_NAME = RDDevLibrary;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		178BD77257E5CFE58ABE1086097A6AAB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D84ECEFC90423FA8D11B5A19DC7026B2 /* Pods-HotMilk.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		21C9BC9188438316E16E88758661B423 /* Release */ = {
+		120F9248DFDCC4A8D9FEF538E8972E6B /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CDC12CB1F1229FE3802F309BA147B98F /* Pods-HotMilk.release.xcconfig */;
 			buildSettings = {
@@ -497,6 +584,78 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		373B6F057002609570CE5D7CA633C2BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12F3CEC13C42126EC91365C00E055C6A /* FMDB.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/FMDB/FMDB-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = FMDB;
+				PRODUCT_NAME = FMDB;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		400DC39AC5FC9D32B756CDF9FEAE403A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A837355439AB1D8C885C01C16A326A5 /* RDTableView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/RDTableView/RDTableView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = RDTableView;
+				PRODUCT_NAME = RDTableView;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4F18718B762002B60B7C767A421DC019 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A837355439AB1D8C885C01C16A326A5 /* RDTableView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/RDTableView/RDTableView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = RDTableView;
+				PRODUCT_NAME = RDTableView;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -623,56 +782,9 @@
 			};
 			name = Release;
 		};
-		BA06C72E13F656204BB90D0FF07B8ACB /* Debug */ = {
+		7074DFBEA7675D3567A340D5A862DFE5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F0CC04A85FBE7A4A2C37822453AD7BA1 /* RDTableView.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/RDTableView/RDTableView-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = RDTableView;
-				PRODUCT_NAME = RDTableView;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		DB6246A438CECD737B391871499FF5CE /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F0CC04A85FBE7A4A2C37822453AD7BA1 /* RDTableView.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/RDTableView/RDTableView-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = RDTableView;
-				PRODUCT_NAME = RDTableView;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		EF4F6855C6AC9717DE98F52CB453E6C4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 036E777C4596B5BC5B93ACB56B3FD2A2 /* RDDevLibrary.xcconfig */;
+			baseConfigurationReference = 96420EF5FB346EC4A77AF60036B68D8B /* RDDevLibrary.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -693,14 +805,84 @@
 			};
 			name = Debug;
 		};
+		7E6C97D1539AF4D6B9AF1967E35E1A3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96420EF5FB346EC4A77AF60036B68D8B /* RDDevLibrary.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/RDDevLibrary/RDDevLibrary-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = RDDevLibrary;
+				PRODUCT_NAME = RDDevLibrary;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AB6EC592E4681C80410E9EDF6D1A6597 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12F3CEC13C42126EC91365C00E055C6A /* FMDB.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/FMDB/FMDB-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = FMDB;
+				PRODUCT_NAME = FMDB;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FE66066DDD057E531C767C19D168AD8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D84ECEFC90423FA8D11B5A19DC7026B2 /* Pods-HotMilk.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		04BE6D2DA75F47960B436C620A8F40D2 /* Build configuration list for PBXNativeTarget "Pods-HotMilk" */ = {
+		28B1BE51DC65F1E48D9BDFD571FEE1E6 /* Build configuration list for PBXNativeTarget "RDDevLibrary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				178BD77257E5CFE58ABE1086097A6AAB /* Debug */,
-				21C9BC9188438316E16E88758661B423 /* Release */,
+				7074DFBEA7675D3567A340D5A862DFE5 /* Debug */,
+				7E6C97D1539AF4D6B9AF1967E35E1A3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -714,20 +896,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		35B50E57EB227D5DFFD441D6C041F8A2 /* Build configuration list for PBXNativeTarget "RDDevLibrary" */ = {
+		5B4EF683387C9081CC9B668979F8376C /* Build configuration list for PBXNativeTarget "Pods-HotMilk" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EF4F6855C6AC9717DE98F52CB453E6C4 /* Debug */,
-				14FC8D4ED027B4CA44059DDA7E920D35 /* Release */,
+				FE66066DDD057E531C767C19D168AD8E /* Debug */,
+				120F9248DFDCC4A8D9FEF538E8972E6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DA44F15658238EDD62827FD4A627AC7A /* Build configuration list for PBXNativeTarget "RDTableView" */ = {
+		BD5637FC9FFD0059BEB97F08F08E2B5F /* Build configuration list for PBXNativeTarget "FMDB" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BA06C72E13F656204BB90D0FF07B8ACB /* Debug */,
-				DB6246A438CECD737B391871499FF5CE /* Release */,
+				AB6EC592E4681C80410E9EDF6D1A6597 /* Debug */,
+				373B6F057002609570CE5D7CA633C2BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E29F0ECE2C292693B3F384B9C6932B5E /* Build configuration list for PBXNativeTarget "RDTableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				400DC39AC5FC9D32B756CDF9FEAE403A /* Debug */,
+				4F18718B762002B60B7C767A421DC019 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
