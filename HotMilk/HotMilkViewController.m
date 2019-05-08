@@ -78,6 +78,23 @@
     //---test
     [[RDFMDBAgent sharedAgent] createSQLiteByName:@"babys.sqlite"];
     [[RDFMDBAgent sharedAgent] openSQLite:@"babys.sqlite"];
+    
+    [[RDFMDBAgent sharedAgent] createTableInSQLite:@"babys.sqlite" 
+                                         tableName:@"dotbaby_records" 
+                                           columns:@"day text not null",  //2019-05-09  
+                                                   @"time text not null", //07:30
+                                                   @"count integer",      //100 / 1 / 0 
+                                                   @"type text not null", //milk / AD / gai / tie o/ bian
+                                                   nil];
+    
+    [[RDFMDBAgent sharedAgent] createTableInSQLite:@"babys.sqlite" 
+                                         tableName:@"sixbaby_records" 
+                                           columns:@"day text not null",  //2019-05-09  
+                                                   @"time text not null", //07:30
+                                                   @"count integer",      //100 / 1 / 0 
+                                                   @"type text not null", //milk / AD / gai / tie o/ bian
+                                                   nil];
+
     //---------
     
 }
