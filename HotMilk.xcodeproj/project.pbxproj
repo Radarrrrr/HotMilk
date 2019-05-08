@@ -20,6 +20,8 @@
 		0C7E19162271B23F006A4546 /* MoveableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7E19152271B23F006A4546 /* MoveableView.m */; };
 		0C7E19182271B2D5006A4546 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7E19172271B2D5006A4546 /* QuartzCore.framework */; };
 		0C7E191B22720B17006A4546 /* HMFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7E191A22720B17006A4546 /* HMFunction.m */; };
+		0CCC30142276128E0063FBEC /* RDFMDBAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CCC30132276128E0063FBEC /* RDFMDBAgent.m */; };
+		0CCC3016227613DF0063FBEC /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCC3015227613DF0063FBEC /* libsqlite3.0.tbd */; };
 		9000A92B9E85A0E3FC2D7258 /* libPods-HotMilk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1431FA8BAC0F18250F0794F6 /* libPods-HotMilk.a */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +52,9 @@
 		0C7E19172271B2D5006A4546 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		0C7E191922720B17006A4546 /* HMFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMFunction.h; sourceTree = "<group>"; };
 		0C7E191A22720B17006A4546 /* HMFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMFunction.m; sourceTree = "<group>"; };
+		0CCC30122276128E0063FBEC /* RDFMDBAgent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RDFMDBAgent.h; sourceTree = "<group>"; };
+		0CCC30132276128E0063FBEC /* RDFMDBAgent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RDFMDBAgent.m; sourceTree = "<group>"; };
+		0CCC3015227613DF0063FBEC /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		1431FA8BAC0F18250F0794F6 /* libPods-HotMilk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HotMilk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86A562146A2BB8E29B4B31A3 /* Pods-HotMilk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotMilk.release.xcconfig"; path = "Pods/Target Support Files/Pods-HotMilk/Pods-HotMilk.release.xcconfig"; sourceTree = "<group>"; };
 		AF58E5993DA4EECF2414F7BB /* Pods-HotMilk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotMilk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HotMilk/Pods-HotMilk.debug.xcconfig"; sourceTree = "<group>"; };
@@ -60,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CCC3016227613DF0063FBEC /* libsqlite3.0.tbd in Frameworks */,
 				0C7E19182271B2D5006A4546 /* QuartzCore.framework in Frameworks */,
 				9000A92B9E85A0E3FC2D7258 /* libPods-HotMilk.a in Frameworks */,
 			);
@@ -98,9 +104,9 @@
 		0C451B1521A1C1330081424F /* HotMilk */ = {
 			isa = PBXGroup;
 			children = (
-				0C150ACC22742D5700D83AD2 /* RecordInputView.h */,
-				0C150ACD22742D5700D83AD2 /* RecordInputView.m */,
 				0C150ACB227412F300D83AD2 /* Constants.h */,
+				0CCC30122276128E0063FBEC /* RDFMDBAgent.h */,
+				0CCC30132276128E0063FBEC /* RDFMDBAgent.m */,
 				0C7E191922720B17006A4546 /* HMFunction.h */,
 				0C7E191A22720B17006A4546 /* HMFunction.m */,
 				0C451B1621A1C1330081424F /* AppDelegate.h */,
@@ -111,6 +117,8 @@
 				0C64A6BD21D4159E006B7A93 /* BabyView.m */,
 				0C64A6BF21D42017006B7A93 /* BabyMilkCell.h */,
 				0C64A6C021D42017006B7A93 /* BabyMilkCell.m */,
+				0C150ACC22742D5700D83AD2 /* RecordInputView.h */,
+				0C150ACD22742D5700D83AD2 /* RecordInputView.m */,
 				0C7E190E2271B13E006A4546 /* Common */,
 				0C451B1F21A1C1350081424F /* Assets.xcassets */,
 				0C451B2121A1C1350081424F /* LaunchScreen.storyboard */,
@@ -152,6 +160,7 @@
 		CDB943B49AA08B2D92A30A11 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0CCC3015227613DF0063FBEC /* libsqlite3.0.tbd */,
 				0C7E19172271B2D5006A4546 /* QuartzCore.framework */,
 				1431FA8BAC0F18250F0794F6 /* libPods-HotMilk.a */,
 			);
@@ -267,6 +276,7 @@
 				0C451B1821A1C1330081424F /* AppDelegate.m in Sources */,
 				0C64A6BE21D4159E006B7A93 /* BabyView.m in Sources */,
 				0C7E19122271B13E006A4546 /* DDPageScrollView.m in Sources */,
+				0CCC30142276128E0063FBEC /* RDFMDBAgent.m in Sources */,
 				0C7E19162271B23F006A4546 /* MoveableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

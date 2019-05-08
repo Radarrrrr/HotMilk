@@ -73,6 +73,13 @@
     
     //改变右上角日期
     [self changeDateForPageIndex:_babyRecords.count-1];
+    
+    
+    //---test
+    [[RDFMDBAgent sharedAgent] createSQLiteByName:@"babys.sqlite"];
+    [[RDFMDBAgent sharedAgent] openSQLite:@"babys.sqlite"];
+    //---------
+    
 }
 
 + (BOOL)iPhoneXorLater
