@@ -45,6 +45,28 @@
                     columns:(NSString*)firstColumn, ... NS_REQUIRES_NIL_TERMINATION;
 
 
-//- (void)openSQLite:(NSString *)name completion:(void (^)(FMDatabase *db))completion; 
+//增删改查   
+//PS: 数据字典，key为字段关键字，value为内容，interger格式转为NSNumber格式录入字典
+
+- (BOOL)insertDataToSQLite:(NSString *)name table:(NSString *)tableName useParameters:(NSDictionary *)paramsDic;  //插入一行数据
+
+- (BOOL)deleteDataFromSQLite:(NSString *)name table:(NSString *)tableName byParameters:(NSDictionary *)paramsDic; //删除一行数据， PS:只处理 key1=value1 and key2=value2 这种形式， 暂不支持大于号和小于号的形式
+
+- (BOOL)updateDataForSQLite:(NSString *)name table:(NSString *)tableName        //更新某一列的值，目前只做更新一列并且条件也只有一列，如需组合，就使用纯SQL语句的纯SQL方法
+                  setColumn:(NSString *)column toValue:(id)value                //PS:value和conditionValue只允许NSString和NSNumber两种类型
+                      where:(NSString *)conditionColumn isValue:(id)conditionValue;
+
+- (NSArray *)selectDataFormSQLite:(NSString *)name table:(NSString *)tableName     //查询paramsDic条件下colmns列对应的数据，返回字典结构
+                       getColumns:(NSArray *)columns                               //本方法中，columns不能为nil
+                     byParameters:(NSDictionary *)paramsDic;
+
+
+
+//走纯SQL语句的方法，用于处理前面简易方法处理不了的地方
+//PS:如果是增删改，返回NSNumber格式的BOOL值表示是否成功
+//   如果是查询，返回FMResultSet格式的数据
+- (id)executeSQL:(NSString *)sql onSQLite:(NSString *)name;  
+
+
 @end
 

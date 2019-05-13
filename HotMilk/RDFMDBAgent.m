@@ -50,6 +50,16 @@
     return dbPath;
 }
 
+- (FMDatabase *)findOpeningDB:(NSString *)name
+{
+    //找到已经打开了的数据库
+    if(!name || [name isEqualToString:@""]) return nil;
+    if(!_dbPool || [_dbPool count] == 0) return nil;
+    
+    FMDatabase *openingDB = [_dbPool objectForKey:name];
+    return openingDB;
+}
+
 - (BOOL)createSQLiteByName:(NSString *)name
 {
     if(!name || [name isEqualToString:@""]) return NO;
@@ -138,7 +148,7 @@
     if(!name || [name isEqualToString:@""]) return nil;
     
     //先在dbPool里查看是否已经是打开的了,如果已经打开了，就直接返回了
-    FMDatabase *openingDB = [_dbPool objectForKey:name];
+    FMDatabase *openingDB = [self findOpeningDB:name];
     if(openingDB) return openingDB; 
     
     //1.创建database路径
@@ -176,7 +186,7 @@
     if(!name || [name isEqualToString:@""]) return;
     
     //先在dbPool里查看是否已经打开了
-    FMDatabase *openingDB = [_dbPool objectForKey:name];
+    FMDatabase *openingDB = [self findOpeningDB:name];
     if(!openingDB) return;
     
     [openingDB close];
@@ -201,7 +211,7 @@
     if(!tableName || [tableName isEqualToString:@""]) return NO;
     
     //找到已经打开了的数据库，前提是必须打开了，本方法不做打开，如果前面没打开，直接返回创建失败
-    FMDatabase *openingDB = [_dbPool objectForKey:name];
+    FMDatabase *openingDB = [self findOpeningDB:name];
     if(!openingDB) return NO; 
     
     
@@ -244,5 +254,224 @@
     
     return NO;
 }
+
+
+//增删改查
+- (BOOL)insertDataToSQLite:(NSString *)name table:(NSString *)tableName useParameters:(NSDictionary *)paramsDic
+{
+    if(!name || [name isEqualToString:@""]) return NO;
+    if(!tableName || [tableName isEqualToString:@""]) return NO;
+    if(!paramsDic || [paramsDic count] == 0) return NO;
+    
+    //找到已经打开了的数据库，前提是必须打开了，本方法不做打开，如果前面没打开，直接返回插入失败
+    FMDatabase *openingDB = [self findOpeningDB:name];
+    if(!openingDB) return NO; 
+    
+    NSArray *keys = [paramsDic allKeys];
+    NSString *columns = @"";
+    NSString *values  = @":";
+    
+    columns = [keys componentsJoinedByString:@","];
+    NSString *aval = [keys componentsJoinedByString:@",:"];
+    values = [values stringByAppendingString:aval];
+    
+    //@"insert into text1(name,age,ID) values(:name,:age,:ID)" withParameterDictionary:@{@"name":name,@"age":[NSNumber numberWithInteger:age],@"ID":@(ID)}
+    
+    NSString *sqlString = [NSString stringWithFormat:@"insert into %@(%@) values(%@)", tableName, columns, values];
+    
+    BOOL result = [openingDB executeUpdate:sqlString withParameterDictionary:paramsDic];
+    
+    if(result) 
+    {
+        NSLog(@"insert data success");
+    }
+    else
+    {
+        NSLog(@"insert data fail");
+    }
+    
+    return result;
+}
+
+- (BOOL)deleteDataFromSQLite:(NSString *)name table:(NSString *)tableName byParameters:(NSDictionary *)paramsDic
+{
+    if(!name || [name isEqualToString:@""]) return NO;
+    if(!tableName || [tableName isEqualToString:@""]) return NO;
+    if(!paramsDic || [paramsDic count] == 0) return NO;
+    
+    //找到已经打开了的数据库，前提是必须打开了，本方法不做打开，如果前面没打开，直接返回插入失败
+    FMDatabase *openingDB = [self findOpeningDB:name];
+    if(!openingDB) return NO; 
+    
+    NSArray *keys = [paramsDic allKeys];
+    NSMutableArray *values = [[NSMutableArray alloc] init];
+    
+    NSString *whereStr = nil;
+    
+    for(int i=0; i<keys.count; i++)
+    {
+        NSString *key = [keys objectAtIndex:i];
+        
+        id value = [paramsDic objectForKey:key];
+        [values addObject:value];
+        
+        if(i == 0)
+        {
+            whereStr = [whereStr stringByAppendingFormat:@"%@ = ?", key];
+        }
+        else
+        {
+            whereStr = [whereStr stringByAppendingFormat:@"and %@ = ?", key];
+        }
+    }
+    
+    //delete from ms_cf01 where brxm='张三' and id='7598'
+    NSString *sqlString = [NSString stringWithFormat:@"delete from %@ where %@", tableName, whereStr];
+    
+    BOOL result = [openingDB executeUpdate:sqlString withArgumentsInArray:values];
+    
+    if(result) 
+    {
+        NSLog(@"delete data success");
+    }
+    else
+    {
+        NSLog(@"delete data fail");
+    }
+    
+    return result;
+}
+
+
+- (BOOL)updateDataForSQLite:(NSString *)name table:(NSString *)tableName    
+                  setColumn:(NSString *)column toValue:(id)value
+                      where:(NSString *)conditionColumn isValue:(id)conditionValue
+{
+    if(!name || [name isEqualToString:@""]) return NO;
+    if(!tableName || [tableName isEqualToString:@""]) return NO;
+    if(!column || [column isEqualToString:@""]) return NO;
+    if(!conditionColumn || [conditionColumn isEqualToString:@""]) return NO;
+    if(!value) return NO;
+    if(!conditionValue) return NO;
+        
+    NSArray *values = [NSArray arrayWithObjects:value, conditionValue, nil];
+    
+    //找到已经打开了的数据库，前提是必须打开了，本方法不做打开，如果前面没打开，直接返回插入失败
+    FMDatabase *openingDB = [self findOpeningDB:name];
+    if(!openingDB) return NO; 
+    
+    //组装sql语句
+    //@"update 't_student' set ID = ? where name = ?"
+    
+    NSString *sqlString = [NSString stringWithFormat:@"update %@ set %@ = ? where %@ = ?", tableName, column, conditionColumn];
+    
+    BOOL result = [openingDB executeUpdate:sqlString withArgumentsInArray:values];
+    
+    if(result) 
+    {
+        NSLog(@"delete data success");
+    }
+    else
+    {
+        NSLog(@"delete data fail");
+    }
+    
+    return result;
+}
+
+- (NSArray *)selectDataFormSQLite:(NSString *)name table:(NSString *)tableName
+                       getColumns:(NSArray *)columns
+                     byParameters:(NSDictionary *)paramsDic
+{
+    if(!name || [name isEqualToString:@""]) return nil;
+    if(!tableName || [tableName isEqualToString:@""]) return nil;
+    if(!paramsDic || [paramsDic count] == 0) return nil;
+    if(!columns || [columns count] == 0) return nil;
+    if(!paramsDic || [paramsDic count] == 0) return nil;
+    
+    //找到已经打开了的数据库，前提是必须打开了，本方法不做打开，如果前面没打开，直接返回插入失败
+    FMDatabase *openingDB = [self findOpeningDB:name];
+    if(!openingDB) return nil; 
+    
+    NSString *getCols = [columns componentsJoinedByString:@", "];
+    
+    NSArray *keys = [paramsDic allKeys];
+    NSMutableArray *values = [[NSMutableArray alloc] init];
+    
+    NSString *whereStr = nil;
+    
+    for(int i=0; i<keys.count; i++)
+    {
+        NSString *key = [keys objectAtIndex:i];
+        
+        id value = [paramsDic objectForKey:key];
+        [values addObject:value];
+        
+        if(i == 0)
+        {
+            whereStr = [whereStr stringByAppendingFormat:@"%@ = ?", key];
+        }
+        else
+        {
+            whereStr = [whereStr stringByAppendingFormat:@"and %@ = ?", key];
+        }
+    }
+    
+    //SELECT LastName,FirstName FROM Persons
+    NSString *sqlString = [NSString stringWithFormat:@"select %@ from %@ where %@", getCols, tableName, whereStr];    
+    
+    FMResultSet *result = [openingDB executeQuery:sqlString withArgumentsInArray:values];
+    if(!result) return nil;
+        
+    NSMutableArray *dataArray = [[NSMutableArray alloc] init]; 
+    
+    while([result next]) 
+    {
+        NSMutableDictionary *lineDic = [[NSMutableDictionary alloc] init];
+        
+        for(NSString *coln in columns)
+        {
+            id data = [result objectForColumn:coln];
+            if(data)
+            {
+                [lineDic setObject:data forKey:coln];
+            }
+        }
+
+        [dataArray addObject:lineDic];
+    }
+    
+    return dataArray;
+}
+
+
+- (id)executeSQL:(NSString *)sql onSQLite:(NSString *)name
+{
+    if(!name || [name isEqualToString:@""]) return nil;
+    if(!sql || [sql isEqualToString:@""]) return nil;
+    
+    //找到已经打开了的数据库，前提是必须打开了，本方法不做打开，如果前面没打开，直接返回插入失败
+    FMDatabase *openingDB = [self findOpeningDB:name];
+    if(!openingDB) return nil; 
+    
+    NSString *ranStr = [NSString stringWithString:sql];
+    ranStr = [ranStr uppercaseString];
+    
+    NSRange range = [ranStr rangeOfString:@"SELECT"];
+    if(range.length != 0)
+    {
+        FMResultSet *result = [openingDB executeQuery:sql];
+        return result;
+    }
+    else
+    {
+        BOOL result = [openingDB executeUpdate:sql];
+        return [NSNumber numberWithBool:result];
+    }
+    
+    return nil;
+}
+
+
 
 @end
