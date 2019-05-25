@@ -18,5 +18,6 @@
 #import "HMFunction.h"
 #import "Constants.h"
 #import "RDFMDBAgent.h"
+#import "HMDataCenter.h"
 
 #endif /* PrefixHeader_pch */

@@ -306,7 +306,7 @@
     NSArray *keys = [paramsDic allKeys];
     NSMutableArray *values = [[NSMutableArray alloc] init];
     
-    NSString *whereStr = nil;
+    NSString *whereStr = @"";
     
     for(int i=0; i<keys.count; i++)
     {
@@ -344,40 +344,85 @@
 
 
 - (BOOL)updateDataForSQLite:(NSString *)name table:(NSString *)tableName    
-                  setColumn:(NSString *)column toValue:(id)value
-                      where:(NSString *)conditionColumn isValue:(id)conditionValue
+               setArguments:(NSDictionary *)argusDic  
+            whereParameters:(NSDictionary *)paramsDic
 {
     if(!name || [name isEqualToString:@""]) return NO;
     if(!tableName || [tableName isEqualToString:@""]) return NO;
-    if(!column || [column isEqualToString:@""]) return NO;
-    if(!conditionColumn || [conditionColumn isEqualToString:@""]) return NO;
-    if(!value) return NO;
-    if(!conditionValue) return NO;
-        
-    NSArray *values = [NSArray arrayWithObjects:value, conditionValue, nil];
+    if(!argusDic || [argusDic count] == 0) return nil;
+    if(!paramsDic || [paramsDic count] == 0) return nil;
     
     //找到已经打开了的数据库，前提是必须打开了，本方法不做打开，如果前面没打开，直接返回插入失败
     FMDatabase *openingDB = [self findOpeningDB:name];
     if(!openingDB) return NO; 
     
-    //组装sql语句
-    //@"update 't_student' set ID = ? where name = ?"
+    //整体参数数组
+    NSMutableArray *values = [[NSMutableArray alloc] init]; 
     
-    NSString *sqlString = [NSString stringWithFormat:@"update %@ set %@ = ? where %@ = ?", tableName, column, conditionColumn];
+    
+    //set部分语句
+    NSString *setStr = @"";
+    NSArray *setkeys = [argusDic allKeys];
+    
+    for(int i=0; i<setkeys.count; i++)
+    {
+        NSString *key = [setkeys objectAtIndex:i];
+        
+        id value = [argusDic objectForKey:key];
+        [values addObject:value];
+        
+        if(i == 0)
+        {
+            setStr = [setStr stringByAppendingFormat:@"%@ = ?", key];
+        }
+        else
+        {
+            setStr = [setStr stringByAppendingFormat:@" , %@ = ?", key];
+        }
+    }
+    
+    //where部分语句
+    NSString *whereStr = @"";
+    NSArray *wherekeys = [paramsDic allKeys];
+    
+    for(int i=0; i<wherekeys.count; i++)
+    {
+        NSString *key = [wherekeys objectAtIndex:i];
+        
+        id value = [paramsDic objectForKey:key];
+        [values addObject:value];
+        
+        if(i == 0)
+        {
+            whereStr = [whereStr stringByAppendingFormat:@"%@ = ?", key];
+        }
+        else
+        {
+            whereStr = [whereStr stringByAppendingFormat:@"and %@ = ?", key];
+        }
+    }
+    
+    
+    //组装sql语句
+    //@"update 't_student' set class = ? , sex = ? where name = ? and ID = ?"
+    
+    NSString *sqlString = [NSString stringWithFormat:@"update %@ set %@ where %@", tableName, setStr, whereStr];
     
     BOOL result = [openingDB executeUpdate:sqlString withArgumentsInArray:values];
     
     if(result) 
     {
-        NSLog(@"delete data success");
+        NSLog(@"update data success");
     }
     else
     {
-        NSLog(@"delete data fail");
+        NSLog(@"update data fail");
     }
     
     return result;
 }
+
+
 
 - (NSArray *)selectDataFormSQLite:(NSString *)name table:(NSString *)tableName
                        getColumns:(NSArray *)columns
@@ -398,7 +443,7 @@
     NSArray *keys = [paramsDic allKeys];
     NSMutableArray *values = [[NSMutableArray alloc] init];
     
-    NSString *whereStr = nil;
+    NSString *whereStr = @"";
     
     for(int i=0; i<keys.count; i++)
     {

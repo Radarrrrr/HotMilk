@@ -31,7 +31,8 @@
     NSDictionary *dict = [NSDictionary dictionaryWithObject:[UIColor whiteColor] forKey:NSForegroundColorAttributeName];
     mainNav.navigationBar.titleTextAttributes = dict;
     
-    
+    //准备数据库
+    [HMDataCenter prepareSQLite];
     
     return YES;
 }

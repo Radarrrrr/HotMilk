@@ -76,25 +76,24 @@
     
     
     //---test
-    [[RDFMDBAgent sharedAgent] createSQLiteByName:@"babys.sqlite"];
-    [[RDFMDBAgent sharedAgent] openSQLite:@"babys.sqlite"];
-    
-    [[RDFMDBAgent sharedAgent] createTableInSQLite:@"babys.sqlite" 
-                                         tableName:@"dotbaby_records" 
-                                           columns:@"day text not null",  //2019-05-09  
-                                                   @"time text not null", //07:30
-                                                   @"count integer",      //100 / 1 / 0 
-                                                   @"type text not null", //milk / AD / gai / tie o/ bian
-                                                   nil];
-    
-    [[RDFMDBAgent sharedAgent] createTableInSQLite:@"babys.sqlite" 
-                                         tableName:@"sixbaby_records" 
-                                           columns:@"day text not null",  //2019-05-09  
-                                                   @"time text not null", //07:30
-                                                   @"count integer",      //100 / 1 / 0 
-                                                   @"type text not null", //milk / AD / gai / tie o/ bian
-                                                   nil];
-
+//    [[RDFMDBAgent sharedAgent] createSQLiteByName:@"babys.sqlite"];
+//    [[RDFMDBAgent sharedAgent] openSQLite:@"babys.sqlite"];
+//    
+//    [[RDFMDBAgent sharedAgent] createTableInSQLite:@"babys.sqlite" 
+//                                         tableName:@"dotbaby_records" 
+//                                           columns:@"day text not null",  //2019-05-09  
+//                                                   @"time text not null", //07:30
+//                                                   @"count integer",      //100 / 1 / 0 
+//                                                   @"type text not null", //milk / ad / gai / tie / bian
+//                                                   nil];
+//    
+//    [[RDFMDBAgent sharedAgent] createTableInSQLite:@"babys.sqlite" 
+//                                         tableName:@"sixbaby_records" 
+//                                           columns:@"day text not null",  //2019-05-09  
+//                                                   @"time text not null", //07:30
+//                                                   @"count integer",      //100 / 1 / 0 
+//                                                   @"type text not null", //milk / ad / gai / tie / bian
+//                                                   nil];
     //---------
     
 }
@@ -155,7 +154,7 @@
     //测试数据
     NSArray *records =  @[
                           @{
-                              @"date":@"2019-04-29",
+                              @"date":@"2019-05-21",
                               @"data":@{
                                       @"dot":@{
                                               @"AD":@"1",

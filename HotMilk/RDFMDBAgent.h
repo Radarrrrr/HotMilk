@@ -52,9 +52,9 @@
 
 - (BOOL)deleteDataFromSQLite:(NSString *)name table:(NSString *)tableName byParameters:(NSDictionary *)paramsDic; //删除一行数据， PS:只处理 key1=value1 and key2=value2 这种形式， 暂不支持大于号和小于号的形式
 
-- (BOOL)updateDataForSQLite:(NSString *)name table:(NSString *)tableName        //更新某一列的值，目前只做更新一列并且条件也只有一列，如需组合，就使用纯SQL语句的纯SQL方法
-                  setColumn:(NSString *)column toValue:(id)value                //PS:value和conditionValue只允许NSString和NSNumber两种类型
-                      where:(NSString *)conditionColumn isValue:(id)conditionValue;
+- (BOOL)updateDataForSQLite:(NSString *)name table:(NSString *)tableName    //更新paramsDic条件下对应的的值为argusDic对应的内容
+               setArguments:(NSDictionary *)argusDic                    //set内容     column:value
+            whereParameters:(NSDictionary *)paramsDic;                  //where条件   colmun:value
 
 - (NSArray *)selectDataFormSQLite:(NSString *)name table:(NSString *)tableName     //查询paramsDic条件下colmns列对应的数据，返回字典结构
                        getColumns:(NSArray *)columns                               //本方法中，columns不能为nil
